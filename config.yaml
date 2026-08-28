@@ -12,6 +12,7 @@ valuation:
 
 retail:
   catalog_csv: data/knoppers55_catalog.csv   # your 408 eBay sets + your prices
+  seller_label: "knoppers55"                  # shown on the deals page header
   min_discount_pct: 0.12
   min_price_eur: 25.0
   min_flip_margin_eur: 15.0                   # only flag if (your eBay price - retail) >= this
@@ -23,7 +24,7 @@ retail:
     feeds: ["https://www.mydealz.de/gruppe/lego-rss"]
   brickmerge:
     enabled: true
-    max_sets: 120            # bestsellers first; raise toward 408 for full coverage
+    max_sets: 408            # bestsellers first; raise toward 408 for full coverage
     min_deal_score: 0
   ebay_seller:
     enabled: false           # set true + add API keys to refresh prices live instead of the CSV
@@ -35,7 +36,7 @@ retail:
   http:
     user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
     timeout: 20
-    min_delay_seconds: 2.0
+    min_delay_seconds: 1.5
     max_retries: 2
 
 store:

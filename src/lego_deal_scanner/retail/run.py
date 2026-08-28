@@ -223,8 +223,10 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
         "errors": errors,
         "lego_prices": lego_prices,
     }
+    label = seller_name or rcfg.get("seller_label")
+    if label:
+        result["seller"] = label
     if seller_name:
-        result["seller"] = seller_name
         result["seller_set_count"] = len(seller_ix)
         result["coverage"], result["uncovered"] = _coverage(
             seller_ix, by_set, lego_prices, rcfg, enabled, amazon_ok, len(merged)

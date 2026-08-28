@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from email.utils import format_datetime
 from datetime import datetime, timezone
 from pathlib import Path
@@ -535,10 +536,28 @@ def render_rss(result: dict, cfg: dict) -> str:
 """
 
 
+def render_fragment(result: dict, cfg: dict) -> str:
+    """Same page, but without the <!doctype>/<html>/<head>/<body> wrapper -
+    ready to publish as a Claude Artifact (its skeleton is added at publish time)."""
+    full = render_html(result, cfg)
+    title = re.search(r"<title>(.*?)</title>", full, re.S)
+    link = re.search(r'<link rel="stylesheet"[^>]*>', full)
+    style = re.search(r"<style>.*?</style>", full, re.S)
+    body = re.search(r"<body>(.*)</body>", full, re.S)   # includes the trailing <script>
+    parts = [
+        f"<title>{title.group(1) if title else 'LEGO Deals DE'}</title>",
+        link.group(0) if link else "",
+        style.group(0) if style else "",
+        (body.group(1).strip() if body else ""),
+    ]
+    return "\n".join(p for p in parts if p) + "\n"
+
+
 def build_site(result: dict, site_cfg: dict) -> Path:
     outdir = Path(site_cfg.get("outdir", "site_out"))
     outdir.mkdir(parents=True, exist_ok=True)
     (outdir / "index.html").write_text(render_html(result, site_cfg), encoding="utf-8")
+    (outdir / "artifact.html").write_text(render_fragment(result, site_cfg), encoding="utf-8")
     (outdir / ".nojekyll").write_text("", encoding="utf-8")
     (outdir / "deals.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
