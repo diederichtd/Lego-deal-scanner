@@ -15,7 +15,8 @@ retail:
   seller_label: "knoppers55"                  # shown on the deals page header
   min_discount_pct: 0.12
   min_price_eur: 25.0
-  min_flip_margin_eur: 15.0                   # only flag if (your eBay price - retail) >= this
+  min_flip_margin_eur: 12.0     # show sets a shop has >= this much cheaper than your eBay price
+  profit_model: false           # simple gap view - no eBay-fee/postage math, no "thin margin" list
   shops_enabled: [otto, mueller, thalia, joybuy, smyths, proshop, galeria]
   sale_pages: {}
   amazon: {enabled: false}
