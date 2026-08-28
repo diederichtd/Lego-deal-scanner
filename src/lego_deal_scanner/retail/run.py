@@ -15,7 +15,7 @@ from .http import Fetcher
 from .extract import extract_price
 from .ebay_sold import sold_value
 from .mydealz import fetch_posts
-from .shops import make_deal
+from .shops import make_deal, shop_product_url
 from .stockcheck import verify
 
 log = logging.getLogger(__name__)
@@ -162,14 +162,15 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
                 take = keep(ref, bp.best_eur) and score_ok
             if not take:
                 continue
-            note = (f"cheapest at {bp.merchant} (as of {bp.priced_at}) - opens the price "
-                    f"list, click through to the shop") if bp.merchant else \
-                   "opens the brickmerge price list"
+            link = shop_product_url(bp.merchant, row.set_num) if bp.merchant else bp.url
+            note = (f"{bp.merchant} had it cheapest as of {bp.priced_at} - "
+                    f"confirm the set + price on the shop page") if bp.priced_at else \
+                   "confirm the set + price on the shop page"
             d = make_deal(row.set_num, row.name, "brickmerge",
-                          bp.url, bp.best_eur, ref, True, state,
+                          link, bp.best_eur, ref, True, state,
                           "brickmerge", image=row.image_url,
                           shop_name=bp.merchant or "brickmerge", note=note)
-            d["offer_url"] = bp.offer_url
+            d["compare_url"] = bp.url        # brickmerge price list, as a backup
             d["deal_score"] = bp.deal_score
             if ep:
                 d["ebay_price_eur"] = ep

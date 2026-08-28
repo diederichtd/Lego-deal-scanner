@@ -135,10 +135,10 @@ def test_flip_reports_real_shop_and_skips_ebay(cfg):
     assert "10255" not in sets        # top offer was an eBay coupon listing -> skipped
     d = next(d for d in result["deals"] if d["set_num"] == "75394")
     assert d["shop_name"] == "Proshop.de"
-    assert d["url"] == "https://www.brickmerge.de/75394-1_x"  # links to the price list (go2 redirect 403s externally)
+    assert d["url"] == "https://www.proshop.de/?s=LEGO+75394"  # straight to the shop, not brickmerge
     assert d["net_profit_eur"] is not None and d["net_profit_eur"] > 10
     assert d["resale_source"] == "your listed price"   # ebay_sold disabled in this cfg
-    assert "click through to the shop" in d["note"]
+    assert "confirm the set + price on the shop page" in d["note"]
 
 
 def test_simple_mode_shows_gap_not_profit(cfg):
