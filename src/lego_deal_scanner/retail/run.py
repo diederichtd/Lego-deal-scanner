@@ -243,11 +243,16 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             d["sold_count"] = sv["count"] if sv else None
         d.update(net_profit(resale, d["price_eur"], econ))
         d["falling_days"] = store.falling_days(d["shop"], d["set_num"])
-    kept = [d for d in priced if (d.get("net_profit_eur") or -1) >= min_net]
-    kept.sort(key=lambda d: -(d.get("net_profit_eur") or -1e9))
+
+    def _n(d):
+        return d.get("net_profit_eur")
+
+    kept = sorted((d for d in priced if _n(d) is not None and _n(d) >= min_net),
+                  key=lambda d: -_n(d))
+    thin = sorted((d for d in priced if _n(d) is not None and 0 <= _n(d) < min_net),
+                  key=lambda d: -_n(d))
 
     # 6) verify the best N are actually in stock at that price
-    stale: list[dict] = []
     for d in kept[: int(rcfg.get("verify_top_n", 0))]:
         v = verify(d["url"], d["price_eur"], fetcher)
         d["verified"] = v["ok"]
@@ -268,6 +273,7 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
         "checked": checked,
         "threshold_pct": min_pct,
         "deals": merged,
+        "thin": thin,
         "stale": stale,
         "health": health,
         "brickmerge_ok": bm_ok,

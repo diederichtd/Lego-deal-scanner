@@ -63,9 +63,11 @@ def send_digest(url: str | None, result: dict, top: int = 12) -> bool:
     when = result.get("generated_at", "")
     head = f":warning: {result['health']}\n\n" if result.get("health") else ""
 
+    thin_n = len(result.get("thin") or [])
     if not deals:
+        extra = (f" {thin_n} thin-margin ones on the page." if thin_n else "")
         body = (head + f"LEGO flip watch ({when}) - {result.get('checked', 0)} sets "
-                f"checked, nothing worth flipping right now.")
+                f"checked, no clear-profit flips right now.{extra}")
     else:
         lines = []
         for d in deals[:top]:
@@ -86,7 +88,9 @@ def send_digest(url: str | None, result: dict, top: int = 12) -> bool:
                 f"-> {gain}  (sell ~EUR {sell:.0f}, {d.get('resale_source', '')}){tag}\n"
                 f"  {d['url']}"
             )
-        more = f"\n...and {len(deals) - top} more on the page" if len(deals) > top else ""
+        more = f"\n...and {len(deals) - top} more" if len(deals) > top else ""
+        if thin_n:
+            more += f"\n+ {thin_n} thin-margin ones on the page"
         body = (head + f"LEGO flip watch ({when})\n{len(deals)} of {seller}'s sets worth "
                 f"buying to re-sell - {result.get('checked', 0)} checked\n\n"
                 + "\n".join(lines) + more)

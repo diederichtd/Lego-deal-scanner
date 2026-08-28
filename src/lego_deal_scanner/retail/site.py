@@ -469,6 +469,20 @@ def render_html(result: dict, cfg: dict) -> str:
         aux += (f'<section class="aux"><h2>Your sets not yet checked '
                 f'({len(result["uncovered"])})</h2><ul>{items}</ul></section>')
 
+    if result.get("thin"):
+        rows = "\n".join(
+            f"<tr><td>{html.escape(t['set_num'])} {html.escape(t['name'][:44])}</td>"
+            f"<td>&euro;{t['price_eur']:.0f} {html.escape(t.get('shop_name', ''))}</td>"
+            f"<td>~&euro;{t.get('net_profit_eur', 0):.0f}</td>"
+            f'<td><a href="{html.escape(t["url"], quote=True)}" target="_blank" '
+            f'rel="noopener">open &rsaquo;</a></td></tr>'
+            for t in result["thin"][:40]
+        )
+        aux += (f'<section class="aux"><h2>Thin margin ({len(result["thin"])}) &mdash; '
+                f'small profit, only if your fees are low</h2>'
+                f"<table><thead><tr><th>Set</th><th>Buy</th><th>Est. profit</th><th></th>"
+                f"</tr></thead><tbody>{rows}</tbody></table></section>")
+
     if result.get("stale"):
         items = "\n".join(
             f"<li>{html.escape(s['set_num'])} {html.escape(s['name'][:44])} — "
