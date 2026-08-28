@@ -154,3 +154,28 @@ def test_simple_mode_shows_gap_not_profit(cfg):
     assert d["net_profit_eur"] is None                       # no profit math
     assert d["margin_vs_ebay_eur"] == pytest.approx(57.74, abs=0.01)  # 156.74 - 99
     assert result["thin"] == []                              # no thin bucket in simple mode
+
+
+def test_resolve_and_verify_swaps_search_url_for_product_url():
+    from lego_deal_scanner.retail.stockcheck import resolve_and_verify
+
+    search_html = (
+        '<html><head><script type="application/ld+json">'
+        '{"@type":"ItemList","itemListElement":[{"item":{"@type":"Product",'
+        '"name":"LEGO Star Wars 75394 Sternzerstoerer","url":"https://shop.test/p/75394",'
+        '"offers":{"price":"99.00","availability":"https://schema.org/InStock"}}}]}'
+        '</script></head><body>x</body></html>')
+    prod_html = (
+        '<html><head><script type="application/ld+json">'
+        '{"@type":"Product","name":"LEGO 75394",'
+        '"offers":{"price":"99.00","availability":"https://schema.org/InStock"}}'
+        '</script></head><body>in den warenkorb</body></html>')
+
+    class F:
+        def get(self, u):
+            return {"https://shop.test/search?q=75394": search_html,
+                    "https://shop.test/p/75394": prod_html}.get(u)
+
+    v = resolve_and_verify("https://shop.test/search?q=75394", "75394", 99.0, F())
+    assert v["product_url"] == "https://shop.test/p/75394"
+    assert v["ok"] is True

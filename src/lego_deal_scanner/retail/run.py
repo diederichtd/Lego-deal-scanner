@@ -16,7 +16,7 @@ from .extract import extract_price
 from .ebay_sold import sold_value
 from .mydealz import fetch_posts
 from .shops import make_deal, shop_product_url
-from .stockcheck import verify
+from .stockcheck import resolve_and_verify
 
 log = logging.getLogger(__name__)
 
@@ -270,9 +270,12 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
         kept = sorted(priced, key=lambda d: -(d.get("margin_vs_ebay_eur") or 0))
         thin = []
 
-    # 6) verify the best N are actually in stock at that price
+    # 6) for the best N: open the shop, swap the search link for the real product
+    #    page, and check it's in stock near the expected price
     for d in kept[: int(rcfg.get("verify_top_n", 0))]:
-        v = verify(d["url"], d["price_eur"], fetcher)
+        v = resolve_and_verify(d["url"], d["set_num"], d["price_eur"], fetcher)
+        if v.get("product_url"):
+            d["url"] = v["product_url"]
         d["verified"] = v["ok"]
         d["verify_reason"] = v["reason"]
     live = [d for d in kept if d.get("verified") is not False]

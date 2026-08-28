@@ -16,7 +16,8 @@ retail:
   min_discount_pct: 0.12
   min_price_eur: 25.0
   min_flip_margin_eur: 12.0     # show sets a shop has >= this much cheaper than your eBay price
-  profit_model: false           # simple gap view - no eBay-fee/postage math, no "thin margin" list
+  profit_model: false           # simple gap view - no fee/postage math
+  verify_top_n: 30              # for the top N, resolve the real product link + check stock
   shops_enabled: [otto, mueller, thalia, joybuy, smyths, proshop, galeria]
   sale_pages: {}
   amazon: {enabled: false}
