@@ -273,12 +273,15 @@ def _cmd_watch(args: argparse.Namespace) -> int:
 def _webhook_rows(deals: list[dict]) -> list[dict]:
     out = []
     for d in deals:
+        margin = d.get("margin_vs_ebay_eur")
+        ref = d.get("ebay_price_eur") if margin is not None else d["lego_price_eur"]
+        gain = margin if margin is not None else d["saving_eur"]
         out.append({
             "verdict": d["state"].replace("_", " ").upper(),
             "set_num": d["set_num"], "name": d["name"], "condition": d["shop_name"],
             "asking_eur": d["price_eur"], "shipping_in_eur": 0.0,
-            "resale_ref_eur": d["lego_price_eur"],
-            "net_profit_eur": d["saving_eur"], "roi": d["saving_pct"], "url": d["url"],
+            "resale_ref_eur": ref,
+            "net_profit_eur": gain, "roi": d["saving_pct"], "url": d["url"],
         })
     return out
 
@@ -340,6 +343,13 @@ def _cmd_install_agent(args: argparse.Namespace) -> int:
     if cfg_path:
         prog_args += ["        <string>-c</string>", f"        <string>{cfg_path}</string>"]
     prog_args.append("        <string>--quiet</string>")
+    env_block = ""
+    if getattr(args, "webhook", None):
+        env_block = (
+            "    <key>EnvironmentVariables</key><dict>\n"
+            f"        <key>LEGO_DEAL_WEBHOOK</key><string>{args.webhook}</string>\n"
+            "    </dict>\n"
+        )
     plist = f"""<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -348,7 +358,7 @@ def _cmd_install_agent(args: argparse.Namespace) -> int:
     <key>ProgramArguments</key><array>
 {chr(10).join(prog_args)}
     </array>
-    <key>WorkingDirectory</key><string>{workdir}</string>
+{env_block}    <key>WorkingDirectory</key><string>{workdir}</string>
     <key>StartInterval</key><integer>3600</integer>
     <key>RunAtLoad</key><true/>
     <key>StandardOutPath</key><string>{workdir}/data/watch.log</string>
@@ -405,6 +415,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     pa = sub.add_parser("install-agent", help="write a launchd plist to run watch hourly")
     pa.add_argument("-c", "--config", help="config.yaml the agent should use")
+    pa.add_argument("--webhook", help="Discord/Slack webhook URL (baked into the plist, "
+                                      "not the repo) for hourly deal alerts")
     pa.add_argument("--print", action="store_true", help="print the plist, don't write it")
     pa.add_argument("--force", action="store_true")
     pa.set_defaults(func=_cmd_install_agent)

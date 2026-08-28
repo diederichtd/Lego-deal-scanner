@@ -35,7 +35,7 @@ retail:
   http:
     user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
     timeout: 20
-    min_delay_seconds: 3.0
+    min_delay_seconds: 2.0
     max_retries: 2
 
 store:
