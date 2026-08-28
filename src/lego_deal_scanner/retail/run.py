@@ -127,6 +127,9 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             checked += 1
             if not bp or bp.best_eur is None:
                 continue
+            if bp.marketplace or bp.coupon_only:
+                # not a plain buy-from-a-shop price (eBay listing / coupon-only) - skip
+                continue
             ref = ((lego_prices.get(row.set_num) or {}).get("price")
                    or bp.uvp_eur or row.rrp_eur or row.ebay_price_eur or bp.best_eur)
             if not ref:
@@ -146,10 +149,13 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
                 take = keep(ref, bp.best_eur) and score_ok
             if not take:
                 continue
-            d = make_deal(row.set_num, row.name, "brickmerge", bp.url, bp.best_eur, ref,
-                          True, state, "brickmerge", image=row.image_url)
+            note = f"{bp.merchant} price as of {bp.priced_at} - verify at the shop" \
+                if bp.priced_at else "verify stock/price at the shop"
+            d = make_deal(row.set_num, row.name, "brickmerge",
+                          bp.offer_url or bp.url, bp.best_eur, ref, True, state,
+                          "brickmerge", image=row.image_url,
+                          shop_name=bp.merchant or "brickmerge", note=note)
             d["deal_score"] = bp.deal_score
-            d["best_30d_eur"] = bp.best_30d_eur
             if ep:
                 d["ebay_price_eur"] = ep
                 d["margin_vs_ebay_eur"] = round(ep - bp.best_eur, 2)

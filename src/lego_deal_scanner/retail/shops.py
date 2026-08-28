@@ -47,14 +47,16 @@ def set_image(set_num: str, override: str | None = None) -> str:
 
 def make_deal(set_num: str, name: str, shop_key: str, url: str, price: float,
               ref: float, available, state: str, source: str,
-              image: str | None = None) -> dict:
+              image: str | None = None, shop_name: str | None = None,
+              note: str | None = None) -> dict:
     shop = shop_for(shop_key)
     saving = round(ref - price, 2)
     return {
         "set_num": set_num,
         "name": name,
         "shop": shop_key,
-        "shop_name": shop.name,
+        "shop_name": shop_name or shop.name,
+        "note": note or "",
         "url": url,
         "price_eur": round(price, 2),
         "lego_price_eur": round(ref, 2),

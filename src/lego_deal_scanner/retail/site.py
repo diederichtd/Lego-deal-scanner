@@ -131,6 +131,8 @@ a{color:inherit;text-decoration:none}
 .b-good{color:var(--save)} .b-info{color:var(--info)}
 .b-warn{color:var(--warn)} .b-oos{color:var(--oos)}
 .src{font:500 10px/1 "IBM Plex Mono",monospace;color:var(--muted);opacity:.75}
+.note{display:block;margin-top:4px;font:400 10.5px/1.3 "IBM Plex Sans",sans-serif;
+  color:var(--warn)}
 .prices{text-align:right}
 .now{font:600 17px/1 "IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;
   display:block}
@@ -351,6 +353,7 @@ def _row(d: dict, seller: bool) -> str:
     <span class="pname">{name}</span>
     <span class="tags"><span class="shop">{shop}</span>{badge}{oos}
       <span class="src">{src}</span></span>
+    {f'<span class="note">{html.escape(d["note"])}</span>' if d.get("note") else ""}
   </span>
   <span class="prices">
     <span class="now">&euro;{d['price_eur']:.2f}</span>
