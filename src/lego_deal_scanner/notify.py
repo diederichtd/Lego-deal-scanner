@@ -3,9 +3,41 @@ from __future__ import annotations
 
 import json
 import logging
+import ssl
 import urllib.request
 
 log = logging.getLogger(__name__)
+
+
+def _post(url: str, payload: dict) -> bool:
+    """POST JSON. Prefer requests (bundles CA certs); fall back to urllib."""
+    data = json.dumps(payload).encode("utf-8")
+    try:
+        import requests
+
+        r = requests.post(url, json=payload, timeout=15)
+        return 200 <= r.status_code < 300
+    except ImportError:
+        pass
+    except Exception as exc:  # noqa: BLE001
+        log.warning("webhook post failed: %s", exc)
+        return False
+    try:
+        ctx = ssl.create_default_context()
+        try:
+            import certifi
+
+            ctx.load_verify_locations(certifi.where())
+        except Exception:  # noqa: BLE001
+            pass
+        req = urllib.request.Request(
+            url, data=data, headers={"Content-Type": "application/json"}, method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
+            return 200 <= resp.status < 300
+    except Exception as exc:  # noqa: BLE001
+        log.warning("webhook post failed: %s", exc)
+        return False
 
 
 def format_line(d: dict) -> str:
@@ -18,21 +50,37 @@ def format_line(d: dict) -> str:
     )
 
 
+def send_digest(url: str | None, result: dict, top: int = 12) -> bool:
+    """One summary message with the current flip list (state-independent).
+
+    Use this for scheduled runs that start from a clean store every time -
+    avoids re-alerting every deal on every run.
+    """
+    if not url:
+        return False
+    deals = result.get("deals") or []
+    seller = result.get("seller") or "your catalogue"
+    when = result.get("generated_at", "")
+    if not deals:
+        body = f"LEGO flip watch ({when}) - {result.get('checked', 0)} checked, no flips right now."
+    else:
+        lines = []
+        for d in deals[:top]:
+            m = d.get("margin_vs_ebay_eur")
+            ref = d.get("ebay_price_eur")
+            gain = (f"+EUR {m:.0f} vs your EUR {ref:.0f}" if m is not None and ref
+                    else f"-{d['saving_pct'] * 100:.0f}% vs UVP")
+            lines.append(f"- {d['set_num']} {d['name'][:40]} - buy EUR {d['price_eur']:.0f} "
+                         f"({d.get('shop_name', d['shop'])}) -> {gain}\n  {d['url']}")
+        more = f"\n...and {len(deals) - top} more" if len(deals) > top else ""
+        body = (f"LEGO flip watch ({when})\n{len(deals)} of {seller}'s sets are cheaper "
+                f"at German retail - {result.get('checked', 0)} checked\n\n"
+                + "\n".join(lines) + more)
+    return _post(url, {"content": body[:1950], "text": body[:1950]})
+
+
 def send_webhook(url: str | None, deals: list[dict]) -> bool:
     if not url or not deals:
         return False
-    body = "\n\n".join(format_line(d) for d in deals)
-    body = "LEGO deal scan\n\n" + body
-    payload = {"content": body[:1900], "text": body[:1900]}
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            return 200 <= resp.status < 300
-    except Exception as exc:  # noqa: BLE001
-        log.warning("webhook post failed: %s", exc)
-        return False
+    body = "LEGO deal scan\n\n" + "\n\n".join(format_line(d) for d in deals)
+    return _post(url, {"content": body[:1900], "text": body[:1900]})

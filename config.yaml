@@ -44,7 +44,8 @@ store:
 notify:
   console: true
   json_out: data/deals.latest.json
-  webhook_url: null           # paste a Discord/Slack incoming webhook to get pinged
+  webhook_url: null           # set via LEGO_DEAL_WEBHOOK env (launchd plist / cloud routine) - keeps it out of git
+  digest: true                # one summary message per run (no per-deal spam on scheduled runs)
 
 site:
   outdir: site_out

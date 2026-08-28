@@ -12,7 +12,7 @@ from pathlib import Path
 
 from .classify import detect_condition
 from .config import DEFAULTS, load_config
-from .notify import send_webhook
+from .notify import send_digest, send_webhook
 from .parse import infer_inbound_shipping
 from .scoring import ScoreConfig, score
 from .setnum import extract_set_numbers
@@ -250,11 +250,19 @@ def _cmd_watch(args: argparse.Namespace) -> int:
             _render_watch(result, outdir)
             if url:
                 print(f"published: {url}")
-        if cfg["notify"].get("webhook_url") and result["deals"]:
-            fresh = [d for d in result["deals"] if d["state"] in ("new", "price_drop",
-                                                                  "back_in_stock")]
-            if fresh:
-                send_webhook(cfg["notify"]["webhook_url"], _webhook_rows(fresh))
+        hook = cfg["notify"].get("webhook_url")
+        if hook:
+            digest = bool(os.environ.get("LEGO_DEAL_DIGEST")
+                          or cfg["notify"].get("digest"))
+            if digest:
+                ok = send_digest(hook, result)
+                if not args.quiet:
+                    print("digest sent" if ok else "digest failed")
+            elif result["deals"]:
+                fresh = [d for d in result["deals"] if d["state"] in
+                         ("new", "price_drop", "back_in_stock")]
+                if fresh:
+                    send_webhook(hook, _webhook_rows(fresh))
         return result
 
     if args.interval:
