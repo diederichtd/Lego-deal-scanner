@@ -162,12 +162,14 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
                 take = keep(ref, bp.best_eur) and score_ok
             if not take:
                 continue
-            note = f"{bp.merchant} price as of {bp.priced_at} - verify at the shop" \
-                if bp.priced_at else "verify stock/price at the shop"
+            note = (f"cheapest at {bp.merchant} (as of {bp.priced_at}) - opens the price "
+                    f"list, click through to the shop") if bp.merchant else \
+                   "opens the brickmerge price list"
             d = make_deal(row.set_num, row.name, "brickmerge",
-                          bp.offer_url or bp.url, bp.best_eur, ref, True, state,
+                          bp.url, bp.best_eur, ref, True, state,
                           "brickmerge", image=row.image_url,
                           shop_name=bp.merchant or "brickmerge", note=note)
+            d["offer_url"] = bp.offer_url
             d["deal_score"] = bp.deal_score
             if ep:
                 d["ebay_price_eur"] = ep
