@@ -244,6 +244,7 @@ def _cmd_watch(args: argparse.Namespace) -> int:
         with Store(cfg["store"]["path"]) as store:
             result = run_watch(cfg, store)
         outdir = build_site(result, cfg["site"])
+        _write_json(cfg["notify"].get("json_out"), result)
         url = deploy(outdir, cfg["site"])
         if not args.quiet:
             _render_watch(result, outdir)
