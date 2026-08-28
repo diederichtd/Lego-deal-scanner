@@ -64,6 +64,9 @@ def seller_cfg(tmp_path):
     c["retail"]["sale_pages"] = {"otto": ["https://otto.test/sale"]}
     c["retail"]["ebay_seller"] = {"enabled": True, "seller": "knoppers55",
                                   "mode": "browse_api", "require_below_ebay": False}
+    c["retail"]["ebay_sold"]["enabled"] = False
+    c["retail"]["verify_top_n"] = 0
+    c["retail"]["min_net_profit_eur"] = -1e9    # this suite tests inventory/margin, not profit
     c["store"]["path"] = str(tmp_path / "s.sqlite3")
     c["site"]["outdir"] = str(tmp_path / "site")
     return c

@@ -16,13 +16,13 @@ TOP_SHOP = (
     '<p>Top-Angebot:</p><div class="topprice">'
     '<a href="/go2/?m=440&i=75394-1" rel="nofollow sponsored" class="tooltipster" '
     'target="_blank" title="Link zu Proshop.de - 40,99 &euro; (24%) gespart - '
-    'Preisangabe vom 28.08., 19:41 Uhr: 129,00 &euro;* - der aktuelle Preis kann '
+    'Preisangabe vom 28.08., 19:41 Uhr: 99,00 &euro;* - der aktuelle Preis kann '
     'h&ouml;her sein.">'
     '<img src="/img/merchants/proshop.de_ico.gif" alt="Proshop.de" /></a></div>'
 )
 PAGE_75394 = _page(
-    "LEGO Star Wars 75394 Imperialer Sternzerst&ouml;rer Preisvergleich ab 129,00 &euro; / 24% gespart",
-    "75394 kostet aktuell ab 129,00 &euro; statt UVP 169,99 &euro;. akt. UVP: 169,99 &euro;. "
+    "LEGO Star Wars 75394 Imperialer Sternzerst&ouml;rer Preisvergleich ab 99,00 &euro; / 42% gespart",
+    "75394 kostet aktuell ab 99,00 &euro; statt UVP 169,99 &euro;. akt. UVP: 169,99 &euro;. "
     "Deal-Score: 75 " + TOP_SHOP,
 )
 
@@ -54,7 +54,7 @@ class FakeFetcher:
 def test_parse_reads_real_shop_offer():
     bp = parse(PAGE_75394, "75394", "u")
     assert bp.merchant == "Proshop.de"
-    assert bp.best_eur == 129.0
+    assert bp.best_eur == 99.0
     assert bp.offer_url == "https://www.brickmerge.de/go2/?m=440&i=75394-1"
     assert bp.uvp_eur == 169.99
     assert bp.deal_score == 75
@@ -86,6 +86,8 @@ def cfg(tmp_path):
     c["retail"]["http"]["min_delay_seconds"] = 0
     c["retail"]["brickmerge"]["enabled"] = True
     c["retail"]["min_flip_margin_eur"] = 15.0
+    c["retail"]["ebay_sold"]["enabled"] = False
+    c["retail"]["verify_top_n"] = 0
     c["store"]["path"] = str(tmp_path / "s.sqlite3")
     c["site"]["outdir"] = str(tmp_path / "site")
     return c
@@ -100,10 +102,11 @@ def test_flip_reports_real_shop_and_skips_ebay(cfg):
         result = run_watch(cfg, store, fetcher=fetch)
 
     sets = [d["set_num"] for d in result["deals"]]
-    assert "75394" in sets            # real Proshop offer, 129 vs eBay 156.74
+    assert "75394" in sets            # real Proshop offer, 99 vs eBay 156.74
     assert "10255" not in sets        # top offer was an eBay coupon listing -> skipped
     d = next(d for d in result["deals"] if d["set_num"] == "75394")
     assert d["shop_name"] == "Proshop.de"
     assert d["url"] == "https://www.brickmerge.de/go2/?m=440&i=75394-1"
-    assert d["margin_vs_ebay_eur"] == pytest.approx(27.74, abs=0.01)
+    assert d["net_profit_eur"] is not None and d["net_profit_eur"] > 10
+    assert d["resale_source"] == "your listed price"   # ebay_sold disabled in this cfg
     assert "verify at the shop" in d["note"]

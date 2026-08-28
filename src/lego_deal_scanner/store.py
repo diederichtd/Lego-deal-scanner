@@ -49,6 +49,14 @@ CREATE TABLE IF NOT EXISTS retail_history (
     price REAL,
     available INTEGER
 );
+CREATE TABLE IF NOT EXISTS sold_cache (
+    set_num TEXT PRIMARY KEY,
+    ts REAL NOT NULL,
+    median REAL,
+    count INTEGER,
+    low REAL,
+    high REAL
+);
 """
 
 
@@ -150,6 +158,59 @@ class Store:
         elif prev_avail == 1 and avail_int == 0:
             state = "went_out_of_stock"
         return {"state": state, "prev_price": prev_price, "prev_available": prev_avail}
+
+    def get_sold_cache(self, set_num: str, max_age_days: float) -> Optional[dict]:
+        cur = self.db.execute(
+            "SELECT ts, median, count, low, high FROM sold_cache WHERE set_num=?",
+            (set_num,),
+        )
+        row = cur.fetchone()
+        if not row:
+            return None
+        ts, median, count, low, high = row
+        if (time.time() - ts) > max_age_days * 86400:
+            return None
+        return {"median": median, "count": count, "low": low, "high": high,
+                "age_days": round((time.time() - ts) / 86400, 1)}
+
+    def put_sold_cache(self, set_num: str, median, count, low, high) -> None:
+        self.db.execute(
+            "INSERT OR REPLACE INTO sold_cache (set_num, ts, median, count, low, high) "
+            "VALUES (?,?,?,?,?,?)",
+            (set_num, time.time(), median, count, low, high),
+        )
+        self.db.commit()
+
+    def falling_days(self, shop: str, set_num: str) -> int:
+        """How many consecutive days the recorded price has only gone down (or held)."""
+        cur = self.db.execute(
+            "SELECT ts, price FROM retail_history WHERE shop=? AND set_num=? "
+            "AND price IS NOT NULL ORDER BY ts DESC LIMIT 60",
+            (shop, set_num),
+        )
+        rows = cur.fetchall()
+        if len(rows) < 2:
+            return 0
+        newest_ts = rows[0][0]
+        prev = rows[0][1]
+        for ts, price in rows[1:]:
+            if price < prev - 0.01:          # older price was higher -> still falling
+                prev = price
+                continue
+            if price <= prev + 0.01:         # equal-ish, keep looking back
+                prev = price
+                continue
+            return max(0, int((newest_ts - ts) / 86400))
+        return max(0, int((newest_ts - rows[-1][0]) / 86400))
+
+    def price_history(self, set_num: str, limit: int = 40) -> list[dict]:
+        cur = self.db.execute(
+            "SELECT ts, shop, price FROM retail_history WHERE set_num=? AND price IS NOT NULL "
+            "ORDER BY ts DESC LIMIT ?",
+            (set_num, limit),
+        )
+        return [{"ts": ts, "shop": shop, "price": price}
+                for ts, shop, price in reversed(cur.fetchall())]
 
     def record_deal(self, source: str, listing_id: str, deal_dict: dict) -> None:
         self.db.execute(

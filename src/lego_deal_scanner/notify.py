@@ -61,20 +61,34 @@ def send_digest(url: str | None, result: dict, top: int = 12) -> bool:
     deals = result.get("deals") or []
     seller = result.get("seller") or "your catalogue"
     when = result.get("generated_at", "")
+    head = f":warning: {result['health']}\n\n" if result.get("health") else ""
+
     if not deals:
-        body = f"LEGO flip watch ({when}) - {result.get('checked', 0)} checked, no flips right now."
+        body = (head + f"LEGO flip watch ({when}) - {result.get('checked', 0)} sets "
+                f"checked, nothing worth flipping right now.")
     else:
         lines = []
         for d in deals[:top]:
-            m = d.get("margin_vs_ebay_eur")
-            ref = d.get("ebay_price_eur")
-            gain = (f"+EUR {m:.0f} vs your EUR {ref:.0f}" if m is not None and ref
-                    else f"-{d['saving_pct'] * 100:.0f}% vs UVP")
-            lines.append(f"- {d['set_num']} {d['name'][:40]} - buy EUR {d['price_eur']:.0f} "
-                         f"({d.get('shop_name', d['shop'])}) -> {gain}\n  {d['url']}")
-        more = f"\n...and {len(deals) - top} more" if len(deals) > top else ""
-        body = (f"LEGO flip watch ({when})\n{len(deals)} of {seller}'s sets are cheaper "
-                f"at German retail - {result.get('checked', 0)} checked\n\n"
+            net = d.get("net_profit_eur")
+            gain = (f"~EUR {net:.0f} profit" if net is not None
+                    else (f"+EUR {d['margin_vs_ebay_eur']:.0f} margin"
+                          if d.get("margin_vs_ebay_eur") is not None else ""))
+            flags = []
+            if d.get("verified") is True:
+                flags.append("in stock")
+            if (d.get("falling_days") or 0) >= 2:
+                flags.append(f"falling {d['falling_days']}d")
+            tag = f"  [{', '.join(flags)}]" if flags else ""
+            sell = d.get("resale_eur") or d.get("ebay_price_eur") or 0
+            lines.append(
+                f"- {d['set_num']} {d['name'][:38]}\n"
+                f"  buy EUR {d['price_eur']:.0f} at {d.get('shop_name', d['shop'])} "
+                f"-> {gain}  (sell ~EUR {sell:.0f}, {d.get('resale_source', '')}){tag}\n"
+                f"  {d['url']}"
+            )
+        more = f"\n...and {len(deals) - top} more on the page" if len(deals) > top else ""
+        body = (head + f"LEGO flip watch ({when})\n{len(deals)} of {seller}'s sets worth "
+                f"buying to re-sell - {result.get('checked', 0)} checked\n\n"
                 + "\n".join(lines) + more)
     return _post(url, {"content": body[:1950], "text": body[:1950]})
 

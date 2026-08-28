@@ -10,10 +10,13 @@ from typing import Optional
 from ..store import Store
 from .catalog import CatalogRow, load_catalog
 from .discover import discover
+from .economics import Economics, net_profit
 from .http import Fetcher
 from .extract import extract_price
+from .ebay_sold import sold_value
 from .mydealz import fetch_posts
 from .shops import make_deal
+from .stockcheck import verify
 
 log = logging.getLogger(__name__)
 
@@ -116,6 +119,7 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
     checked += len(disc)
 
     # 2.5) brickmerge aggregator: one fetch per set = all German shops -------
+    bm_total = bm_ok = 0
     if brickmerge_on:
         from .brickmerge import fetch as bm_fetch
 
@@ -125,8 +129,10 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
         for row in order[:cap]:
             bp = bm_fetch(row.set_num, fetcher)
             checked += 1
+            bm_total += 1
             if not bp or bp.best_eur is None:
                 continue
+            bm_ok += 1
             if bp.marketplace or bp.coupon_only:
                 # not a plain buy-from-a-shop price (eBay listing / coupon-only) - skip
                 continue
@@ -219,12 +225,53 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             merged = [d for d in merged if (d.get("margin_vs_ebay_eur") or 0) > 0]
         merged.sort(key=lambda d: -(d.get("margin_vs_ebay_eur") or d["saving_eur"]))
 
+    # 5) real money: resale value (eBay sold), net profit, trend, stock check
+    econ = Economics.from_dict(rcfg.get("economics"))
+    sold_cfg = rcfg.get("ebay_sold") or {}
+    min_solds = int(sold_cfg.get("min_solds", 2))
+    min_net = float(rcfg.get("min_net_profit_eur", 0.0))
+    priced = [d for d in merged if d.get("ebay_price_eur")]
+    for d in priced:
+        sv = sold_value(d["set_num"], fetcher, store, sold_cfg)
+        if sv and sv.get("median") and (sv.get("count") or 0) >= min_solds:
+            resale = sv["median"]
+            d["resale_source"] = f"eBay sold ~{sv['count']}x/{sold_cfg.get('days', 90)}d"
+            d["sold_count"] = sv["count"]
+        else:
+            resale = d["ebay_price_eur"]
+            d["resale_source"] = "your listed price"
+            d["sold_count"] = sv["count"] if sv else None
+        d.update(net_profit(resale, d["price_eur"], econ))
+        d["falling_days"] = store.falling_days(d["shop"], d["set_num"])
+    kept = [d for d in priced if (d.get("net_profit_eur") or -1) >= min_net]
+    kept.sort(key=lambda d: -(d.get("net_profit_eur") or -1e9))
+
+    # 6) verify the best N are actually in stock at that price
+    stale: list[dict] = []
+    for d in kept[: int(rcfg.get("verify_top_n", 0))]:
+        v = verify(d["url"], d["price_eur"], fetcher)
+        d["verified"] = v["ok"]
+        d["verify_reason"] = v["reason"]
+    live = [d for d in kept if d.get("verified") is not False]
+    stale = [d for d in kept if d.get("verified") is False]
+
+    merged = live if priced else merged
+
+    health = None
+    if bm_total >= 40 and (bm_ok / bm_total) < 0.35:
+        health = (f"brickmerge parsed only {bm_ok}/{bm_total} pages - the site layout "
+                  f"may have changed; results are unreliable this run")
+
     result = {
         "generated_at": time.strftime("%Y-%m-%d %H:%M"),
         "generated_ts": time.time(),
         "checked": checked,
         "threshold_pct": min_pct,
         "deals": merged,
+        "stale": stale,
+        "health": health,
+        "brickmerge_ok": bm_ok,
+        "brickmerge_total": bm_total,
         "unverified": [] if seller_name else unverified,
         "errors": errors,
         "lego_prices": lego_prices,

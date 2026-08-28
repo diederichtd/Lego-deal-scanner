@@ -83,7 +83,23 @@ DEFAULTS: dict[str, Any] = {
             "min_delay_seconds": 3.0,
             "max_retries": 2,
         },
-        "min_flip_margin_eur": 15.0,  # eBay-seller mode: min (your price - retail price)
+        "min_flip_margin_eur": 15.0,  # pre-filter: min (your price - retail price)
+        "min_net_profit_eur": 8.0,    # keep only flips worth at least this after fees + shipping
+        "verify_top_n": 12,           # check the shop actually has the N best deals in stock
+        "economics": {
+            "ebay_fee_pct": 0.12,
+            "ebay_fee_fixed": 0.35,
+            "outbound_ship_eur": 6.50,
+            "outbound_ship_big_eur": 10.49,
+            "big_threshold_eur": 120.0,
+            "packaging_eur": 1.00,
+        },
+        "ebay_sold": {
+            "enabled": True,          # value sets at their real eBay sold price, not your list
+            "days": 90,
+            "min_solds": 2,           # need at least this many sold comps to trust it
+            "cache_days": 7,
+        },
         "brickmerge": {
             "enabled": True,          # aggregates all German shops, not bot-walled
             "max_sets": 120,          # per run; bestsellers (highest ebay_sold) first

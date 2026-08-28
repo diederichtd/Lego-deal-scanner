@@ -31,15 +31,23 @@ def test_render_shows_photo_and_retailer_link():
     assert 'onerror="this.remove()"' in html
 
 
-def test_seller_mode_adds_margin_and_own_listing_link():
-    d = _deal(ebay_price_eur=185.0, margin_vs_ebay_eur=35.01,
-              ebay_url="https://www.ebay.de/itm/abc", ebay_condition="Neu")
+def test_seller_mode_shows_profit_resale_and_own_listing_link():
+    d = _deal(ebay_price_eur=185.0, margin_vs_ebay_eur=35.01, net_profit_eur=18.0,
+              resale_eur=185.0, resale_source="your listed price",
+              ebay_url="https://www.ebay.de/itm/abc", verified=True, falling_days=3)
     html = render_html({**BASE, "deals": [d], "seller": "knoppers55"}, {"title": "t"})
     assert "knoppers55" in html
-    assert "your eBay" in html
-    assert "vs your price" in html
+    assert "~&euro;18" in html and "profit" in html
+    assert "sell ~&euro;185" in html
     assert 'href="https://www.ebay.de/itm/abc"' in html
-    assert "margin vs your price" in html   # tile label
+    assert "in stock" in html and "falling 3d" in html
+    assert "best single profit" in html   # tile label
+
+
+def test_health_banner_when_scanner_looks_broken():
+    html = render_html({**BASE, "deals": [], "health": "brickmerge parsed only 3/50 pages"},
+                       {"title": "t"})
+    assert "brickmerge parsed only 3/50" in html
 
 
 def test_render_shows_coverage_and_uncovered_sets():

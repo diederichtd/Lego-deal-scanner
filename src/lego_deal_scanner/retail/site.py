@@ -141,8 +141,9 @@ a{color:inherit;text-decoration:none}
 .rrp s{text-decoration:line-through}
 .mine{color:var(--accent-ink)}
 .save{text-align:right;min-width:104px}
-.amt{font:600 15px/1 "IBM Plex Mono",monospace;color:var(--save);
+.amt{font:600 16px/1 "IBM Plex Mono",monospace;color:var(--save);
   font-variant-numeric:tabular-nums;display:block}
+.amt.pos{color:var(--save)} .amt.neg{color:var(--oos)}
 .pct{font:500 11px/1 "IBM Plex Mono",monospace;color:var(--muted);display:block;
   margin-top:3px}
 .bar{display:block;height:3px;margin-top:6px;background:var(--line);border-radius:2px;
@@ -325,46 +326,53 @@ def _row(d: dict, seller: bool) -> str:
     src = html.escape(d.get("source", ""))
     instock = "0" if d.get("available") is False else "1"
 
-    mine = margin_html = ""
-    my_link = ""
-    if seller and d.get("ebay_price_eur"):
-        mine = (f'<span class="rrp mine">your eBay '
-                f'&euro;{d["ebay_price_eur"]:.2f}</span>')
-        m = d.get("margin_vs_ebay_eur")
-        if m is not None:
-            cls = "pos" if m > 0 else "neg"
-            sign = "+" if m > 0 else "&minus;"
-            margin_html = (f'<span class="margin {cls}">{sign}&euro;{abs(m):.2f} '
-                           f'vs your price</span>')
-        if d.get("ebay_url"):
-            my_link = (f'<a class="mylink" href="{html.escape(d["ebay_url"], quote=True)}" '
-                       f'target="_blank" rel="noopener">your listing &rsaquo;</a>')
+    net = d.get("net_profit_eur")
+    sell = d.get("resale_eur") or d.get("ebay_price_eur")
+    src = html.escape(d.get("resale_source") or d.get("source", ""))
+    mine = (f'<span class="rrp mine">sell ~&euro;{sell:.0f} &middot; {src}</span>'
+            if sell else "")
+
+    v = d.get("verified")
+    vbadge = ('<span class="badge b-info">&check; in stock</span>' if v is True
+              else '<span class="badge b-warn">unconfirmed</span>' if v is None
+              and "verify_reason" in d else "")
+    fdays = d.get("falling_days") or 0
+    fall = f'<span class="badge b-good">falling {fdays}d</span>' if fdays >= 2 else ""
+
+    if net is not None:
+        pcls = "pos" if net > 0 else "neg"
+        amt = f'<span class="amt {pcls}">~&euro;{net:.0f}</span><span class="pct">profit</span>'
+    else:
+        amt = (f'<span class="amt">&minus;&euro;{d["saving_eur"]:.0f}</span>'
+               f'<span class="pct">&minus;{d["saving_pct"] * 100:.0f}%</span>')
+
+    my_link = (f'<a class="mylink" href="{html.escape(d["ebay_url"], quote=True)}" '
+               f'target="_blank" rel="noopener">your listing &rsaquo;</a>'
+               if d.get("ebay_url") else "")
 
     return f"""<div class="row" style="--stripe:var({stripe})"
   data-shop="{html.escape(d['shop'])}" data-shopname="{shop}"
   data-set="{html.escape(d['set_num'])}" data-price="{d['price_eur']:.2f}"
   data-pct="{d['saving_pct'] * 100:.1f}" data-saved="{d['saving_eur']:.2f}"
-  data-margin="{d.get('margin_vs_ebay_eur') or 0:.2f}" data-instock="{instock}">
+  data-margin="{d.get('margin_vs_ebay_eur') or 0:.2f}"
+  data-net="{net if net is not None else -999:.2f}" data-instock="{instock}">
   <a class="hit" href="{url}" target="_blank" rel="noopener"
      aria-label="Open {name} at {shop}"></a>
   <span class="thumb">{'<img src="' + img + '" alt="" loading="lazy" onerror="this.remove()">' if img else ''}<b>{html.escape(d['set_num'])}</b></span>
   <span class="setno">{html.escape(d['set_num'])}</span>
   <span class="meta">
     <span class="pname">{name}</span>
-    <span class="tags"><span class="shop">{shop}</span>{badge}{oos}
-      <span class="src">{src}</span></span>
+    <span class="tags"><span class="shop">{shop}</span>{badge}{vbadge}{fall}{oos}</span>
     {f'<span class="note">{html.escape(d["note"])}</span>' if d.get("note") else ""}
   </span>
   <span class="prices">
     <span class="now">&euro;{d['price_eur']:.2f}</span>
-    <span class="rrp"><s>LEGO.de &euro;{d['lego_price_eur']:.2f}</s></span>
     {mine}
   </span>
   <span class="save">
-    <span class="amt">&minus;&euro;{d['saving_eur']:.2f}</span>
-    <span class="pct">&minus;{d['saving_pct'] * 100:.0f}%</span>
+    {amt}
     <span class="bar"><i style="width:{_depth(d['saving_pct'])}%"></i></span>
-    {margin_html}{my_link}
+    {my_link}
   </span>
 </div>"""
 
@@ -375,9 +383,10 @@ def render_html(result: dict, cfg: dict) -> str:
     seller = result.get("seller")
     thr = result.get("threshold_pct", 0.0)
     biggest = max((d["saving_pct"] for d in deals), default=0.0)
-    total_saved = sum(d["saving_eur"] for d in deals)
-    in_stock = sum(1 for d in deals if d.get("available") is not False)
-    best_margin = max((d.get("margin_vs_ebay_eur") or 0) for d in deals) if deals else 0
+    nets = [d["net_profit_eur"] for d in deals if d.get("net_profit_eur") is not None]
+    total_profit = sum(n for n in nets if n > 0)
+    best_profit = max(nets) if nets else 0
+    confirmed = sum(1 for d in deals if d.get("verified") is True)
 
     shops = sorted({(d["shop"], d.get("shop_name") or d["shop"]) for d in deals})
     chips = "".join(
@@ -387,19 +396,21 @@ def render_html(result: dict, cfg: dict) -> str:
 
     who = f'<span class="who">· {html.escape(seller)}</span>' if seller else ""
     if seller:
-        lede = (f'Sets <b>{html.escape(seller)}</b> lists on eBay that are now '
-                f'{thr * 100:.0f}%+ cheaper at a German retailer. '
-                f'&ldquo;vs your price&rdquo; = retailer price minus your eBay price '
-                f'(before eBay fees &amp; shipping).')
+        lede = (f'Sets <b>{html.escape(seller)}</b> sells that you can buy cheaper right '
+                f'now at a German shop. &ldquo;profit&rdquo; = expected resale minus the '
+                f'shop price, eBay&rsquo;s ~12% fee, and postage. Verify stock before buying.')
     else:
         lede = (f'LEGO sets currently {thr * 100:.0f}%+ below LEGO.de across German '
                 f'shops. Updated hourly.')
 
+    hbanner = (f'<div class="ribbon">&#9888; {html.escape(result["health"])}</div>'
+               if result.get("health") else "")
+
     tiles = f"""<div class="tiles">
-    <div class="tile"><div class="n">{len(deals)}</div><div class="l">on sale &ge;{thr * 100:.0f}%</div></div>
-    <div class="tile"><div class="n">{biggest * 100:.0f}%</div><div class="l">biggest cut</div></div>
-    {'<div class="tile good"><div class="n">&euro;' + format(best_margin, '.0f') + '</div><div class="l">best margin vs your price</div></div>' if seller else '<div class="tile good"><div class="n">&euro;' + format(total_saved, '.0f') + '</div><div class="l">total saved</div></div>'}
-    <div class="tile"><div class="n">{in_stock}</div><div class="l">in stock</div></div>
+    <div class="tile"><div class="n">{len(deals)}</div><div class="l">worth flipping</div></div>
+    <div class="tile good"><div class="n">&euro;{best_profit:.0f}</div><div class="l">best single profit</div></div>
+    <div class="tile good"><div class="n">&euro;{total_profit:.0f}</div><div class="l">total if you bought all</div></div>
+    <div class="tile"><div class="n">{confirmed}</div><div class="l">stock confirmed</div></div>
   </div>"""
 
     board = "\n".join(_row(d, bool(seller)) for d in deals) or (
@@ -425,11 +436,7 @@ def render_html(result: dict, cfg: dict) -> str:
             f'<b>{cov["on_sale"]}</b> on sale now{gap}</div>'
         )
 
-    sort_opts = [
-        ("pct", "discount %"), ("saved", "&euro; saved"), ("price", "price"),
-    ]
-    if seller:
-        sort_opts.insert(0, ("margin", "margin vs your price"))
+    sort_opts = [("net", "profit"), ("price", "shop price"), ("pct", "% off UVP")]
     sort_html = "".join(f'<option value="{v}">{lbl}</option>' for v, lbl in sort_opts)
 
     controls = f"""<div class="controls">
@@ -462,6 +469,15 @@ def render_html(result: dict, cfg: dict) -> str:
         aux += (f'<section class="aux"><h2>Your sets not yet checked '
                 f'({len(result["uncovered"])})</h2><ul>{items}</ul></section>')
 
+    if result.get("stale"):
+        items = "\n".join(
+            f"<li>{html.escape(s['set_num'])} {html.escape(s['name'][:44])} — "
+            f"{html.escape(s.get('shop_name', ''))}: {html.escape(s.get('verify_reason', 'gone'))}</li>"
+            for s in result["stale"][:40]
+        )
+        aux += (f'<section class="aux"><h2>Looked good but not confirmed '
+                f'({len(result["stale"])})</h2><ul>{items}</ul></section>')
+
     if result.get("errors"):
         items = "\n".join(
             f"<li>{html.escape(e.get('set_num', ''))} {html.escape(e.get('name', ''))}"
@@ -490,6 +506,7 @@ def render_html(result: dict, cfg: dict) -> str:
     · updated {html.escape(result['generated_at'])}</p>
 </div></header>
 <div class="wrap">
+{hbanner}
 {ribbon}
 {tiles}
 {cov_html}
