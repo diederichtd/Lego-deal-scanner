@@ -67,7 +67,7 @@ def send_digest(url: str | None, result: dict, top: int = 12) -> bool:
     if not deals:
         extra = (f" {thin_n} thin-margin ones on the page." if thin_n else "")
         body = (head + f"LEGO flip watch ({when}) - {result.get('checked', 0)} sets "
-                f"checked, no clear-profit flips right now.{extra}")
+                f"checked, nothing cheaper than your prices right now.{extra}")
     else:
         lines = []
         for d in deals[:top]:

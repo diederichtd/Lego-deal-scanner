@@ -333,10 +333,8 @@ def _row(d: dict, seller: bool) -> str:
     mine = (f'<span class="rrp mine">sell ~&euro;{sell:.0f} &middot; {src}</span>'
             if sell else "")
 
-    v = d.get("verified")
-    vbadge = ('<span class="badge b-info">&check; in stock</span>' if v is True
-              else '<span class="badge b-warn">unconfirmed</span>' if v is None
-              and "verify_reason" in d else "")
+    vbadge = ('<span class="badge b-info">&check; in stock</span>'
+              if d.get("verified") is True else "")
     fdays = d.get("falling_days") or 0
     fall = f'<span class="badge b-good">falling {fdays}d</span>' if fdays >= 2 else ""
 
@@ -423,11 +421,15 @@ def render_html(result: dict, cfg: dict) -> str:
 
     _bl = "best single profit" if profit_mode else "biggest gap vs your price"
     _tl = "total profit if you bought all" if profit_mode else "total gap if you bought all"
+    _t4 = (f'<div class="tile"><div class="n">{confirmed}</div>'
+           f'<div class="l">stock confirmed</div></div>' if confirmed else
+           f'<div class="tile"><div class="n">{result.get("checked", 0)}</div>'
+           f'<div class="l">sets checked</div></div>')
     tiles = f"""<div class="tiles">
     <div class="tile"><div class="n">{len(deals)}</div><div class="l">cheaper than you sell</div></div>
     <div class="tile good"><div class="n">&euro;{best_val:.0f}</div><div class="l">{_bl}</div></div>
     <div class="tile good"><div class="n">&euro;{total_val:.0f}</div><div class="l">{_tl}</div></div>
-    <div class="tile"><div class="n">{confirmed}</div><div class="l">stock confirmed</div></div>
+    {_t4}
   </div>"""
 
     board = "\n".join(_row(d, bool(seller)) for d in deals) or (
@@ -511,7 +513,7 @@ def render_html(result: dict, cfg: dict) -> str:
             f"{html.escape(s.get('shop_name', ''))}: {html.escape(s.get('verify_reason', 'gone'))}</li>"
             for s in result["stale"][:40]
         )
-        aux += (f'<section class="aux"><h2>Looked good but not confirmed '
+        aux += (f'<section class="aux"><h2>Sold out or pricier now '
                 f'({len(result["stale"])})</h2><ul>{items}</ul></section>')
 
     if result.get("errors"):
