@@ -1,0 +1,42 @@
+name: LEGO flip watch
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: lego-flip-watch
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Restore price DB
+        uses: actions/cache@v4
+        with:
+          path: data/scanner.sqlite3
+          key: scanner-db-${{ github.run_id }}
+          restore-keys: |
+            scanner-db-
+      - name: Run the watch
+        env:
+          LEGO_DEAL_WEBHOOK: ${{ secrets.LEGO_DEAL_WEBHOOK }}
+        run: lego-deal-scanner watch -c config.yaml
+      - name: Publish deals page to gh-pages
+        run: |
+          set -e
+          cd site_out
+          touch .nojekyll
+          git init -q
+          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git add -A
+          git commit -q -m "deals $(date -u +%FT%TZ)" || { echo "nothing to publish"; exit 0; }
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:gh-pages
