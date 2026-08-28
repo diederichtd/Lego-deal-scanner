@@ -69,12 +69,14 @@ _SHOP_SEARCH = {
 
 
 def shop_product_url(merchant: str, set_num: str) -> str:
-    key = re.sub(r"\s*\(.*?\)\s*", "", (merchant or "")).strip().lower()
-    key = key.replace(".de", "").strip()
-    tmpl = _SHOP_SEARCH.get(key) or _SHOP_SEARCH.get(key.replace(" ", ""))
-    if tmpl:
-        return tmpl.format(n=set_num)
-    q = f"LEGO {set_num} {merchant}".strip().replace(" ", "+")
+    """Fallback link when we can't resolve the exact product URL.
+
+    A Google search for "LEGO <set> <shop>" - the first organic result is
+    almost always the shop's own product page, so it's one click to the item
+    and works for every shop, unlike each shop's clunky/bot-walled search.
+    """
+    m = re.sub(r"\s*\(.*?\)\s*", "", (merchant or "")).strip() or "kaufen"
+    q = f"LEGO {set_num} {m}".replace(" ", "+")
     return f"https://www.google.com/search?q={q}"
 
 

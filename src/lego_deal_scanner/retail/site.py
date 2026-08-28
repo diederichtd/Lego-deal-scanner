@@ -12,90 +12,130 @@ import re
 from email.utils import format_datetime
 from datetime import datetime, timezone
 from pathlib import Path
-
 _CSS = """
 :root{
-  --bg:#fbfbfa; --fg:#1a1a19; --dim:#6b6b66; --line:#e8e7e3;
-  --hi:#f2f1ec; --accent:#1f7a3d; --new:#c8102e;
+  --bg:#fbfbfa; --fg:#1a1a19; --dim:#6b6b66; --line:#e6e5e1;
+  --hi:#f2f1ec; --accent:#177a3a; --new:#c8102e; --tile:#efeee9;
 }
-@media (prefers-color-scheme:dark){:root{
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#141413; --fg:#eceae4; --dim:#928e85; --line:#2b2a27;
-  --hi:#1e1d1b; --accent:#5cc27a; --new:#f2637a;
+  --hi:#1e1d1b; --accent:#57c27a; --new:#f2637a; --tile:#232220;
 }}
+:root[data-theme="dark"]{
+  --bg:#141413; --fg:#eceae4; --dim:#928e85; --line:#2b2a27;
+  --hi:#1e1d1b; --accent:#57c27a; --new:#f2637a; --tile:#232220;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--bg)}
 body{background:var(--bg);color:var(--fg);
   font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   -webkit-font-smoothing:antialiased}
-.wrap{max-width:660px;margin:0 auto;padding:34px 20px 64px}
+.wrap{max-width:680px;margin:0 auto;padding:30px 20px 64px}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 h1{font-size:19px;font-weight:650;letter-spacing:-.01em}
 h1 span{color:var(--dim);font-weight:500}
 .sub{color:var(--dim);font-size:13px;margin-top:4px}
+.theme{flex:none;font:12px/1 inherit;color:var(--dim);background:var(--tile);
+  border:1px solid var(--line);border-radius:7px;padding:6px 9px;cursor:pointer}
+.theme:hover{color:var(--fg)}
 .newbar{margin:16px 0 0;font-size:13px;color:var(--accent)}
 .newbar a{color:var(--dim);text-decoration:underline;cursor:pointer;margin-left:8px}
-main{margin-top:14px;border-top:1px solid var(--line)}
-.row{display:flex;align-items:baseline;gap:12px;padding:13px 4px;
+main{margin-top:16px;border-top:1px solid var(--line)}
+.row{display:flex;align-items:center;gap:13px;padding:12px 4px;
   border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .row:hover{background:var(--hi)}
-.num{flex:none;width:58px;font:12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
-  color:var(--dim);padding-top:2px}
+.thumb{flex:none;width:46px;height:46px;border-radius:8px;background:var(--tile);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative}
+.thumb img{width:100%;height:100%;object-fit:contain}
+.thumb b{font:11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
 .name{flex:1;min-width:0}
-.name .t{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.name .shop{color:var(--dim);font-size:12.5px}
-.row.is-new .name .t::after{content:" · new";color:var(--new);font-size:12px}
-.fig{flex:none;text-align:right;white-space:nowrap}
-.fig .buy{font:13px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim);
-  display:block}
-.fig .gap{font-weight:600;color:var(--accent)}
-.empty{color:var(--dim);padding:40px 4px;text-align:center}
+.name .t{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font-weight:500}
+.name .m{color:var(--dim);font-size:12.5px;margin-top:2px}
+.row.is-new .name .t::after{content:" · new";color:var(--new);font-size:12px;
+  font-weight:600}
+.fig{flex:none;text-align:right;white-space:nowrap;line-height:1.25}
+.fig .buy{font:14px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
+.fig .gap{display:block;margin-top:3px;font-size:20px;font-weight:700;
+  color:var(--accent);letter-spacing:-.01em}
+.fig .gap small{font-size:12px;font-weight:600;color:var(--dim)}
+.empty{color:var(--dim);padding:44px 4px;text-align:center}
 .gone{color:var(--dim);font-size:12.5px;margin-top:18px}
 footer{margin-top:34px;color:var(--dim);font-size:12px;line-height:1.6}
+@media(max-width:520px){.fig .gap{font-size:18px}.thumb{width:40px;height:40px}}
 """
 
 _JS = r"""
 (function(){
-  var rows=[].slice.call(document.querySelectorAll('.row'));
+  var root=document.documentElement;
   var LS={g:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
           s:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+  var modes=[['','Auto'],['light','Light'],['dark','Dark']];
+  var tb=document.getElementById('theme'), cur=LS.g('lds-theme')||'';
+  function apply(m){
+    if(m) root.setAttribute('data-theme',m); else root.removeAttribute('data-theme');
+    var f=modes.filter(function(x){return x[0]===m})[0]||modes[0];
+    if(tb) tb.textContent=f[1];
+  }
+  apply(cur);
+  if(tb) tb.addEventListener('click',function(){
+    var i=0; for(var j=0;j<modes.length;j++){if(modes[j][0]===cur)i=j;}
+    cur=modes[(i+1)%modes.length][0]; LS.s('lds-theme',cur); apply(cur);
+  });
+
+  var rows=[].slice.call(document.querySelectorAll('.row'));
   var prev={}; try{prev=JSON.parse(LS.g('lds')||'{}')||{}}catch(e){}
-  var first=!Object.keys(prev).length, n=0, cur={};
+  var first=!Object.keys(prev).length, n=0, cmap={};
   rows.forEach(function(r){
-    var k=r.dataset.key, p=parseFloat(r.dataset.price)||0; cur[k]=p;
+    var k=r.dataset.key, p=parseFloat(r.dataset.price)||0; cmap[k]=p;
     if(first) return;
     if(!(k in prev) || p<prev[k]-0.01){ r.classList.add('is-new'); n++; }
   });
   var bar=document.getElementById('new');
   if(bar && n){
     bar.hidden=false;
-    bar.innerHTML=n+(n===1?' new or cheaper':' new or cheaper')+' since your last visit'+
-      ' <a id="x">clear</a>';
+    bar.innerHTML=n+' new or cheaper since your last visit <a id="x">clear</a>';
     var x=document.getElementById('x');
     if(x) x.onclick=function(){rows.forEach(function(r){r.classList.remove('is-new')});bar.hidden=true;};
   }
-  function save(){LS.s('lds',JSON.stringify(cur));}
-  setTimeout(save,45000); window.addEventListener('beforeunload',save);
+  function snap(){LS.s('lds',JSON.stringify(cmap));}
+  setTimeout(snap,45000);
+  window.addEventListener('beforeunload',snap);
 })();
 """
+
+
+def _bricklink(set_num: str) -> str:
+    return f"https://img.bricklink.com/ItemImage/SN/0/{set_num}-1.png"
 
 
 def _row(d: dict) -> str:
     name = html.escape(d["name"])
     shop = html.escape(d.get("shop_name") or d.get("shop") or "")
     url = html.escape(d["url"], quote=True)
+    sn = html.escape(d["set_num"])
     key = html.escape(f'{d["set_num"]}|{d.get("shop", "")}', quote=True)
+    img = html.escape(d.get("image_url") or _bricklink(d["set_num"]), quote=True)
+
     net = d.get("net_profit_eur")
     if net is not None:
-        fig = f'~&euro;{net:.0f} profit'
+        fig = f'~&euro;{net:.0f} <small>profit</small>'
     else:
         g = d.get("margin_vs_ebay_eur")
-        fig = f'&euro;{g:.0f} under' if g is not None else f'&minus;{d["saving_pct"] * 100:.0f}%'
+        fig = (f'&euro;{g:.0f} <small>under</small>' if g is not None
+               else f'&minus;{d["saving_pct"] * 100:.0f}%')
+
     return (
         f'<a class="row" href="{url}" target="_blank" rel="noopener" '
         f'data-key="{key}" data-price="{d["price_eur"]:.2f}">'
-        f'<span class="num">{html.escape(d["set_num"])}</span>'
+        f'<span class="thumb"><img src="{img}" alt="" loading="lazy" '
+        f'onerror="this.style.display=\'none\'"><b>{sn}</b></span>'
         f'<span class="name"><span class="t">{name}</span>'
-        f'<span class="shop">{shop} &middot; &euro;{d["price_eur"]:.0f}</span></span>'
-        f'<span class="fig"><span class="gap">{fig}</span></span></a>'
+        f'<span class="m">{sn} &middot; {shop}</span></span>'
+        f'<span class="fig"><span class="buy">&euro;{d["price_eur"]:.0f}</span>'
+        f'<span class="gap">{fig}</span></span></a>'
     )
 
 
@@ -105,18 +145,14 @@ def render_html(result: dict, cfg: dict) -> str:
     seller = result.get("seller")
     who = f'<span>&middot; {html.escape(seller)}</span>' if seller else ""
 
-    if result.get("health"):
-        note = f'<p class="sub" style="color:var(--new)">{html.escape(result["health"])}</p>'
-    else:
-        note = ""
+    note = (f'<p class="sub" style="color:var(--new)">{html.escape(result["health"])}</p>'
+            if result.get("health") else "")
 
     body = "\n".join(_row(d) for d in deals) or \
         '<p class="empty">Nothing cheaper than your prices right now.</p>'
 
-    gone = ""
-    if result.get("stale"):
-        gone = (f'<p class="gone">{len(result["stale"])} looked good but sold out or '
-                f'jumped in price since.</p>')
+    gone = (f'<p class="gone">{len(result["stale"])} looked good but sold out or '
+            f'jumped in price since.</p>' if result.get("stale") else "")
 
     return f"""<!doctype html>
 <html lang="de"><head>
@@ -126,10 +162,13 @@ def render_html(result: dict, cfg: dict) -> str:
 <style>{_CSS}</style></head>
 <body><div class="wrap">
 <header>
-  <h1>LEGO deals {who}</h1>
-  <p class="sub">{len(deals)} sets a German shop has cheaper than you sell them
-    &middot; updated {html.escape(result.get('generated_at', ''))}</p>
-  {note}
+  <div>
+    <h1>LEGO deals {who}</h1>
+    <p class="sub">{len(deals)} sets a German shop has cheaper than you sell them
+      &middot; updated {html.escape(result.get('generated_at', ''))}</p>
+    {note}
+  </div>
+  <button id="theme" class="theme" type="button">Auto</button>
 </header>
 <div id="new" class="newbar" hidden></div>
 <main>
@@ -143,6 +182,7 @@ affiliated with the LEGO Group.</footer>
 <script>{_JS}</script>
 </body></html>
 """
+
 
 def render_rss(result: dict, cfg: dict) -> str:
     base = (cfg.get("public_url") or cfg.get("base_url") or "").rstrip("/")

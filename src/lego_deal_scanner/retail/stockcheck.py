@@ -21,16 +21,37 @@ _INSTOCK = re.compile(
 )
 
 
+_NOT_PRODUCT = re.compile(
+    r"/(search|suche|s\?|listing|category|kategorie|marken?|brand|cart|warenkorb|"
+    r"login|account|agb|kontakt|hilfe|filter)\b|[?&](q|search|keyword|sSearch|text)=",
+    re.I,
+)
+
+
 def _product_link(html: str, set_num: str) -> str | None:
     """Best guess at the product-page URL for `set_num` from a shop page."""
+    # 1) JSON-LD product whose name carries the set number
     for p in extract_products(html):
-        if set_num in (p.get("name") or "") and p.get("url", "").startswith("http"):
-            return p["url"]
-    # fall back: an <a href> that mentions the set number and looks like a product
+        u = p.get("url", "")
+        if set_num in (p.get("name") or "") and u.startswith("http") \
+                and not _NOT_PRODUCT.search(u):
+            return u
+    # 2) a Google organic result (when the link is a Google search)
+    gm = re.search(r'/url\?q=(https?://[^&"]+)&', html)
+    if gm and "google." not in gm.group(1):
+        from urllib.parse import unquote
+        return unquote(gm.group(1))
+    # 3) any <a href> that mentions the set number and doesn't look like a listing
     for m in re.finditer(r'href="(https?://[^"]*?%s[^"]*)"' % re.escape(set_num), html):
         u = m.group(1)
-        if not re.search(r"/(search|suche|s\?|listing)", u, re.I):
+        if not _NOT_PRODUCT.search(u):
             return u
+    # 4) og:url / canonical, if it isn't a listing page
+    for rx in (r'<meta[^>]+property="og:url"[^>]+content="([^"]+)"',
+               r'<link[^>]+rel="canonical"[^>]+href="([^"]+)"'):
+        cm = re.search(rx, html, re.I)
+        if cm and not _NOT_PRODUCT.search(cm.group(1)) and set_num in html[:6000]:
+            return cm.group(1)
     return None
 
 
