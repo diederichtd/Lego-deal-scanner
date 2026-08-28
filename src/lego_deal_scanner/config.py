@@ -83,8 +83,9 @@ DEFAULTS: dict[str, Any] = {
             "min_delay_seconds": 3.0,
             "max_retries": 2,
         },
-        "min_flip_margin_eur": 12.0,  # pre-filter: min (your price - retail price)
-        "min_net_profit_eur": 5.0,    # main list: net profit after fees + postage >= this
+        "min_flip_margin_eur": 12.0,  # the filter: show sets where your price - retail >= this
+        "profit_model": False,        # True = also subtract eBay fees + postage and rank by net profit
+        "min_net_profit_eur": 5.0,    # only used when profit_model is True
         "verify_top_n": 15,           # check the shop actually has the N best deals in stock
         "economics": {
             "ebay_fee_pct": 0.11,     # eBay.de FVF - lower for a commercial shop-abo account

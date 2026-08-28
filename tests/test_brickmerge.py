@@ -115,6 +115,7 @@ def cfg(tmp_path):
     c["retail"]["brickmerge"]["enabled"] = True
     c["retail"]["min_flip_margin_eur"] = 15.0
     c["retail"]["ebay_sold"]["enabled"] = False
+    c["retail"]["profit_model"] = True
     c["retail"]["verify_top_n"] = 0
     c["store"]["path"] = str(tmp_path / "s.sqlite3")
     c["site"]["outdir"] = str(tmp_path / "site")
@@ -138,3 +139,18 @@ def test_flip_reports_real_shop_and_skips_ebay(cfg):
     assert d["net_profit_eur"] is not None and d["net_profit_eur"] > 10
     assert d["resale_source"] == "your listed price"   # ebay_sold disabled in this cfg
     assert "verify at the shop" in d["note"]
+
+
+def test_simple_mode_shows_gap_not_profit(cfg):
+    cfg["retail"]["profit_model"] = False          # "remove the profit thing"
+    fetch = FakeFetcher({
+        "https://www.brickmerge.de/75394-1_x": PAGE_75394,
+        "https://www.brickmerge.de/10255-1_x": PAGE_10255,
+    })
+    with Store(cfg["store"]["path"]) as store:
+        result = run_watch(cfg, store, fetcher=fetch)
+    assert [d["set_num"] for d in result["deals"]] == ["75394"]
+    d = result["deals"][0]
+    assert d["net_profit_eur"] is None                       # no profit math
+    assert d["margin_vs_ebay_eur"] == pytest.approx(57.74, abs=0.01)  # 156.74 - 99
+    assert result["thin"] == []                              # no thin bucket in simple mode

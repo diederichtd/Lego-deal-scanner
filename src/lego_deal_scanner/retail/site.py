@@ -340,9 +340,13 @@ def _row(d: dict, seller: bool) -> str:
     fdays = d.get("falling_days") or 0
     fall = f'<span class="badge b-good">falling {fdays}d</span>' if fdays >= 2 else ""
 
+    mrg = d.get("margin_vs_ebay_eur")
     if net is not None:
         pcls = "pos" if net > 0 else "neg"
         amt = f'<span class="amt {pcls}">~&euro;{net:.0f}</span><span class="pct">profit</span>'
+    elif mrg is not None:
+        amt = (f'<span class="amt pos">&euro;{mrg:.0f}</span>'
+               f'<span class="pct">under your price</span>')
     else:
         amt = (f'<span class="amt">&minus;&euro;{d["saving_eur"]:.0f}</span>'
                f'<span class="pct">&minus;{d["saving_pct"] * 100:.0f}%</span>')
@@ -384,10 +388,15 @@ def render_html(result: dict, cfg: dict) -> str:
     deals = result["deals"]
     seller = result.get("seller")
     thr = result.get("threshold_pct", 0.0)
-    biggest = max((d["saving_pct"] for d in deals), default=0.0)
     nets = [d["net_profit_eur"] for d in deals if d.get("net_profit_eur") is not None]
-    total_profit = sum(n for n in nets if n > 0)
-    best_profit = max(nets) if nets else 0
+    profit_mode = bool(nets)
+    if profit_mode:
+        head_val = [n for n in nets if n > 0]
+    else:
+        head_val = [d["margin_vs_ebay_eur"] for d in deals
+                    if d.get("margin_vs_ebay_eur") is not None]
+    best_val = max(head_val) if head_val else 0
+    total_val = sum(v for v in head_val if v > 0)
     confirmed = sum(1 for d in deals if d.get("verified") is True)
 
     shops = sorted({(d.get("shop_name") or d["shop"]) for d in deals}, key=str.lower)
@@ -397,10 +406,14 @@ def render_html(result: dict, cfg: dict) -> str:
     )
 
     who = f'<span class="who">· {html.escape(seller)}</span>' if seller else ""
-    if seller:
+    if seller and profit_mode:
         lede = (f'Sets <b>{html.escape(seller)}</b> sells that you can buy cheaper right '
                 f'now at a German shop. &ldquo;profit&rdquo; = expected resale minus the '
                 f'shop price, eBay&rsquo;s ~12% fee, and postage. Verify stock before buying.')
+    elif seller:
+        lede = (f'Sets <b>{html.escape(seller)}</b> sells that a German shop has cheaper '
+                f'than your eBay price right now. The number is the gap &mdash; eBay fees '
+                f'and postage still come off. Verify stock before buying.')
     else:
         lede = (f'LEGO sets currently {thr * 100:.0f}%+ below LEGO.de across German '
                 f'shops. Updated hourly.')
@@ -408,10 +421,12 @@ def render_html(result: dict, cfg: dict) -> str:
     hbanner = (f'<div class="ribbon">&#9888; {html.escape(result["health"])}</div>'
                if result.get("health") else "")
 
+    _bl = "best single profit" if profit_mode else "biggest gap vs your price"
+    _tl = "total profit if you bought all" if profit_mode else "total gap if you bought all"
     tiles = f"""<div class="tiles">
-    <div class="tile"><div class="n">{len(deals)}</div><div class="l">worth flipping</div></div>
-    <div class="tile good"><div class="n">&euro;{best_profit:.0f}</div><div class="l">best single profit</div></div>
-    <div class="tile good"><div class="n">&euro;{total_profit:.0f}</div><div class="l">total if you bought all</div></div>
+    <div class="tile"><div class="n">{len(deals)}</div><div class="l">cheaper than you sell</div></div>
+    <div class="tile good"><div class="n">&euro;{best_val:.0f}</div><div class="l">{_bl}</div></div>
+    <div class="tile good"><div class="n">&euro;{total_val:.0f}</div><div class="l">{_tl}</div></div>
     <div class="tile"><div class="n">{confirmed}</div><div class="l">stock confirmed</div></div>
   </div>"""
 
@@ -438,7 +453,10 @@ def render_html(result: dict, cfg: dict) -> str:
             f'<b>{cov["on_sale"]}</b> on sale now{gap}</div>'
         )
 
-    sort_opts = [("net", "profit"), ("price", "shop price"), ("pct", "% off UVP")]
+    sort_opts = ([("net", "profit"), ("price", "shop price"), ("pct", "% off UVP")]
+                 if profit_mode else
+                 [("margin", "gap vs your price"), ("price", "shop price"),
+                  ("pct", "% off UVP")])
     sort_html = "".join(f'<option value="{v}">{lbl}</option>' for v, lbl in sort_opts)
 
     conf_toggle = ('<label><input type="checkbox" id="confonly"> stock-confirmed only</label>'

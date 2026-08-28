@@ -232,14 +232,15 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             merged = [d for d in merged if (d.get("margin_vs_ebay_eur") or 0) > 0]
         merged.sort(key=lambda d: -(d.get("margin_vs_ebay_eur") or d["saving_eur"]))
 
-    # 5) real money: resale value (eBay sold), net profit, trend, stock check
+    # 5) enrich: eBay sold value, price trend, and (optionally) a net-profit model
+    profit_on = bool(rcfg.get("profit_model", False))
     econ = Economics.from_dict(rcfg.get("economics"))
     sold_cfg = rcfg.get("ebay_sold") or {}
     min_solds = int(sold_cfg.get("min_solds", 2))
     min_net = float(rcfg.get("min_net_profit_eur", 0.0))
     priced = [d for d in merged if d.get("ebay_price_eur")]
     for d in priced:
-        sv = sold_value(d["set_num"], fetcher, store, sold_cfg)
+        sv = sold_value(d["set_num"], fetcher, store, sold_cfg) if profit_on else None
         if sv and sv.get("median") and (sv.get("count") or 0) >= min_solds:
             resale = sv["median"]
             d["resale_source"] = f"eBay sold ~{sv['count']}x/{sold_cfg.get('days', 90)}d"
@@ -248,16 +249,23 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             resale = d["ebay_price_eur"]
             d["resale_source"] = "your listed price"
             d["sold_count"] = sv["count"] if sv else None
-        d.update(net_profit(resale, d["price_eur"], econ))
+        if profit_on:
+            d.update(net_profit(resale, d["price_eur"], econ))
+        else:
+            d["net_profit_eur"] = None
+            d["resale_eur"] = round(resale, 2)
         d["falling_days"] = store.falling_days(d["shop"], d["set_num"])
 
-    def _n(d):
-        return d.get("net_profit_eur")
-
-    kept = sorted((d for d in priced if _n(d) is not None and _n(d) >= min_net),
-                  key=lambda d: -_n(d))
-    thin = sorted((d for d in priced if _n(d) is not None and 0 <= _n(d) < min_net),
-                  key=lambda d: -_n(d))
+    if profit_on:
+        _n = lambda d: d.get("net_profit_eur")
+        kept = sorted((d for d in priced if _n(d) is not None and _n(d) >= min_net),
+                      key=lambda d: -_n(d))
+        thin = sorted((d for d in priced if _n(d) is not None and 0 <= _n(d) < min_net),
+                      key=lambda d: -_n(d))
+    else:
+        # simple mode: everything that passed the min_flip_margin gate, biggest gap first
+        kept = sorted(priced, key=lambda d: -(d.get("margin_vs_ebay_eur") or 0))
+        thin = []
 
     # 6) verify the best N are actually in stock at that price
     for d in kept[: int(rcfg.get("verify_top_n", 0))]:

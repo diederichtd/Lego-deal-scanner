@@ -73,7 +73,7 @@ def send_digest(url: str | None, result: dict, top: int = 12) -> bool:
         for d in deals[:top]:
             net = d.get("net_profit_eur")
             gain = (f"~EUR {net:.0f} profit" if net is not None
-                    else (f"+EUR {d['margin_vs_ebay_eur']:.0f} margin"
+                    else (f"EUR {d['margin_vs_ebay_eur']:.0f} under your price"
                           if d.get("margin_vs_ebay_eur") is not None else ""))
             flags = []
             if d.get("verified") is True:
