@@ -47,10 +47,13 @@ def _price(text: str) -> Optional[float]:
 
 def parse_feed(xml_text: str, known_sets: Iterable[str] = ()) -> list[DealPost]:
     known = set(known_sets)
+    if not xml_text or not xml_text.lstrip().startswith("<?xml"):
+        log.info("mydealz: feed did not return RSS (got HTML?) - skipping")
+        return []
     try:
         root = ET.fromstring(xml_text)
     except ET.ParseError as exc:
-        log.warning("mydealz: bad RSS: %s", exc)
+        log.info("mydealz: bad RSS (%s) - skipping", exc)
         return []
 
     posts: list[DealPost] = []

@@ -243,25 +243,26 @@ _JS = r"""
 
   var board=document.getElementById('board'); if(!board) return;
   var rows=[].slice.call(board.querySelectorAll('.row'));
-  var sortSel=document.getElementById('sort'), stock=document.getElementById('stockonly'),
+  var sortSel=document.getElementById('sort'), okonly=document.getElementById('confonly'),
       count=document.getElementById('count'), copyBtn=document.getElementById('copy');
   var chips=[].slice.call(document.querySelectorAll('.chip')); var active=new Set();
-  function num(r,k){return parseFloat(r.dataset[k]||'0')||0;}
+  function num(r,k){var v=parseFloat(r.dataset[k]); return isNaN(v)?0:v;}
   function apply(){
-    var key=sortSel?sortSel.value:'pct';
-    rows.sort(function(a,b){return num(b,key)-num(a,key);});
+    var key=sortSel?sortSel.value:'net';
+    var asc=(key==='price');
+    rows.sort(function(a,b){return asc?num(a,key)-num(b,key):num(b,key)-num(a,key);});
     rows.forEach(function(r){board.appendChild(r);});
     var shown=0;
     rows.forEach(function(r){
       var ok=true;
       if(active.size && !active.has(r.dataset.shop)) ok=false;
-      if(stock && stock.checked && r.dataset.instock!=='1') ok=false;
+      if(okonly && okonly.checked && r.dataset.verified!=='1') ok=false;
       r.style.display=ok?'':'none'; if(ok) shown++;
     });
-    if(count) count.textContent=shown+' shown';
+    if(count) count.textContent=shown+(shown===1?' deal':' deals');
   }
   if(sortSel) sortSel.addEventListener('change',apply);
-  if(stock) stock.addEventListener('change',apply);
+  if(okonly) okonly.addEventListener('change',apply);
   chips.forEach(function(c){c.addEventListener('click',function(){
     var s=c.dataset.shop, on=c.getAttribute('aria-pressed')==='true';
     c.setAttribute('aria-pressed',!on);
@@ -351,11 +352,12 @@ def _row(d: dict, seller: bool) -> str:
                if d.get("ebay_url") else "")
 
     return f"""<div class="row" style="--stripe:var({stripe})"
-  data-shop="{html.escape(d['shop'])}" data-shopname="{shop}"
+  data-shop="{html.escape((d.get('shop_name') or d['shop']).lower())}" data-shopname="{shop}"
   data-set="{html.escape(d['set_num'])}" data-price="{d['price_eur']:.2f}"
   data-pct="{d['saving_pct'] * 100:.1f}" data-saved="{d['saving_eur']:.2f}"
   data-margin="{d.get('margin_vs_ebay_eur') or 0:.2f}"
-  data-net="{net if net is not None else -999:.2f}" data-instock="{instock}">
+  data-net="{net if net is not None else -999:.2f}"
+  data-instock="{instock}" data-verified="{'1' if d.get('verified') is True else '0'}">
   <a class="hit" href="{url}" target="_blank" rel="noopener"
      aria-label="Open {name} at {shop}"></a>
   <span class="thumb">{'<img src="' + img + '" alt="" loading="lazy" onerror="this.remove()">' if img else ''}<b>{html.escape(d['set_num'])}</b></span>
@@ -388,10 +390,10 @@ def render_html(result: dict, cfg: dict) -> str:
     best_profit = max(nets) if nets else 0
     confirmed = sum(1 for d in deals if d.get("verified") is True)
 
-    shops = sorted({(d["shop"], d.get("shop_name") or d["shop"]) for d in deals})
+    shops = sorted({(d.get("shop_name") or d["shop"]) for d in deals}, key=str.lower)
     chips = "".join(
-        f'<span class="chip" role="button" aria-pressed="false" data-shop="{html.escape(k)}">'
-        f'{html.escape(n)}</span>' for k, n in shops
+        f'<span class="chip" role="button" aria-pressed="false" '
+        f'data-shop="{html.escape(n.lower())}">{html.escape(n)}</span>' for n in shops
     )
 
     who = f'<span class="who">· {html.escape(seller)}</span>' if seller else ""
@@ -442,10 +444,10 @@ def render_html(result: dict, cfg: dict) -> str:
     controls = f"""<div class="controls">
     <select id="sort" aria-label="Sort by">{sort_html}</select>
     {chips}
-    <label><input type="checkbox" id="stockonly"> in stock only</label>
-    <label><input type="checkbox" id="auto"> auto 15m</label>
+    <label><input type="checkbox" id="confonly"> stock-confirmed only</label>
+    <label><input type="checkbox" id="auto"> auto-refresh</label>
     <button id="copy" type="button">Copy list</button>
-    <span class="count" id="count">{len(deals)} shown</span>
+    <span class="count" id="count">{len(deals)} deals</span>
   </div>"""
 
     aux = ""
