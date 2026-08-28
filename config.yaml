@@ -1,0 +1,56 @@
+# knoppers55 flip-watch config. Run: lego-deal-scanner watch -c config.yaml
+watchlist: ["lego"]
+
+sources:
+  fixture: {enabled: false}
+  kleinanzeigen: {enabled: false}
+  ebay_de: {enabled: false}
+
+valuation:
+  reference_csv: data/reference_prices.csv
+  prefer: market
+
+retail:
+  catalog_csv: data/knoppers55_catalog.csv   # your 408 eBay sets + your prices
+  min_discount_pct: 0.12
+  min_price_eur: 25.0
+  min_flip_margin_eur: 15.0                   # only flag if (your eBay price - retail) >= this
+  shops_enabled: [otto, mueller, thalia, joybuy, smyths, proshop, galeria]
+  sale_pages: {}
+  amazon: {enabled: false}
+  mydealz:
+    enabled: true
+    feeds: ["https://www.mydealz.de/gruppe/lego-rss"]
+  brickmerge:
+    enabled: true
+    max_sets: 120            # bestsellers first; raise toward 408 for full coverage
+    min_deal_score: 0
+  ebay_seller:
+    enabled: false           # set true + add API keys to refresh prices live instead of the CSV
+    seller: "knoppers55"
+    mode: browse_api
+    client_id: null
+    client_secret: null
+
+  http:
+    user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+    timeout: 20
+    min_delay_seconds: 3.0
+    max_retries: 2
+
+store:
+  path: data/scanner.sqlite3
+
+notify:
+  console: true
+  json_out: data/deals.latest.json
+  webhook_url: null           # paste a Discord/Slack incoming webhook to get pinged
+
+site:
+  outdir: site_out
+  title: "knoppers55 · LEGO flip watch"
+  public_url: ""
+  deploy:
+    mode: none                # git | rsync | netlify | folder  (see README)
+    branch: gh-pages
+    remote_url: ""

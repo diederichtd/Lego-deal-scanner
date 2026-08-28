@@ -1,0 +1,133 @@
+# Copy to config.yaml and edit. `lego-deal-scanner init` does this for you.
+
+# Search terms sent to every enabled marketplace source.
+watchlist:
+  - "lego 10300"
+  - "lego 75192"
+  - "lego 21318"
+  - "lego 10276"
+  - "lego konvolut"
+
+sources:
+  fixture:
+    enabled: true                # offline sample data — good for a first run / tests
+    path: data/fixture_listings.json
+
+  kleinanzeigen:
+    # NOTE: kleinanzeigen.de has no public API and its ToS forbid automated access.
+    # It also blocks bots aggressively. Enable only if you accept that risk, and keep
+    # the delay high. Prefer official APIs where you can.
+    enabled: false
+    max_pages: 2
+    delay_seconds: 8.0
+    price_min: 20
+    price_max: 2000
+    user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+
+  ebay_de:
+    enabled: false
+    mode: browse_api             # browse_api (needs keys) | html
+    client_id: null              # from developer.ebay.com application keys
+    client_secret: null
+    max_results: 100
+    price_min: 20
+    price_max: 2000
+
+valuation:
+  reference_csv: data/reference_prices.csv
+  prefer: market                 # market (use mv_* columns) | rrp
+  bricklink:
+    enabled: false               # pip install "lego-deal-scanner[bricklink]"
+    consumer_key: null
+    consumer_secret: null
+    token: null
+    token_secret: null
+
+scoring:
+  marketplace_fee_pct: 0.11      # eBay.de final value fee, private seller ~ 0
+  payment_fee_pct: 0.0
+  payment_fee_fixed: 0.0
+  packaging_eur: 1.20
+  resale_haircut_pct: 0.08       # discount vs reference value to actually sell it
+  assumed_shipping_in_eur: 5.49  # used when a listing offers shipping but no price
+  default_shipping_out_eur: 6.99
+  shipping_out_by_weight:        # grams -> EUR, first tier >= parcel weight wins
+    1000: 4.99
+    2000: 5.99
+    5000: 6.99
+    31500: 10.49
+  refurb_cost_used_eur: 0.0
+  min_profit_eur: 20.0           # DEAL needs at least this net profit ...
+  min_roi: 0.30                  # ... and at least this return on cash in
+  watch_roi: 0.15               # anything profitable above this is a WATCH
+
+store:
+  path: data/scanner.sqlite3
+
+notify:
+  console: true
+  json_out: data/deals.latest.json
+  webhook_url: null              # Discord or Slack compatible incoming webhook
+
+# ------------------------------------------------------------------ #
+# `watch` command: retail drop monitor -> standalone deals website
+# ------------------------------------------------------------------ #
+retail:
+  catalog_csv: data/catalog.csv   # your sets + per-shop URLs (see catalog.example.csv)
+  min_saving_eur: 3.0             # ignore tiny differences vs LEGO.de
+  min_discount_pct: 0.12          # only show sets >=12% below LEGO.de (raise to 0.15 to tighten)
+  min_price_eur: 25.0             # skip cheap sets not worth the effort
+  sale_pages:                     # shop -> LEGO sale/clearance listing pages
+    # discovery reads EVERY discounted set off these pages - no per-set URL needed
+    otto: []                      # e.g. ["https://www.otto.de/spielzeug/lego/lego-angebote/"]
+    galeria: []
+    mueller: []
+    thalia: []
+  shops_enabled:
+    - lego                        # LEGO.de = the reference price
+    - otto
+    - mueller
+    - thalia
+    - joybuy
+    - smyths
+    - proshop
+    - galeria
+  http:
+    user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+    timeout: 20
+    min_delay_seconds: 3.0        # per-domain politeness gap
+    max_retries: 2
+  amazon:
+    enabled: false                # scraping Amazon is unreliable; use PA-API instead
+  mydealz:
+    enabled: true
+    feeds:
+      # grab the RSS link off any mydealz group or saved-search page
+      - "https://www.mydealz.de/gruppe/lego-rss"
+
+  ebay_seller:
+    # Restrict the whole board to set numbers YOU currently list on eBay, and show
+    # the margin between your eBay price and each retailer deal.
+    enabled: false
+    seller: "knoppers55"           # your eBay username
+    mode: browse_api               # browse_api (free app keys) | html (keyless, brittle)
+    client_id: null
+    client_secret: null
+    require_below_ebay: false       # true = only show sets cheaper than your own price
+
+site:
+  outdir: site_out                # `watch` rewrites index.html + deals.json + feed.xml here
+  title: "LEGO Deals DE"
+  public_url: ""                  # where it's hosted; shown after deploy + used in RSS
+  preview_note: ""                # banner text; set for a layout preview
+  deploy:
+    mode: none                    # none | folder | rsync | netlify | git
+    # git mode (GitHub Pages / any git host):
+    branch: gh-pages
+    remote_url: ""                # git@github.com:you/lego-deals.git  (set once)
+    # rsync mode:
+    target: ""                    # you@host:/var/www/legodeals/
+    # netlify mode:
+    site_id: ""
+    # folder mode:
+    dest: ""                      # e.g. ~/Library/Mobile Documents/com~apple~CloudDocs/legodeals

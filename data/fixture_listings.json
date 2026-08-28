@@ -1,0 +1,102 @@
+[
+  {
+    "listing_id": "fx-1001",
+    "title": "LEGO 10300 Back to the Future DeLorean Zeitmaschine NEU OVP",
+    "url": "https://example.invalid/lego-10300-neu-ovp",
+    "price_eur": 120.0,
+    "shipping_eur": null,
+    "description": "Neu und original versiegelt, ungeoeffnet. Versand als Paket moeglich.",
+    "location": "10115 Berlin",
+    "posted_at": "2026-08-27"
+  },
+  {
+    "listing_id": "fx-1002",
+    "title": "LEGO Star Wars 75192 Millennium Falcon UCS gebraucht komplett",
+    "url": "https://example.invalid/lego-75192-gebraucht",
+    "price_eur": 430.0,
+    "shipping_eur": null,
+    "description": "Gebraucht, einmal aufgebaut, vollstaendig mit BA und Box. Nur Abholung.",
+    "location": "80331 Muenchen",
+    "posted_at": "2026-08-26"
+  },
+  {
+    "listing_id": "fx-1003",
+    "title": "LEGO Ideas 21318 Baumhaus neu versiegelt",
+    "url": "https://example.invalid/lego-21318-neu",
+    "price_eur": 170.0,
+    "shipping_eur": null,
+    "description": "Neu, versiegelt. Versand moeglich.",
+    "location": "20095 Hamburg",
+    "posted_at": "2026-08-27"
+  },
+  {
+    "listing_id": "fx-1004",
+    "title": "LEGO 10281 Bonsai Baum NEU",
+    "url": "https://example.invalid/lego-10281-neu",
+    "price_eur": 40.0,
+    "shipping_eur": null,
+    "description": "Neu und ungeoeffnet. Versand moeglich.",
+    "location": "50667 Koeln",
+    "posted_at": "2026-08-25"
+  },
+  {
+    "listing_id": "fx-1005",
+    "title": "LEGO Konvolut 6 kg gemischt Basic Steine Platten",
+    "url": "https://example.invalid/lego-konvolut",
+    "price_eur": 55.0,
+    "shipping_eur": null,
+    "description": "Grosses gemischtes Konvolut, gebraucht bespielt. Kiloware.",
+    "location": "04109 Leipzig",
+    "posted_at": "2026-08-27"
+  },
+  {
+    "listing_id": "fx-1006",
+    "title": "LEGO Technic 42115 Lamborghini Sian NEU OVP",
+    "url": "https://example.invalid/lego-42115-neu",
+    "price_eur": 500.0,
+    "shipping_eur": null,
+    "description": "Neu, versiegelt, ungeoeffnet. Versand moeglich.",
+    "location": "70173 Stuttgart",
+    "posted_at": "2026-08-24"
+  },
+  {
+    "listing_id": "fx-1007",
+    "title": "LEGO Harry Potter 71043 Schloss Hogwarts gebraucht komplett",
+    "url": "https://example.invalid/lego-71043-gebraucht",
+    "price_eur": 220.0,
+    "shipping_eur": null,
+    "description": "Gebraucht, komplett und vollstaendig. Versand moeglich als Paket.",
+    "location": "60311 Frankfurt",
+    "posted_at": "2026-08-27"
+  },
+  {
+    "listing_id": "fx-1008",
+    "title": "LEGO 10276 Kolosseum NEU OVP ungeoeffnet",
+    "url": "https://example.invalid/lego-10276-neu",
+    "price_eur": 320.0,
+    "shipping_eur": null,
+    "description": "Neu und versiegelt. Versand moeglich.",
+    "location": "01067 Dresden",
+    "posted_at": "2026-08-27"
+  },
+  {
+    "listing_id": "fx-1009",
+    "title": "LEGO 10300 Zurueck in die Zukunft DeLorean - NEU, nur Abholung",
+    "url": "https://example.invalid/lego-10300-abholung",
+    "price_eur": 125.0,
+    "shipping_eur": null,
+    "description": "Neu, versiegelt. Nur Abholung in Muenchen, kein Versand.",
+    "location": "81667 Muenchen",
+    "posted_at": "2026-08-27"
+  },
+  {
+    "listing_id": "fx-1010",
+    "title": "LEGO 21330 Home Alone Kevin allein zu Haus gebraucht Teile fehlen",
+    "url": "https://example.invalid/lego-21330-unvollstaendig",
+    "price_eur": 90.0,
+    "shipping_eur": null,
+    "description": "Gebraucht, leider unvollstaendig, ein paar Teile fehlen. Versand moeglich.",
+    "location": "90402 Nuernberg",
+    "posted_at": "2026-08-26"
+  }
+]
