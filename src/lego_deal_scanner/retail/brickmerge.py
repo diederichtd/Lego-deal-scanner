@@ -41,7 +41,11 @@ _TITLE_SHIP = re.compile(r"\+\s*Versand\s*([\d.]+,\d{2})\s*" + _EURO)
 _TITLE_TIME = re.compile(r"Preisangabe vom\s*([\d.]+,?\s*[\d:]+\s*Uhr)")
 _GO2 = re.compile(r"(?:go2m=|[?&]m=)(\d+).*?(?:go2i=|[?&]i=)([\w-]+)")
 
-_MARKETPLACE = re.compile(r"\bebay\b|marketplace|kleinanzeigen", re.I)
+_MARKETPLACE = re.compile(
+    r"\bebay\b|marketplace|kleinanzeigen|"
+    r"amazon\s*\(\s*(?:fr|es|it|nl|pl|se|be|co\.uk|com|us)\s*\)",  # foreign Amazon = import
+    re.I,
+)
 
 
 def _eur(s: str | None) -> Optional[float]:

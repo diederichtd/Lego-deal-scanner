@@ -71,6 +71,34 @@ def test_parse_flags_ebay_and_coupon_offer():
     assert bp.best_eur == pytest.approx(236.09, abs=0.01)   # 225.60 + 10.49 shipping
 
 
+def test_parse_flags_foreign_amazon():
+    body = ('Top-Angebot:<div class="topprice"><a href="/go2/?m=9&i=60367-1" '
+            'title="Link zu amazon (FR) - 20,00 &euro; (20%) gespart - Preisangabe vom '
+            '28.08., 12:00 Uhr: 71,89 &euro;*"><img alt="amazon (FR)"></a></div>')
+    bp = parse(_page("x ab 71,89 &euro;", body), "60367", "u")
+    assert bp.marketplace is True          # foreign Amazon = import -> skipped upstream
+
+
+def test_run_skips_absurdly_low_price(cfg, tmp_path):
+    # a "30er box" polybag priced at EUR 7.71 while the user sells the set for EUR 119
+    cat = tmp_path / "cat2.csv"
+    cat.write_text(
+        "set_num,name,rrp_eur,lego_url,retailer_urls,ebay_price_eur,ebay_sold\n"
+        "30727,TIE box,,,,119.70,50\n", encoding="utf-8")
+    cfg["retail"]["catalog_csv"] = str(cat)
+    bad = _page(
+        "LEGO 30727 Preisvergleich ab 7,71 &euro;",
+        '30727 kostet aktuell ab 7,71 &euro; statt UVP 15,00 &euro;. akt. UVP: 15,00 &euro;. '
+        '<div class="topprice"><a href="/go2/?m=1&i=30727-1" '
+        'title="Link zu toymi.eu - 2,00 &euro; (20%) gespart - Preisangabe vom 28.08., '
+        '12:00 Uhr: 7,71 &euro;*"><img alt="toymi.eu"></a></div>',
+    )
+    fetch = FakeFetcher({"https://www.brickmerge.de/30727-1_x": bad})
+    with Store(cfg["store"]["path"]) as store:
+        result = run_watch(cfg, store, fetcher=fetch)
+    assert result["deals"] == [] and (result.get("thin") or []) == []
+
+
 @pytest.fixture
 def cfg(tmp_path):
     cat = tmp_path / "catalog.csv"

@@ -441,10 +441,12 @@ def render_html(result: dict, cfg: dict) -> str:
     sort_opts = [("net", "profit"), ("price", "shop price"), ("pct", "% off UVP")]
     sort_html = "".join(f'<option value="{v}">{lbl}</option>' for v, lbl in sort_opts)
 
+    conf_toggle = ('<label><input type="checkbox" id="confonly"> stock-confirmed only</label>'
+                   if confirmed else "")
     controls = f"""<div class="controls">
     <select id="sort" aria-label="Sort by">{sort_html}</select>
     {chips}
-    <label><input type="checkbox" id="confonly"> stock-confirmed only</label>
+    {conf_toggle}
     <label><input type="checkbox" id="auto"> auto-refresh</label>
     <button id="copy" type="button">Copy list</button>
     <span class="count" id="count">{len(deals)} deals</span>

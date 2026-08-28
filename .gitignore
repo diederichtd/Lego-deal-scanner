@@ -8,3 +8,4 @@ data/scanner.sqlite3
 data/deals.latest.json
 site_out/
 .pytest_cache/
+.github/workflows/watch.yml

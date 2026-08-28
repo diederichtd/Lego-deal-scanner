@@ -147,6 +147,13 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             if bp.url in seen_urls:
                 continue
             ep = row.ebay_price_eur
+            ref_for_sanity = ep or ref
+            if ref_for_sanity and bp.best_eur < ref_for_sanity * 0.30:
+                # a price this far below the sale value is a parse error, a single
+                # polybag priced as a "30er Box", or a wrong SKU match - not a deal
+                log.info("brickmerge: %s EUR %.2f is <30%% of EUR %.2f - skipping as bad data",
+                         row.set_num, bp.best_eur, ref_for_sanity)
+                continue
             if ep is not None:
                 # you told us your selling price: only flag a real buy-to-resell margin
                 take = (ep - bp.best_eur) >= min_flip
