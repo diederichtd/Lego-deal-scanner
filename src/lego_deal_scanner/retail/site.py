@@ -61,7 +61,6 @@ main{margin-top:16px;border-top:1px solid var(--line)}
   color:var(--accent);letter-spacing:-.01em}
 .fig .gap small{font-size:12px;font-weight:600;color:var(--dim)}
 .empty{color:var(--dim);padding:44px 4px;text-align:center}
-.gone{color:var(--dim);font-size:12.5px;margin-top:18px}
 footer{margin-top:34px;color:var(--dim);font-size:12px;line-height:1.6}
 @media(max-width:520px){.fig .gap{font-size:18px}.thumb{width:40px;height:40px}}
 """
@@ -151,9 +150,6 @@ def render_html(result: dict, cfg: dict) -> str:
     body = "\n".join(_row(d) for d in deals) or \
         '<p class="empty">Nothing cheaper than your prices right now.</p>'
 
-    gone = (f'<p class="gone">{len(result["stale"])} looked good but sold out or '
-            f'jumped in price since.</p>' if result.get("stale") else "")
-
     return f"""<!doctype html>
 <html lang="de"><head>
 <meta charset="utf-8">
@@ -174,7 +170,6 @@ def render_html(result: dict, cfg: dict) -> str:
 <main>
 {body}
 </main>
-{gone}
 <footer>Links go to the shop's page for that set &mdash; confirm the set, price
 and stock before buying. Prices via brickmerge.de, minutes to hours old. Not
 affiliated with the LEGO Group.</footer>
