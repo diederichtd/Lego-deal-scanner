@@ -1,0 +1,5058 @@
+{
+  "generated_at": "2026-09-05 16:23",
+  "generated_ts": 1788625417.633881,
+  "checked": 408,
+  "threshold_pct": 0.12,
+  "deals": [
+    {
+      "set_num": "75419",
+      "name": "LEGO® Star Wars 75419 Todesstern EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Alza",
+      "note": "Alza had it cheapest as of 05.09.2026, 18:02 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75419+Alza",
+      "price_eur": 781.39,
+      "lego_price_eur": 950.0,
+      "saving_eur": 168.61,
+      "saving_pct": 0.1775,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75419-1.png",
+      "compare_url": "https://www.brickmerge.de/75419-1_x",
+      "deal_score": 56,
+      "ebay_price_eur": 950.0,
+      "margin_vs_ebay_eur": 168.61,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 950.0,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75367",
+      "name": "Star Wars 75367 Venator-Klasse Angriffskreuzer",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:17 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75367+Proshop",
+      "price_eur": 479.0,
+      "lego_price_eur": 623.99,
+      "saving_eur": 144.99,
+      "saving_pct": 0.2324,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75367-1.png",
+      "compare_url": "https://www.brickmerge.de/75367-1_x",
+      "deal_score": 68,
+      "ebay_price_eur": 623.99,
+      "margin_vs_ebay_eur": 144.99,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 623.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75382",
+      "name": "Star Wars 75382 TIE-Abfangjäger",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75382+Proshop",
+      "price_eur": 179.0,
+      "lego_price_eur": 239.99,
+      "saving_eur": 60.99,
+      "saving_pct": 0.2541,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75382-1.png",
+      "compare_url": "https://www.brickmerge.de/75382-1_x",
+      "deal_score": 61,
+      "ebay_price_eur": 239.99,
+      "margin_vs_ebay_eur": 60.99,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 239.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75192",
+      "name": "LEGO® Star Wars 75192 Millennium Falcon UCS NEU OVP!",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:07 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75192+Lucky+Bricks",
+      "price_eur": 749.95,
+      "lego_price_eur": 849.99,
+      "saving_eur": 100.04,
+      "saving_pct": 0.1177,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75192-1.png",
+      "compare_url": "https://www.brickmerge.de/75192-1_x",
+      "deal_score": 40,
+      "ebay_price_eur": 799.0,
+      "margin_vs_ebay_eur": 49.05,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 799.0,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42224",
+      "name": "Technic 42224 Porsche 911 GT3 R REXY AO Racing",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42224+amazon",
+      "price_eur": 93.99,
+      "lego_price_eur": 139.99,
+      "saving_eur": 46.0,
+      "saving_pct": 0.3286,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42224-1.png",
+      "compare_url": "https://www.brickmerge.de/42224-1_x",
+      "deal_score": 55,
+      "ebay_price_eur": 139.99,
+      "margin_vs_ebay_eur": 46.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 139.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21063",
+      "name": "Architecture 21063 Schloss Neuschwanstein",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21063+amazon",
+      "price_eur": 179.99,
+      "lego_price_eur": 224.63,
+      "saving_eur": 44.64,
+      "saving_pct": 0.1987,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21063-1.png",
+      "compare_url": "https://www.brickmerge.de/21063-1_x",
+      "deal_score": 63,
+      "ebay_price_eur": 224.63,
+      "margin_vs_ebay_eur": 44.64,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 224.63,
+      "falling_days": 3,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "71847",
+      "name": "Ninjago 71847 Der Wächterdrache",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:16 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+71847+Steinehelden",
+      "price_eur": 109.89,
+      "lego_price_eur": 149.99,
+      "saving_eur": 40.1,
+      "saving_pct": 0.2674,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/71847-1.png",
+      "compare_url": "https://www.brickmerge.de/71847-1_x",
+      "deal_score": 49,
+      "ebay_price_eur": 149.99,
+      "margin_vs_ebay_eur": 40.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 149.99,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75397",
+      "name": "LEGO® Star Wars 75397 Jabbas Segelbarke EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:06 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75397+Proshop",
+      "price_eur": 373.99,
+      "lego_price_eur": 413.99,
+      "saving_eur": 40.0,
+      "saving_pct": 0.0966,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75397-1.png",
+      "compare_url": "https://www.brickmerge.de/75397-1_x",
+      "deal_score": 58,
+      "ebay_price_eur": 413.99,
+      "margin_vs_ebay_eur": 40.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 413.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21061",
+      "name": "Architecture 21061 Notre-Dame de Paris",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21061+amazon",
+      "price_eur": 152.99,
+      "lego_price_eur": 191.99,
+      "saving_eur": 39.0,
+      "saving_pct": 0.2031,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21061-1.png",
+      "compare_url": "https://www.brickmerge.de/21061-1_x",
+      "deal_score": 64,
+      "ebay_price_eur": 191.99,
+      "margin_vs_ebay_eur": 39.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 191.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "77073",
+      "name": "Fortnite 77073 Schlachtenbus",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+77073+amazon",
+      "price_eur": 62.99,
+      "lego_price_eur": 99.99,
+      "saving_eur": 37.0,
+      "saving_pct": 0.37,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/77073-1.png",
+      "compare_url": "https://www.brickmerge.de/77073-1_x",
+      "deal_score": 59,
+      "ebay_price_eur": 99.99,
+      "margin_vs_ebay_eur": 37.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 99.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "76976",
+      "name": "Jurassic World 76976 Spinosaurier & Quetzalcoatlus",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+76976+amazon",
+      "price_eur": 102.99,
+      "lego_price_eur": 139.99,
+      "saving_eur": 37.0,
+      "saving_pct": 0.2643,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/76976-1.png",
+      "compare_url": "https://www.brickmerge.de/76976-1_x",
+      "deal_score": 56,
+      "ebay_price_eur": 139.99,
+      "margin_vs_ebay_eur": 37.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 139.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "40634",
+      "name": "LEGO® 40634 Ikonen NEU OVP EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:07 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+40634+Lucky+Bricks",
+      "price_eur": 113.94,
+      "lego_price_eur": 149.99,
+      "saving_eur": 36.05,
+      "saving_pct": 0.2403,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/40634-1.png",
+      "compare_url": "https://www.brickmerge.de/40634-1_x",
+      "deal_score": null,
+      "ebay_price_eur": 149.99,
+      "margin_vs_ebay_eur": 36.05,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 149.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21348",
+      "name": "LEGO® Ideas 21348 Dungeons & Dragons: Die Sage vom Roten Drachen",
+      "shop": "brickmerge",
+      "shop_name": "Office-Partner",
+      "note": "Office-Partner had it cheapest as of 05.09.2026, 17:35 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21348+Office-Partner",
+      "price_eur": 363.99,
+      "lego_price_eur": 399.99,
+      "saving_eur": 36.0,
+      "saving_pct": 0.09,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21348-1.png",
+      "compare_url": "https://www.brickmerge.de/21348-1_x",
+      "deal_score": 27,
+      "ebay_price_eur": 399.99,
+      "margin_vs_ebay_eur": 36.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 399.99,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42175",
+      "name": "LEGO® Technic 42175 Volvo FMX LKW mit EC230 Electric Raupenbagger",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42175+amazon",
+      "price_eur": 128.99,
+      "lego_price_eur": 164.16,
+      "saving_eur": 35.17,
+      "saving_pct": 0.2142,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42175-1.png",
+      "compare_url": "https://www.brickmerge.de/42175-1_x",
+      "deal_score": 62,
+      "ebay_price_eur": 164.16,
+      "margin_vs_ebay_eur": 35.17,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 164.16,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "11372",
+      "name": "Icons 11372 Herbstlicher Landhausgarten",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+11372+amazon",
+      "price_eur": 74.89,
+      "lego_price_eur": 109.99,
+      "saving_eur": 35.1,
+      "saving_pct": 0.3191,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/11372-1.png",
+      "compare_url": "https://www.brickmerge.de/11372-1_x",
+      "deal_score": 69,
+      "ebay_price_eur": 109.99,
+      "margin_vs_ebay_eur": 35.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 109.99,
+      "falling_days": 5,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75452",
+      "name": "Star Wars 75452 Astromech-Droide BB-8",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75452+amazon",
+      "price_eur": 54.99,
+      "lego_price_eur": 89.99,
+      "saving_eur": 35.0,
+      "saving_pct": 0.3889,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75452-1.png",
+      "compare_url": "https://www.brickmerge.de/75452-1_x",
+      "deal_score": 62,
+      "ebay_price_eur": 89.99,
+      "margin_vs_ebay_eur": 35.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 89.99,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21356",
+      "name": "LEGO® Ideas 21356 Flussraddampfer NEU OVP EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:06 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21356+Proshop",
+      "price_eur": 253.99,
+      "lego_price_eur": 287.99,
+      "saving_eur": 34.0,
+      "saving_pct": 0.1181,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21356-1.png",
+      "compare_url": "https://www.brickmerge.de/21356-1_x",
+      "deal_score": 69,
+      "ebay_price_eur": 287.99,
+      "margin_vs_ebay_eur": 34.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 287.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42215",
+      "name": "Technic 42215 Volvo EC500 Hybrid Bagger",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:06 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42215+Steinehelden",
+      "price_eur": 286.04,
+      "lego_price_eur": 319.68,
+      "saving_eur": 33.64,
+      "saving_pct": 0.1052,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42215-1.png",
+      "compare_url": "https://www.brickmerge.de/42215-1_x",
+      "deal_score": 53,
+      "ebay_price_eur": 319.68,
+      "margin_vs_ebay_eur": 33.64,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 319.68,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42156",
+      "name": "Technic 42156 PEUGEOT 9X8 Le Mans Hypercar",
+      "shop": "brickmerge",
+      "shop_name": "ComputerSalg",
+      "note": "ComputerSalg had it cheapest as of 05.09.2026, 17:21 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42156+ComputerSalg",
+      "price_eur": 156.85,
+      "lego_price_eur": 189.99,
+      "saving_eur": 33.14,
+      "saving_pct": 0.1744,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42156-1.png",
+      "compare_url": "https://www.brickmerge.de/42156-1_x",
+      "deal_score": 45,
+      "ebay_price_eur": 189.99,
+      "margin_vs_ebay_eur": 33.14,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 189.99,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42171",
+      "name": "Technic 42171 Mercedes-AMG F1 W14 E Performance",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42171+amazon",
+      "price_eur": 158.99,
+      "lego_price_eur": 191.0,
+      "saving_eur": 32.01,
+      "saving_pct": 0.1676,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42171-1.png",
+      "compare_url": "https://www.brickmerge.de/42171-1_x",
+      "deal_score": 51,
+      "ebay_price_eur": 191.0,
+      "margin_vs_ebay_eur": 32.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 191.0,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "76437",
+      "name": "LEGO® Harry Potter 76437 Der Fuchsbau Sammleredition",
+      "shop": "brickmerge",
+      "shop_name": "LEGO",
+      "note": "LEGO had it cheapest as of 05.09.2026, 18:02 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+76437+LEGO",
+      "price_eur": 207.99,
+      "lego_price_eur": 239.99,
+      "saving_eur": 32.0,
+      "saving_pct": 0.1333,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/76437-1.png",
+      "compare_url": "https://www.brickmerge.de/76437-1_x",
+      "deal_score": 54,
+      "ebay_price_eur": 239.99,
+      "margin_vs_ebay_eur": 32.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 239.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75389",
+      "name": "Star Wars 75389 Dunkler Millennium Falke",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75389+amazon",
+      "price_eur": 120.99,
+      "lego_price_eur": 152.64,
+      "saving_eur": 31.65,
+      "saving_pct": 0.2074,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75389-1.png",
+      "compare_url": "https://www.brickmerge.de/75389-1_x",
+      "deal_score": 59,
+      "ebay_price_eur": 152.64,
+      "margin_vs_ebay_eur": 31.65,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 152.64,
+      "falling_days": 3,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21279",
+      "name": "Minecraft 21279 Der Enderman-Turm",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21279+amazon",
+      "price_eur": 69.86,
+      "lego_price_eur": 99.99,
+      "saving_eur": 30.13,
+      "saving_pct": 0.3013,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21279-1.png",
+      "compare_url": "https://www.brickmerge.de/21279-1_x",
+      "deal_score": 53,
+      "ebay_price_eur": 99.99,
+      "margin_vs_ebay_eur": 30.13,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 99.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "76470",
+      "name": "Harry Potter 76470 Fliegender Ford Anglia",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+76470+amazon",
+      "price_eur": 49.99,
+      "lego_price_eur": 79.99,
+      "saving_eur": 30.0,
+      "saving_pct": 0.375,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/76470-1.png",
+      "compare_url": "https://www.brickmerge.de/76470-1_x",
+      "deal_score": 67,
+      "ebay_price_eur": 79.99,
+      "margin_vs_ebay_eur": 30.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 79.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75441",
+      "name": "Star Wars 75441 Angriffskreuzer der Venator-Klasse",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75441+amazon",
+      "price_eur": 50.25,
+      "lego_price_eur": 79.99,
+      "saving_eur": 29.74,
+      "saving_pct": 0.3718,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75441-1.png",
+      "compare_url": "https://www.brickmerge.de/75441-1_x",
+      "deal_score": 60,
+      "ebay_price_eur": 79.99,
+      "margin_vs_ebay_eur": 29.74,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 79.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21360",
+      "name": "LEGO® Ideas 21360 Willy Wonka und die Schokoladenfabrik EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21360+Proshop",
+      "price_eur": 166.06,
+      "lego_price_eur": 194.37,
+      "saving_eur": 28.31,
+      "saving_pct": 0.1457,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21360-1.png",
+      "compare_url": "https://www.brickmerge.de/21360-1_x",
+      "deal_score": 73,
+      "ebay_price_eur": 194.37,
+      "margin_vs_ebay_eur": 28.31,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 194.37,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10354",
+      "name": "LEGO® Icons 10354 Herr der Ringe: Das Auenland EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:10 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10354+Proshop",
+      "price_eur": 213.99,
+      "lego_price_eur": 241.79,
+      "saving_eur": 27.8,
+      "saving_pct": 0.115,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10354-1.png",
+      "compare_url": "https://www.brickmerge.de/10354-1_x",
+      "deal_score": 57,
+      "ebay_price_eur": 241.79,
+      "margin_vs_ebay_eur": 27.8,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 241.79,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "31168",
+      "name": "Creator 31168 Ritterburg im Mittelalter",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+31168+amazon",
+      "price_eur": 82.99,
+      "lego_price_eur": 109.99,
+      "saving_eur": 27.0,
+      "saving_pct": 0.2455,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/31168-1.png",
+      "compare_url": "https://www.brickmerge.de/31168-1_x",
+      "deal_score": 55,
+      "ebay_price_eur": 109.99,
+      "margin_vs_ebay_eur": 27.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 109.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "71858",
+      "name": "Ninjago 71858 15-Jubiläum Vier-Waffen-Schmiede",
+      "shop": "brickmerge",
+      "shop_name": "BrickCoast",
+      "note": "BrickCoast had it cheapest as of 05.09.2026, 18:16 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+71858+BrickCoast",
+      "price_eur": 73.84,
+      "lego_price_eur": 99.99,
+      "saving_eur": 26.15,
+      "saving_pct": 0.2615,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/71858-1.png",
+      "compare_url": "https://www.brickmerge.de/71858-1_x",
+      "deal_score": 55,
+      "ebay_price_eur": 99.99,
+      "margin_vs_ebay_eur": 26.15,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 99.99,
+      "falling_days": 3,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75422",
+      "name": "Star Wars 75422 SMART Play: Jedi-Training Yodas Hütte",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75422+amazon",
+      "price_eur": 43.98,
+      "lego_price_eur": 69.99,
+      "saving_eur": 26.01,
+      "saving_pct": 0.3716,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75422-1.png",
+      "compare_url": "https://www.brickmerge.de/75422-1_x",
+      "deal_score": 69,
+      "ebay_price_eur": 69.99,
+      "margin_vs_ebay_eur": 26.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 69.99,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10367",
+      "name": "LEGO® Icons 10367 Herr der Ringe: Gandalf vs. Balrog",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10367+amazon",
+      "price_eur": 74.99,
+      "lego_price_eur": 100.8,
+      "saving_eur": 25.81,
+      "saving_pct": 0.2561,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10367-1.png",
+      "compare_url": "https://www.brickmerge.de/10367-1_x",
+      "deal_score": 64,
+      "ebay_price_eur": 100.8,
+      "margin_vs_ebay_eur": 25.81,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 100.8,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75425",
+      "name": "Star Wars 75425 SMART Play: Mos Eisley Cantina",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75425+amazon",
+      "price_eur": 47.95,
+      "lego_price_eur": 73.59,
+      "saving_eur": 25.64,
+      "saving_pct": 0.3484,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75425-1.png",
+      "compare_url": "https://www.brickmerge.de/75425-1_x",
+      "deal_score": 91,
+      "ebay_price_eur": 73.59,
+      "margin_vs_ebay_eur": 25.64,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 73.59,
+      "falling_days": 5,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "71043",
+      "name": "LEGO® Harry Potter 71043 Schloss Hogwarts NEU & OVP",
+      "shop": "brickmerge",
+      "shop_name": "ComputerSalg",
+      "note": "ComputerSalg had it cheapest as of 05.09.2026, 17:21 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+71043+ComputerSalg",
+      "price_eur": 352.09,
+      "lego_price_eur": 469.99,
+      "saving_eur": 117.9,
+      "saving_pct": 0.2509,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/71043-1.png",
+      "compare_url": "https://www.brickmerge.de/71043-1_x",
+      "deal_score": 65,
+      "ebay_price_eur": 377.19,
+      "margin_vs_ebay_eur": 25.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 377.19,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "60503",
+      "name": "City 60503 Hubschrauber der Küstenwache",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+60503+Proshop",
+      "price_eur": 34.89,
+      "lego_price_eur": 59.99,
+      "saving_eur": 25.1,
+      "saving_pct": 0.4184,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/60503-1.png",
+      "compare_url": "https://www.brickmerge.de/60503-1_x",
+      "deal_score": 84,
+      "ebay_price_eur": 59.99,
+      "margin_vs_ebay_eur": 25.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 59.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "40820",
+      "name": "40820 Große Weihnachtsmann-Minifigur",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:01 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+40820+Steinehelden",
+      "price_eur": 50.82,
+      "lego_price_eur": 75.84,
+      "saving_eur": 25.02,
+      "saving_pct": 0.3299,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/40820-1.png",
+      "compare_url": "https://www.brickmerge.de/40820-1_x",
+      "deal_score": 53,
+      "ebay_price_eur": 75.84,
+      "margin_vs_ebay_eur": 25.02,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 75.84,
+      "falling_days": 3,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10353",
+      "name": "Icons 10353 Williams Racing FW14B Nigel Mansell",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10353+amazon",
+      "price_eur": 54.98,
+      "lego_price_eur": 79.99,
+      "saving_eur": 25.01,
+      "saving_pct": 0.3127,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10353-1.png",
+      "compare_url": "https://www.brickmerge.de/10353-1_x",
+      "deal_score": 52,
+      "ebay_price_eur": 79.99,
+      "margin_vs_ebay_eur": 25.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 79.99,
+      "falling_days": 5,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10360",
+      "name": "LEGO® Icons 10360 Spaceshuttle-Transport-Jumbo EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Coolshop",
+      "note": "Coolshop had it cheapest as of 05.09.2026, 17:53 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10360+Coolshop",
+      "price_eur": 185.0,
+      "lego_price_eur": 210.0,
+      "saving_eur": 25.0,
+      "saving_pct": 0.119,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10360-1.png",
+      "compare_url": "https://www.brickmerge.de/10360-1_x",
+      "deal_score": 53,
+      "ebay_price_eur": 210.0,
+      "margin_vs_ebay_eur": 25.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 210.0,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21359",
+      "name": "LEGO® Ideas 21359 Die Italienische Riviera",
+      "shop": "brickmerge",
+      "shop_name": "MÜLLER",
+      "note": "MÜLLER had it cheapest as of 05.09.2026, 17:43 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21359+MÜLLER",
+      "price_eur": 229.0,
+      "lego_price_eur": 253.79,
+      "saving_eur": 24.79,
+      "saving_pct": 0.0977,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21359-1.png",
+      "compare_url": "https://www.brickmerge.de/21359-1_x",
+      "deal_score": 55,
+      "ebay_price_eur": 253.79,
+      "margin_vs_ebay_eur": 24.79,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 253.79,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75379",
+      "name": "Star Wars 75379 R2-D2",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75379+amazon",
+      "price_eur": 64.99,
+      "lego_price_eur": 88.88,
+      "saving_eur": 23.89,
+      "saving_pct": 0.2688,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75379-1.png",
+      "compare_url": "https://www.brickmerge.de/75379-1_x",
+      "deal_score": 61,
+      "ebay_price_eur": 88.88,
+      "margin_vs_ebay_eur": 23.89,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 88.88,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10356",
+      "name": "LEGO® Icons 10356 Star Trek: U.S.S. Enterprise NCC-1701-D",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:10 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10356+Proshop",
+      "price_eur": 323.99,
+      "lego_price_eur": 347.79,
+      "saving_eur": 23.8,
+      "saving_pct": 0.0684,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10356-1.png",
+      "compare_url": "https://www.brickmerge.de/10356-1_x",
+      "deal_score": 50,
+      "ebay_price_eur": 347.79,
+      "margin_vs_ebay_eur": 23.8,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 347.79,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21273",
+      "name": "Minecraft 21273 Angriff des Ghast-Ballons",
+      "shop": "brickmerge",
+      "shop_name": "Joybuy",
+      "note": "Joybuy had it cheapest as of 05.09.2026, 18:15 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21273+Joybuy",
+      "price_eur": 46.2,
+      "lego_price_eur": 69.99,
+      "saving_eur": 23.79,
+      "saving_pct": 0.3399,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21273-1.png",
+      "compare_url": "https://www.brickmerge.de/21273-1_x",
+      "deal_score": 58,
+      "ebay_price_eur": 69.99,
+      "margin_vs_ebay_eur": 23.79,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 69.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75399",
+      "name": "Star Wars 75399 Rebel U-Wing Starfighter",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75399+amazon",
+      "price_eur": 46.98,
+      "lego_price_eur": 69.99,
+      "saving_eur": 23.01,
+      "saving_pct": 0.3288,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75399-1.png",
+      "compare_url": "https://www.brickmerge.de/75399-1_x",
+      "deal_score": 70,
+      "ebay_price_eur": 69.99,
+      "margin_vs_ebay_eur": 23.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 69.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "60505",
+      "name": "City 60505 Flugzeug, Wartungsfahrzeug, Luftkissenboot",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+60505+amazon",
+      "price_eur": 46.98,
+      "lego_price_eur": 69.99,
+      "saving_eur": 23.01,
+      "saving_pct": 0.3288,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/60505-1.png",
+      "compare_url": "https://www.brickmerge.de/60505-1_x",
+      "deal_score": 72,
+      "ebay_price_eur": 69.99,
+      "margin_vs_ebay_eur": 23.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 69.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75394",
+      "name": "LEGO® Star Wars 75394 Imperialer Sternzerstörer EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:01 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75394+Proshop",
+      "price_eur": 133.99,
+      "lego_price_eur": 156.74,
+      "saving_eur": 22.75,
+      "saving_pct": 0.1451,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75394-1.png",
+      "compare_url": "https://www.brickmerge.de/75394-1_x",
+      "deal_score": 69,
+      "ebay_price_eur": 156.74,
+      "margin_vs_ebay_eur": 22.75,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 156.74,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "43020",
+      "name": "LEGO® 43020 Offizieller Pokal FIFA Fußball-WM NEU OVP!",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+43020+amazon",
+      "price_eur": 119.99,
+      "lego_price_eur": 142.5,
+      "saving_eur": 22.51,
+      "saving_pct": 0.158,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/43020-1.png",
+      "compare_url": "https://www.brickmerge.de/43020-1_x",
+      "deal_score": 76,
+      "ebay_price_eur": 142.5,
+      "margin_vs_ebay_eur": 22.51,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 142.5,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10323",
+      "name": "LEGO® Icons 10323 PAC-MAN Spielautomat NEU OVP EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Office-Partner",
+      "note": "Office-Partner had it cheapest as of 05.09.2026, 18:05 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10323+Office-Partner",
+      "price_eur": 235.24,
+      "lego_price_eur": 257.59,
+      "saving_eur": 22.35,
+      "saving_pct": 0.0868,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10323-1.png",
+      "compare_url": "https://www.brickmerge.de/10323-1_x",
+      "deal_score": 47,
+      "ebay_price_eur": 257.59,
+      "margin_vs_ebay_eur": 22.35,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 257.59,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "60499",
+      "name": "City 60499 Flughafenlöschfahrzeug",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+60499+amazon",
+      "price_eur": 47.95,
+      "lego_price_eur": 69.99,
+      "saving_eur": 22.04,
+      "saving_pct": 0.3149,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/60499-1.png",
+      "compare_url": "https://www.brickmerge.de/60499-1_x",
+      "deal_score": 59,
+      "ebay_price_eur": 69.99,
+      "margin_vs_ebay_eur": 22.04,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 69.99,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10291",
+      "name": "Creator Expert 10291 Queer Eye Loft der Fab 5",
+      "shop": "brickmerge",
+      "shop_name": "HOLY BRICK",
+      "note": "HOLY BRICK had it cheapest as of 05.09.2026, 18:16 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10291+HOLY+BRICK",
+      "price_eur": 64.9,
+      "lego_price_eur": 86.39,
+      "saving_eur": 21.49,
+      "saving_pct": 0.2488,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10291-1.png",
+      "compare_url": "https://www.brickmerge.de/10291-1_x",
+      "deal_score": 50,
+      "ebay_price_eur": 86.39,
+      "margin_vs_ebay_eur": 21.49,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 86.39,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "11376",
+      "name": "LEGO® Icons 11376 Ford Model T NEU OVP EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+11376+Proshop",
+      "price_eur": 87.89,
+      "lego_price_eur": 109.25,
+      "saving_eur": 21.36,
+      "saving_pct": 0.1955,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/11376-1.png",
+      "compare_url": "https://www.brickmerge.de/11376-1_x",
+      "deal_score": 75,
+      "ebay_price_eur": 109.25,
+      "margin_vs_ebay_eur": 21.36,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 109.25,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10273",
+      "name": "LEGO® 10273 Geisterhaus auf dem Jahrmarkt NEU OVP EXKLUSIV",
+      "shop": "brickmerge",
+      "shop_name": "Playzeug",
+      "note": "Playzeug had it cheapest as of 05.09.2026, 18:02 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10273+Playzeug",
+      "price_eur": 236.49,
+      "lego_price_eur": 299.99,
+      "saving_eur": 63.5,
+      "saving_pct": 0.2117,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10273-1.png",
+      "compare_url": "https://www.brickmerge.de/10273-1_x",
+      "deal_score": 74,
+      "ebay_price_eur": 257.59,
+      "margin_vs_ebay_eur": 21.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 257.59,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10333",
+      "name": "LEGO® Icons 10333 Herr der Ringe: Barad-dûr NEU OVP EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Alza",
+      "note": "Alza had it cheapest as of 05.09.2026, 18:02 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10333+Alza",
+      "price_eur": 411.39,
+      "lego_price_eur": 432.39,
+      "saving_eur": 21.0,
+      "saving_pct": 0.0486,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10333-1.png",
+      "compare_url": "https://www.brickmerge.de/10333-1_x",
+      "deal_score": 43,
+      "ebay_price_eur": 432.39,
+      "margin_vs_ebay_eur": 21.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 432.39,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "60470",
+      "name": "LEGO® City 60470 Arktis-Polarexpress NEU OVP",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:11 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+60470+Steinehelden",
+      "price_eur": 144.35,
+      "lego_price_eur": 164.99,
+      "saving_eur": 20.64,
+      "saving_pct": 0.1251,
+      "available": true,
+      "state": "price_rise",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/60470-1.png",
+      "compare_url": "https://www.brickmerge.de/60470-1_x",
+      "deal_score": 50,
+      "ebay_price_eur": 164.99,
+      "margin_vs_ebay_eur": 20.64,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 164.99,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21358",
+      "name": "LEGO® Ideas 21358 Spielzeugautomat mit Minifiguren EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "MÜLLER",
+      "note": "MÜLLER had it cheapest as of 05.09.2026, 17:43 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21358+MÜLLER",
+      "price_eur": 139.0,
+      "lego_price_eur": 159.0,
+      "saving_eur": 20.0,
+      "saving_pct": 0.1258,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21358-1.png",
+      "compare_url": "https://www.brickmerge.de/21358-1_x",
+      "deal_score": 52,
+      "ebay_price_eur": 159.0,
+      "margin_vs_ebay_eur": 20.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 159.0,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "43302",
+      "name": "LEGO® Disney 43302 Main Street, U.S.A. NEU EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:07 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+43302+Lucky+Bricks",
+      "price_eur": 329.99,
+      "lego_price_eur": 349.99,
+      "saving_eur": 20.0,
+      "saving_pct": 0.0571,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/43302-1.png",
+      "compare_url": "https://www.brickmerge.de/43302-1_x",
+      "deal_score": 32,
+      "ebay_price_eur": 349.99,
+      "margin_vs_ebay_eur": 20.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 349.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "31171",
+      "name": "LEGO® Creator 31171 Wilde Tiere: Prächtiges Nashorn mit Vögeln",
+      "shop": "brickmerge",
+      "shop_name": "LEGO",
+      "note": "LEGO had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+31171+LEGO",
+      "price_eur": 45.49,
+      "lego_price_eur": 64.99,
+      "saving_eur": 19.5,
+      "saving_pct": 0.3,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/31171-1.png",
+      "compare_url": "https://www.brickmerge.de/31171-1_x",
+      "deal_score": 61,
+      "ebay_price_eur": 64.99,
+      "margin_vs_ebay_eur": 19.5,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 64.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "80103",
+      "name": "80103 Drachenbootrennen",
+      "shop": "brickmerge",
+      "shop_name": "HOLY BRICK",
+      "note": "HOLY BRICK had it cheapest as of 05.09.2026, 18:16 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+80103+HOLY+BRICK",
+      "price_eur": 49.9,
+      "lego_price_eur": 69.0,
+      "saving_eur": 19.1,
+      "saving_pct": 0.2768,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/80103-1.png",
+      "compare_url": "https://www.brickmerge.de/80103-1_x",
+      "deal_score": 64,
+      "ebay_price_eur": 69.0,
+      "margin_vs_ebay_eur": 19.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 69.0,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "11501",
+      "name": "Botanicals 11501 Tulpenstrauß",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+11501+amazon",
+      "price_eur": 40.96,
+      "lego_price_eur": 59.99,
+      "saving_eur": 19.03,
+      "saving_pct": 0.3172,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/11501-1.png",
+      "compare_url": "https://www.brickmerge.de/11501-1_x",
+      "deal_score": 72,
+      "ebay_price_eur": 59.99,
+      "margin_vs_ebay_eur": 19.03,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 59.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "no response"
+    },
+    {
+      "set_num": "76304",
+      "name": "Super Heroes 76304 Batman Forever Batmobil",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:11 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+76304+Steinehelden",
+      "price_eur": 71.3,
+      "lego_price_eur": 89.99,
+      "saving_eur": 18.69,
+      "saving_pct": 0.2077,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/76304-1.png",
+      "compare_url": "https://www.brickmerge.de/76304-1_x",
+      "deal_score": 51,
+      "ebay_price_eur": 89.99,
+      "margin_vs_ebay_eur": 18.69,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 89.99,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "no response"
+    },
+    {
+      "set_num": "10326",
+      "name": "LEGO® Icons 10326 Naturhistorisches Museum",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:01 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10326+Steinehelden",
+      "price_eur": 269.96,
+      "lego_price_eur": 287.99,
+      "saving_eur": 18.03,
+      "saving_pct": 0.0626,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10326-1.png",
+      "compare_url": "https://www.brickmerge.de/10326-1_x",
+      "deal_score": 43,
+      "ebay_price_eur": 287.99,
+      "margin_vs_ebay_eur": 18.03,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 287.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "no response"
+    },
+    {
+      "set_num": "60423",
+      "name": "City 60423 Straßenbahn mit Haltestelle",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+60423+amazon",
+      "price_eur": 56.99,
+      "lego_price_eur": 75.0,
+      "saving_eur": 18.01,
+      "saving_pct": 0.2401,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/60423-1.png",
+      "compare_url": "https://www.brickmerge.de/60423-1_x",
+      "deal_score": 58,
+      "ebay_price_eur": 75.0,
+      "margin_vs_ebay_eur": 18.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 75.0,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "no response"
+    },
+    {
+      "set_num": "75444",
+      "name": "Star Wars 75444 Angriff des AT-RT",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75444+amazon",
+      "price_eur": 31.98,
+      "lego_price_eur": 49.99,
+      "saving_eur": 18.01,
+      "saving_pct": 0.3603,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75444-1.png",
+      "compare_url": "https://www.brickmerge.de/75444-1_x",
+      "deal_score": 74,
+      "ebay_price_eur": 49.99,
+      "margin_vs_ebay_eur": 18.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 49.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "no response"
+    },
+    {
+      "set_num": "11504",
+      "name": "Icons 11504 Friedenslilie",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+11504+amazon",
+      "price_eur": 42.07,
+      "lego_price_eur": 59.99,
+      "saving_eur": 17.92,
+      "saving_pct": 0.2987,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/11504-1.png",
+      "compare_url": "https://www.brickmerge.de/11504-1_x",
+      "deal_score": 59,
+      "ebay_price_eur": 59.99,
+      "margin_vs_ebay_eur": 17.92,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 59.99,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75440",
+      "name": "Star Wars 75440 AT-AT",
+      "shop": "brickmerge",
+      "shop_name": "Playzeug",
+      "note": "Playzeug had it cheapest as of 05.09.2026, 18:16 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75440+Playzeug",
+      "price_eur": 47.49,
+      "lego_price_eur": 64.99,
+      "saving_eur": 17.5,
+      "saving_pct": 0.2693,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75440-1.png",
+      "compare_url": "https://www.brickmerge.de/75440-1_x",
+      "deal_score": 60,
+      "ebay_price_eur": 64.99,
+      "margin_vs_ebay_eur": 17.5,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 64.99,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "72037",
+      "name": "Super Mario 72037 Mario Kart: Mario & Standard-Kart",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+72037+Proshop",
+      "price_eur": 131.59,
+      "lego_price_eur": 148.8,
+      "saving_eur": 17.21,
+      "saving_pct": 0.1157,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/72037-1.png",
+      "compare_url": "https://www.brickmerge.de/72037-1_x",
+      "deal_score": 47,
+      "ebay_price_eur": 148.8,
+      "margin_vs_ebay_eur": 17.21,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 148.8,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42242",
+      "name": "LEGO® Technic 42242 Mercedes-Benz Unimog U 5023 mit Kran",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:10 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42242+Proshop",
+      "price_eur": 96.89,
+      "lego_price_eur": 113.99,
+      "saving_eur": 17.1,
+      "saving_pct": 0.15,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42242-1.png",
+      "compare_url": "https://www.brickmerge.de/42242-1_x",
+      "deal_score": 59,
+      "ebay_price_eur": 113.99,
+      "margin_vs_ebay_eur": 17.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 113.99,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "71813",
+      "name": "LEGO® Ninjago 71813 Wolfsmasken-Dojo NEU EXKLUSIV",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:07 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+71813+Lucky+Bricks",
+      "price_eur": 105.9,
+      "lego_price_eur": 122.19,
+      "saving_eur": 16.29,
+      "saving_pct": 0.1333,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/71813-1.png",
+      "compare_url": "https://www.brickmerge.de/71813-1_x",
+      "deal_score": 56,
+      "ebay_price_eur": 122.19,
+      "margin_vs_ebay_eur": 16.29,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 122.19,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "80036",
+      "name": "Monkie Kid 80036 Stadt der Laternen",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+80036+Lucky+Bricks",
+      "price_eur": 143.9,
+      "lego_price_eur": 139.99,
+      "saving_eur": -3.91,
+      "saving_pct": -0.0279,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/80036-1.png",
+      "compare_url": "https://www.brickmerge.de/80036-1_x",
+      "deal_score": null,
+      "ebay_price_eur": 160.0,
+      "margin_vs_ebay_eur": 16.1,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 160.0,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "40824",
+      "name": "40824 Liebesbote Tweety",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:07 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+40824+Lucky+Bricks",
+      "price_eur": 23.9,
+      "lego_price_eur": 39.99,
+      "saving_eur": 16.09,
+      "saving_pct": 0.4024,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/40824-1.png",
+      "compare_url": "https://www.brickmerge.de/40824-1_x",
+      "deal_score": 65,
+      "ebay_price_eur": 39.99,
+      "margin_vs_ebay_eur": 16.09,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 39.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42141",
+      "name": "LEGO® Technic 42141 McLaren Formel 1 Rennwagen",
+      "shop": "brickmerge",
+      "shop_name": "duo-Shop",
+      "note": "duo-Shop had it cheapest as of 05.09.2026, 17:45 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42141+duo-Shop",
+      "price_eur": 153.0,
+      "lego_price_eur": 199.99,
+      "saving_eur": 46.99,
+      "saving_pct": 0.235,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42141-1.png",
+      "compare_url": "https://www.brickmerge.de/42141-1_x",
+      "deal_score": 47,
+      "ebay_price_eur": 169.0,
+      "margin_vs_ebay_eur": 16.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 169.0,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21330",
+      "name": "LEGO® Ideas 21330 McCallister House aus Home Alone",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:01 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21330+Proshop",
+      "price_eur": 243.99,
+      "lego_price_eur": 299.99,
+      "saving_eur": 56.0,
+      "saving_pct": 0.1867,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21330-1.png",
+      "compare_url": "https://www.brickmerge.de/21330-1_x",
+      "deal_score": 52,
+      "ebay_price_eur": 259.47,
+      "margin_vs_ebay_eur": 15.48,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 259.47,
+      "falling_days": 0,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75351",
+      "name": "LEGO® Star Wars 75351 Princess Leia (Boushh) Helm NEU OVP",
+      "shop": "brickmerge",
+      "shop_name": "Alternate",
+      "note": "Alternate had it cheapest as of 05.09.2026, 18:02 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75351+Alternate",
+      "price_eur": 44.99,
+      "lego_price_eur": 60.44,
+      "saving_eur": 15.45,
+      "saving_pct": 0.2556,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75351-1.png",
+      "compare_url": "https://www.brickmerge.de/75351-1_x",
+      "deal_score": 50,
+      "ebay_price_eur": 60.44,
+      "margin_vs_ebay_eur": 15.45,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 60.44,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75430",
+      "name": "LEGO® Star Wars 75430 Der Ewok Wicket",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:06 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75430+Proshop",
+      "price_eur": 99.89,
+      "lego_price_eur": 115.19,
+      "saving_eur": 15.3,
+      "saving_pct": 0.1328,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75430-1.png",
+      "compare_url": "https://www.brickmerge.de/75430-1_x",
+      "deal_score": 48,
+      "ebay_price_eur": 115.19,
+      "margin_vs_ebay_eur": 15.3,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 115.19,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10357",
+      "name": "LEGO® Icons 10357 Shelby Cobra 427 S/C NEU OVP EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "toymi.eu",
+      "note": "toymi.eu had it cheapest as of 05.09.2026, 18:06 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10357+toymi.eu",
+      "price_eur": 112.75,
+      "lego_price_eur": 127.88,
+      "saving_eur": 15.13,
+      "saving_pct": 0.1183,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10357-1.png",
+      "compare_url": "https://www.brickmerge.de/10357-1_x",
+      "deal_score": 53,
+      "ebay_price_eur": 127.88,
+      "margin_vs_ebay_eur": 15.13,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 127.88,
+      "falling_days": 5,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "31212",
+      "name": "LEGO® ART 31212 Die Milchstraßen-Galaxie NEU OVP!",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+31212+amazon",
+      "price_eur": 139.99,
+      "lego_price_eur": 155.1,
+      "saving_eur": 15.11,
+      "saving_pct": 0.0974,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/31212-1.png",
+      "compare_url": "https://www.brickmerge.de/31212-1_x",
+      "deal_score": 58,
+      "ebay_price_eur": 155.1,
+      "margin_vs_ebay_eur": 15.11,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 155.1,
+      "falling_days": 5,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "11502",
+      "name": "Icons 11502 Sonnenblumen",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:11 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+11502+Steinehelden",
+      "price_eur": 44.97,
+      "lego_price_eur": 59.99,
+      "saving_eur": 15.02,
+      "saving_pct": 0.2504,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/11502-1.png",
+      "compare_url": "https://www.brickmerge.de/11502-1_x",
+      "deal_score": 61,
+      "ebay_price_eur": 59.99,
+      "margin_vs_ebay_eur": 15.02,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 59.99,
+      "falling_days": 6,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "60469",
+      "name": "City 60469 Hauptbahnhof",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+60469+amazon",
+      "price_eur": 59.99,
+      "lego_price_eur": 75.0,
+      "saving_eur": 15.01,
+      "saving_pct": 0.2001,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/60469-1.png",
+      "compare_url": "https://www.brickmerge.de/60469-1_x",
+      "deal_score": 52,
+      "ebay_price_eur": 75.0,
+      "margin_vs_ebay_eur": 15.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 75.0,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "76969",
+      "name": "Jurassic World 76969 Dino-Fossilien: Triceratops-Schädel",
+      "shop": "brickmerge",
+      "shop_name": "MediaMarkt",
+      "note": "MediaMarkt had it cheapest as of 05.09.2026, 18:11 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+76969+MediaMarkt",
+      "price_eur": 29.98,
+      "lego_price_eur": 44.99,
+      "saving_eur": 15.01,
+      "saving_pct": 0.3336,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/76969-1.png",
+      "compare_url": "https://www.brickmerge.de/76969-1_x",
+      "deal_score": 78,
+      "ebay_price_eur": 44.99,
+      "margin_vs_ebay_eur": 15.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 44.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10290",
+      "name": "Creator Expert 10290 Pickup",
+      "shop": "brickmerge",
+      "shop_name": "Playzeug",
+      "note": "Playzeug had it cheapest as of 05.09.2026, 18:02 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10290+Playzeug",
+      "price_eur": 135.18,
+      "lego_price_eur": 150.0,
+      "saving_eur": 14.82,
+      "saving_pct": 0.0988,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10290-1.png",
+      "compare_url": "https://www.brickmerge.de/10290-1_x",
+      "deal_score": 32,
+      "ebay_price_eur": 150.0,
+      "margin_vs_ebay_eur": 14.82,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 150.0,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "40923",
+      "name": "BrickHeadz 40923 Shrek, Donkey und Gingy",
+      "shop": "brickmerge",
+      "shop_name": "LEGO",
+      "note": "LEGO had it cheapest as of 05.09.2026, 18:12 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+40923+LEGO",
+      "price_eur": 28.49,
+      "lego_price_eur": 43.19,
+      "saving_eur": 14.7,
+      "saving_pct": 0.3404,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/40923-1.png",
+      "compare_url": "https://www.brickmerge.de/40923-1_x",
+      "deal_score": null,
+      "ebay_price_eur": 43.19,
+      "margin_vs_ebay_eur": 14.7,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 43.19,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21367",
+      "name": "LEGO® Ideas 21367 Die Mondrakete von Tim und Struppi NEU OVP",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:07 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21367+Lucky+Bricks",
+      "price_eur": 116.94,
+      "lego_price_eur": 131.59,
+      "saving_eur": 14.65,
+      "saving_pct": 0.1113,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21367-1.png",
+      "compare_url": "https://www.brickmerge.de/21367-1_x",
+      "deal_score": 62,
+      "ebay_price_eur": 131.59,
+      "margin_vs_ebay_eur": 14.65,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 131.59,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "72046",
+      "name": "LEGO® Gaming 72046 Game Boy NEU",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+72046+amazon",
+      "price_eur": 42.98,
+      "lego_price_eur": 57.59,
+      "saving_eur": 14.61,
+      "saving_pct": 0.2537,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/72046-1.png",
+      "compare_url": "https://www.brickmerge.de/72046-1_x",
+      "deal_score": 71,
+      "ebay_price_eur": 57.59,
+      "margin_vs_ebay_eur": 14.61,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 57.59,
+      "falling_days": 3,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "42241",
+      "name": "LEGO® Technic 42241 Grüner Bugatti Chiron Pur Sport EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "MÜLLER",
+      "note": "MÜLLER had it cheapest as of 05.09.2026, 17:47 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+42241+MÜLLER",
+      "price_eur": 49.99,
+      "lego_price_eur": 64.39,
+      "saving_eur": 14.4,
+      "saving_pct": 0.2236,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/42241-1.png",
+      "compare_url": "https://www.brickmerge.de/42241-1_x",
+      "deal_score": 65,
+      "ebay_price_eur": 64.39,
+      "margin_vs_ebay_eur": 14.4,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 64.39,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21366",
+      "name": "Ideas 21366 Schwimmende Otter",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:06 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21366+Steinehelden",
+      "price_eur": 74.74,
+      "lego_price_eur": 89.0,
+      "saving_eur": 14.26,
+      "saving_pct": 0.1602,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21366-1.png",
+      "compare_url": "https://www.brickmerge.de/21366-1_x",
+      "deal_score": 63,
+      "ebay_price_eur": 89.0,
+      "margin_vs_ebay_eur": 14.26,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 89.0,
+      "falling_days": 3,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "60466",
+      "name": "City 60466 Gelber Bulldozer",
+      "shop": "brickmerge",
+      "shop_name": "BrickCoast",
+      "note": "BrickCoast had it cheapest as of 05.09.2026, 18:11 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+60466+BrickCoast",
+      "price_eur": 46.42,
+      "lego_price_eur": 59.99,
+      "saving_eur": 13.57,
+      "saving_pct": 0.2262,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/60466-1.png",
+      "compare_url": "https://www.brickmerge.de/60466-1_x",
+      "deal_score": 53,
+      "ebay_price_eur": 59.99,
+      "margin_vs_ebay_eur": 13.57,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 59.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "11505",
+      "name": "LEGO® Botanicals 11505 Waldpilze NEU OVP!",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+11505+amazon",
+      "price_eur": 52.99,
+      "lego_price_eur": 66.24,
+      "saving_eur": 13.25,
+      "saving_pct": 0.2,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/11505-1.png",
+      "compare_url": "https://www.brickmerge.de/11505-1_x",
+      "deal_score": 65,
+      "ebay_price_eur": 66.24,
+      "margin_vs_ebay_eur": 13.25,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 66.24,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "31216",
+      "name": "LEGO® Art 31216 Keith Haring Tanzende Figuren NEU",
+      "shop": "brickmerge",
+      "shop_name": "Steinehelden",
+      "note": "Steinehelden had it cheapest as of 05.09.2026, 18:06 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+31216+Steinehelden",
+      "price_eur": 79.97,
+      "lego_price_eur": 93.06,
+      "saving_eur": 13.09,
+      "saving_pct": 0.1407,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/31216-1.png",
+      "compare_url": "https://www.brickmerge.de/31216-1_x",
+      "deal_score": 58,
+      "ebay_price_eur": 93.06,
+      "margin_vs_ebay_eur": 13.09,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 93.06,
+      "falling_days": 5,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75458",
+      "name": "LEGO® Star Wars 75458 Helm AT-RT-Pilot des Restimperiums",
+      "shop": "brickmerge",
+      "shop_name": "MÜLLER",
+      "note": "MÜLLER had it cheapest as of 05.09.2026, 17:47 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75458+MÜLLER",
+      "price_eur": 51.91,
+      "lego_price_eur": 64.99,
+      "saving_eur": 13.08,
+      "saving_pct": 0.2013,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75458-1.png",
+      "compare_url": "https://www.brickmerge.de/75458-1_x",
+      "deal_score": 74,
+      "ebay_price_eur": 64.99,
+      "margin_vs_ebay_eur": 13.08,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 64.99,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "31167",
+      "name": "Creator 31167 Geisterhaus 3-in-1",
+      "shop": "brickmerge",
+      "shop_name": "BrickCoast",
+      "note": "BrickCoast had it cheapest as of 05.09.2026, 18:11 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+31167+BrickCoast",
+      "price_eur": 66.93,
+      "lego_price_eur": 80.0,
+      "saving_eur": 13.07,
+      "saving_pct": 0.1634,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/31167-1.png",
+      "compare_url": "https://www.brickmerge.de/31167-1_x",
+      "deal_score": 54,
+      "ebay_price_eur": 80.0,
+      "margin_vs_ebay_eur": 13.07,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 80.0,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75409",
+      "name": "LEGO® Star Wars 75409 Jango Fetts Sternenschiff Firespray-Klasse",
+      "shop": "brickmerge",
+      "shop_name": "Coolshop",
+      "note": "Coolshop had it cheapest as of 05.09.2026, 17:53 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75409+Coolshop",
+      "price_eur": 244.0,
+      "lego_price_eur": 256.68,
+      "saving_eur": 12.68,
+      "saving_pct": 0.0494,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75409-1.png",
+      "compare_url": "https://www.brickmerge.de/75409-1_x",
+      "deal_score": 50,
+      "ebay_price_eur": 256.68,
+      "margin_vs_ebay_eur": 12.68,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 256.68,
+      "falling_days": 3,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10300",
+      "name": "LEGO® Icons 10300 Die Zeitmaschine Zurück in die Zukunft",
+      "shop": "brickmerge",
+      "shop_name": "Proshop",
+      "note": "Proshop had it cheapest as of 05.09.2026, 18:01 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10300+Proshop",
+      "price_eur": 154.94,
+      "lego_price_eur": 199.99,
+      "saving_eur": 45.05,
+      "saving_pct": 0.2253,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10300-1.png",
+      "compare_url": "https://www.brickmerge.de/10300-1_x",
+      "deal_score": 64,
+      "ebay_price_eur": 167.39,
+      "margin_vs_ebay_eur": 12.45,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 167.39,
+      "falling_days": 1,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21246",
+      "name": "Minecraft 21246 Das Duell in der Finsternis",
+      "shop": "brickmerge",
+      "shop_name": "Collector Expert",
+      "note": "Collector Expert had it cheapest as of 05.09.2026, 18:02 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21246+Collector+Expert",
+      "price_eur": 83.85,
+      "lego_price_eur": 95.99,
+      "saving_eur": 12.14,
+      "saving_pct": 0.1265,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21246-1.png",
+      "compare_url": "https://www.brickmerge.de/21246-1_x",
+      "deal_score": null,
+      "ebay_price_eur": 95.99,
+      "margin_vs_ebay_eur": 12.14,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 95.99,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10345",
+      "name": "LEGO® Botanicals 10345 Blumengesteck NEU OVP EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "MÜLLER",
+      "note": "MÜLLER had it cheapest as of 05.09.2026, 17:44 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10345+MÜLLER",
+      "price_eur": 87.95,
+      "lego_price_eur": 100.0,
+      "saving_eur": 12.05,
+      "saving_pct": 0.1205,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10345-1.png",
+      "compare_url": "https://www.brickmerge.de/10345-1_x",
+      "deal_score": 50,
+      "ebay_price_eur": 100.0,
+      "margin_vs_ebay_eur": 12.05,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 100.0,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "40743",
+      "name": "40743 Weihnachtsgesteck",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:03 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+40743+amazon",
+      "price_eur": 26.98,
+      "lego_price_eur": 39.0,
+      "saving_eur": 12.02,
+      "saving_pct": 0.3082,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/40743-1.png",
+      "compare_url": "https://www.brickmerge.de/40743-1_x",
+      "deal_score": 67,
+      "ebay_price_eur": 39.0,
+      "margin_vs_ebay_eur": 12.02,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 39.0,
+      "falling_days": 7,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "10280",
+      "name": "Creator 10280 Blumenstrauß",
+      "shop": "brickmerge",
+      "shop_name": "MediaMarkt",
+      "note": "MediaMarkt had it cheapest as of 05.09.2026, 18:11 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+10280+MediaMarkt",
+      "price_eur": 37.98,
+      "lego_price_eur": 59.99,
+      "saving_eur": 22.01,
+      "saving_pct": 0.3669,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/10280-1.png",
+      "compare_url": "https://www.brickmerge.de/10280-1_x",
+      "deal_score": 80,
+      "ebay_price_eur": 50.0,
+      "margin_vs_ebay_eur": 12.02,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 50.0,
+      "falling_days": 5,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "75420",
+      "name": "Star Wars 75420 SMART Play: Lukes Landspeeder",
+      "shop": "brickmerge",
+      "shop_name": "amazon",
+      "note": "amazon had it cheapest as of 05.09.2026, 18:13 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+75420+amazon",
+      "price_eur": 27.98,
+      "lego_price_eur": 39.99,
+      "saving_eur": 12.01,
+      "saving_pct": 0.3003,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/75420-1.png",
+      "compare_url": "https://www.brickmerge.de/75420-1_x",
+      "deal_score": 73,
+      "ebay_price_eur": 39.99,
+      "margin_vs_ebay_eur": 12.01,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 39.99,
+      "falling_days": 2,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    },
+    {
+      "set_num": "21369",
+      "name": "LEGO® Ideas 21369 The X-Files EXKLUSIV!",
+      "shop": "brickmerge",
+      "shop_name": "Lucky Bricks",
+      "note": "Lucky Bricks had it cheapest as of 05.09.2026, 18:07 Uhr - confirm the set + price on the shop page",
+      "url": "https://www.google.com/search?q=LEGO+21369+Lucky+Bricks",
+      "price_eur": 179.99,
+      "lego_price_eur": 191.99,
+      "saving_eur": 12.0,
+      "saving_pct": 0.0625,
+      "available": true,
+      "state": "unchanged",
+      "source": "brickmerge",
+      "image_url": "https://img.bricklink.com/ItemImage/SN/0/21369-1.png",
+      "compare_url": "https://www.brickmerge.de/21369-1_x",
+      "deal_score": 44,
+      "ebay_price_eur": 191.99,
+      "margin_vs_ebay_eur": 12.0,
+      "resale_source": "your listed price",
+      "sold_count": null,
+      "net_profit_eur": null,
+      "resale_eur": 191.99,
+      "falling_days": 4,
+      "verified": null,
+      "verify_reason": "found the page, price not readable"
+    }
+  ],
+  "thin": [],
+  "stale": [],
+  "health": null,
+  "brickmerge_ok": 401,
+  "brickmerge_total": 408,
+  "unverified": [],
+  "errors": [],
+  "lego_prices": {
+    "21318": {
+      "name": "Ideas 21318 Baumhaus / Treehouse",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71043": {
+      "name": "LEGO® Harry Potter 71043 Schloss Hogwarts NEU & OVP",
+      "price": 469.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76909": {
+      "name": "LEGO® Speed Champions 76909 Mercedes-AMG F1 W12 & Project One",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10255": {
+      "name": "LEGO® Creator 10255 Stadtleben Assembly Square NEU OVP EOL!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21246": {
+      "name": "Minecraft 21246 Das Duell in der Finsternis",
+      "price": 95.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75383": {
+      "name": "LEGO® Star Wars 75383 Darth Mauls Sith Infiltrator EOL!",
+      "price": 65.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21343": {
+      "name": "LEGO® Ideas 21343 Wikingerdorf NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10318": {
+      "name": "LEGO® Icons 10318 Concorde NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75394": {
+      "name": "LEGO® Star Wars 75394 Imperialer Sternzerstörer EXKLUSIV!",
+      "price": 156.74,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21349": {
+      "name": "LEGO® Ideas 21349 Schwarz-weiße Katze EXKLUSIV",
+      "price": 95.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77241": {
+      "name": "LEGO® Speed Champions 77241 2 Fast 2 Furious Honda S2000",
+      "price": 31.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75980": {
+      "name": "Harry Potter 75980 Angriff auf den Fuchsbau EOL",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21330": {
+      "name": "LEGO® Ideas 21330 McCallister House aus Home Alone",
+      "price": 299.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75356": {
+      "name": "LEGO® Star Wars 75356 Supersternzerstörer Executor",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40755": {
+      "name": "LEGO® Star Wars 40755 Imperial Dropship vs. Rebel Scout Speeder",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60467": {
+      "name": "LEGO® City 60467 Schwerlast-Abschleppwagen mit Kran",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10309": {
+      "name": "LEGO® Creator Expert 10309 Sukkulenten EXKLUSIV NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75351": {
+      "name": "LEGO® Star Wars 75351 Princess Leia (Boushh) Helm NEU OVP",
+      "price": 60.44,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21333": {
+      "name": "LEGO® Ideas 21333 Vincent van Gogh Sternennacht",
+      "price": 154.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10273": {
+      "name": "LEGO® 10273 Geisterhaus auf dem Jahrmarkt NEU OVP EXKLUSIV",
+      "price": 299.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10350": {
+      "name": "LEGO® Icons 10350 Eckhaus im Tudorstil NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10372": {
+      "name": "LEGO® Icons 10372 Hibiskus EXKLUSIV!",
+      "price": 66.93,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10370": {
+      "name": "LEGO® Icons 10370 Weihnachtsstern NEU OVP!",
+      "price": 52.8,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10355": {
+      "name": "LEGO® Icons 10355 Blacktron Renegade NEU OVP EXKLUSIV!",
+      "price": 84.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10328": {
+      "name": "LEGO® Icons 10328 Rosenstrauß NEU OVP",
+      "price": 41.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40712": {
+      "name": "LEGO® 40712 Mikro-Startrampe NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76199": {
+      "name": "LEGO® Super Heroes 76199 Carnage NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75810": {
+      "name": "75810 Stranger Things The Upside Down EOL",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10311": {
+      "name": "Creator Expert 10311 Orchidee",
+      "price": 45.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40478": {
+      "name": "LEGO® 40478 Kleines Disney Schloss NEU OVP",
+      "price": 39.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76968": {
+      "name": "LEGO® Jurassic World 76968 Dino-Fossilien: Tyrannosaurus rex",
+      "price": 231.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40573": {
+      "name": "LEGO® Promotional 40573 Weihnachtsbaum NEU OVP!",
+      "price": 39.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40719": {
+      "name": "LEGO® 40719 Traditionelles Schachspiel NEU OVP EXKLUSIV!",
+      "price": 79.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75385": {
+      "name": "Star Wars 75385 Ahsoka Tanos Duell auf Peridea",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10326": {
+      "name": "LEGO® Icons 10326 Naturhistorisches Museum",
+      "price": 287.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76437": {
+      "name": "LEGO® Harry Potter 76437 Der Fuchsbau Sammleredition",
+      "price": 239.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "853910": {
+      "name": "LEGO® 853910 Minifiguren-Keramikbecher NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10316": {
+      "name": "LEGO® Icons 10316 Herr der Ringe - Bruchtal NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40649": {
+      "name": "LEGO® 40649 Große LEGO Minifigur NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76440": {
+      "name": "LEGO® Harry Potter 76440 Trimagisches Turnier: Die Ankunft EOL!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60440": {
+      "name": "LEGO® City 60440 Sattelzug NEU OVP EOL!",
+      "price": 99.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43242": {
+      "name": "LEGO® Disney 43242 Hütte Schneewittchen und sieben Zwerge NEU OVP!",
+      "price": 269.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21338": {
+      "name": "LEGO® Ideas 21338 Finnhütte NEU OVP! EOL!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21348": {
+      "name": "LEGO® Ideas 21348 Dungeons & Dragons: Die Sage vom Roten Drachen",
+      "price": 399.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40813": {
+      "name": "40813 Glückskatze",
+      "price": 36.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10300": {
+      "name": "LEGO® Icons 10300 Die Zeitmaschine Zurück in die Zukunft",
+      "price": 199.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11373": {
+      "name": "LEGO® Icons 11373 Der Herr der Ringe: Saurons Helm",
+      "price": 52.8,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40499": {
+      "name": "LEGO® 40499 Schlitten des Weihnachtsmanns NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21358": {
+      "name": "LEGO® Ideas 21358 Spielzeugautomat mit Minifiguren EXKLUSIV!",
+      "price": 159.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "30628": {
+      "name": "Harry Potter 30628 Das Monsterbuch der Monster",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76959": {
+      "name": "LEGO® Jurassic World 76959 Triceratops-Forschung NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76333": {
+      "name": "LEGO® Super Heroes 76333 Batman & Robin: Batmobil EXKLUSIV!",
+      "price": 27.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10345": {
+      "name": "LEGO® Botanicals 10345 Blumengesteck NEU OVP EXKLUSIV!",
+      "price": 100.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21342": {
+      "name": "LEGO® Ideas 21342 Die Insektensammlung NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10332": {
+      "name": "LEGO® Icons 10332 Mittelalterlicher Stadtplatz NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71799": {
+      "name": "Ninjago 71799 Die Märkte von NINJAGO City",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77073": {
+      "name": "Fortnite 77073 Schlachtenbus",
+      "price": 99.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21350": {
+      "name": "LEGO® Ideas 21350 Der weiße Hai NEU OVP EXKLUSIV!",
+      "price": 147.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43249": {
+      "name": "Disney 43249 Stitch",
+      "price": 55.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10290": {
+      "name": "Creator Expert 10290 Pickup",
+      "price": 150.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21376": {
+      "name": "LEGO® Ideas 21376 Orangefarbene Katze EXKLUSIV!",
+      "price": 91.2,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21341": {
+      "name": "LEGO® Ideas 21341 Disney Hocus Pocus: Hexenhaus Sanderson",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76974": {
+      "name": "LEGO® Jurassic World 76974 Mosasaurier: Die Bootmission NEU OVP",
+      "price": 55.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77256": {
+      "name": "LEGO® Speed Champions 77256 Zeitmaschine Zurück in die Zukunft",
+      "price": 23.25,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40575": {
+      "name": "LEGO® 40575 Jahr des Kaninchens NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40355": {
+      "name": "LEGO® 40355 Jahr der Ratte",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42184": {
+      "name": "Technic 42184 Koenigsegg Jesko Absolut",
+      "price": 57.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71051": {
+      "name": "LEGO® 71051 Minifiguren Serie 28 - 12er Set",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40659": {
+      "name": "LEGO® Disney 40659 Steamboat Willie Mini-Modell EXKLUSIV!",
+      "price": 38.4,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40650": {
+      "name": "LEGO® Creator 40650 Klassischer Land Rover Defender NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71841": {
+      "name": "Ninjago 71841 Drachensturmdorf",
+      "price": 39.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10340": {
+      "name": "LEGO® Icons 10340 Weihnachtskranz NEU OVP!",
+      "price": 87.4,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75409": {
+      "name": "LEGO® Star Wars 75409 Jango Fetts Sternenschiff Firespray-Klasse",
+      "price": 256.68,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10352": {
+      "name": "LEGO® Icons 10352 The Simpsons™: Krusty Burger EXKLUSIV!",
+      "price": 168.34,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75435": {
+      "name": "LEGO® Star Wars 75435 MTT der Separatisten Schlacht von Felucia",
+      "price": 114.68,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21355": {
+      "name": "LEGO® Ideas 21355 Die Entstehung von MINT NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40801": {
+      "name": "BrickHeadz 40801 Mike, Dustin, Lucas und Will",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21357": {
+      "name": "LEGO® Ideas 21357 Disney Pixar Luxo Jr. NEU!",
+      "price": 51.3,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10360": {
+      "name": "LEGO® Icons 10360 Spaceshuttle-Transport-Jumbo EXKLUSIV!",
+      "price": 210.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40921": {
+      "name": "LEGO® 40921 Große Minifigur Blauer Astronaut EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21271": {
+      "name": "LEGO® Minecraft 21271 Prüfungskammern NEU OVP EXKLUSIV!",
+      "price": 40.31,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43021": {
+      "name": "LEGO® 43021 Nike Dunk Trickshot EXKLUSIV!",
+      "price": 46.49,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77252": {
+      "name": "LEGO® Speed Champions 77252 APXGP Team Race Car F1 Der Film",
+      "price": 28.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40820": {
+      "name": "40820 Große Weihnachtsmann-Minifigur",
+      "price": 75.84,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75406": {
+      "name": "LEGO® Star Wars 75406 Kylo Rens Kommandoshuttle NEU OVP",
+      "price": 64.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71855": {
+      "name": "LEGO® Ninjago 71855 Showdown mit dem Ninja-Drachen Riyu",
+      "price": 43.2,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42175": {
+      "name": "LEGO® Technic 42175 Volvo FMX LKW mit EC230 Electric Raupenbagger",
+      "price": 164.16,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77015": {
+      "name": "Indiana Jones 77015 Tempel des goldenen Götzen",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21337": {
+      "name": "LEGO® Ideas 21337 Tischkicker NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60475": {
+      "name": "City 60475 Adventskalender 2025",
+      "price": 32.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31212": {
+      "name": "LEGO® ART 31212 Die Milchstraßen-Galaxie NEU OVP!",
+      "price": 155.1,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21276": {
+      "name": "LEGO® Minecraft 21276 Der Creeper",
+      "price": 39.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60512": {
+      "name": "LEGO® City 60512 Mountainbike-Abenteuervan EXKLUSIV!",
+      "price": 22.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40681": {
+      "name": "LEGO® Icons 40681 Retro Food Truck NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40819": {
+      "name": "LEGO® 40819 Große Rennfahrer-Minifigur EXKLUSIV!",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76300": {
+      "name": "LEGO® Super Heroes 76300 Arkham Asylum NEU OVP EXKLUSIV!",
+      "price": 286.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11384": {
+      "name": "LEGO® Icons 11384 Golden Retriever Welpe NEU OVP EXKLUSIV!",
+      "price": 105.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40409": {
+      "name": "LEGO® 40409 Hot Rod NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40916": {
+      "name": "LEGO® Botanicals 40916 Bepflanzter Bilderrahmen EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40619": {
+      "name": "BrickHeadz 40619 EVE und WALL-E",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10333": {
+      "name": "LEGO® Icons 10333 Herr der Ringe: Barad-dûr NEU OVP EXKLUSIV!",
+      "price": 432.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40560": {
+      "name": "BrickHeadz 40560 Die Professoren von Hogwarts",
+      "price": 49.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40707": {
+      "name": "LEGO® 40707 Jahr der Schlange EXKLUSIV!",
+      "price": 19.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75430": {
+      "name": "LEGO® Star Wars 75430 Der Ewok Wicket",
+      "price": 115.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21262": {
+      "name": "LEGO® Minecraft 21262 Die Windmühlenfarm NEU EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40766": {
+      "name": "LEGO® Promotional 40766 Hommage an Jane Austen EXKLUSIV!",
+      "price": 53.35,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40743": {
+      "name": "40743 Weihnachtsgesteck",
+      "price": 39.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40955": {
+      "name": "LEGO® 40955 Maersk-Containerschiff Zweistoffantrieb",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21356": {
+      "name": "LEGO® Ideas 21356 Flussraddampfer NEU OVP EXKLUSIV!",
+      "price": 287.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71813": {
+      "name": "LEGO® Ninjago 71813 Wolfsmasken-Dojo NEU EXKLUSIV",
+      "price": 122.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11375": {
+      "name": "LEGO® Icons 11375 Ferrari F2004 und Michael Schumacher",
+      "price": 65.09,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40759": {
+      "name": "LEGO® 40759 Festtagsserie: Valentinstag Geschenk",
+      "price": 27.84,
+      "source": "no reference price",
+      "url": ""
+    },
+    "72046": {
+      "name": "LEGO® Gaming 72046 Game Boy NEU",
+      "price": 57.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40728": {
+      "name": "Fortnite 40728 Farbenbomber",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40450": {
+      "name": "LEGO® 40450 Hommage an Amelia Earhart NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60509": {
+      "name": "LEGO® City 60509 Harbor Freight Train with Crane & Truck",
+      "price": 83.66,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40805": {
+      "name": "LEGO® 40805 Spielautomat EXKLUSIV!",
+      "price": 41.84,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40486": {
+      "name": "40486 adidas Originals Superstar",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40817": {
+      "name": "LEGO® 40817 Gelber Reisekoffer NEU",
+      "price": 18.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71048": {
+      "name": "LEGO® Minifigures 71048 Serie 27 - 12er Set",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40824": {
+      "name": "40824 Liebesbote Tweety",
+      "price": 39.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40528": {
+      "name": "LEGO® Store 40528 NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76457": {
+      "name": "LEGO® Harry Potter 76457 Dorf Hogsmeade Sammleredition",
+      "price": 321.08,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11371": {
+      "name": "LEGO® Icons 11371 Einkaufsmeile NEU OVP EXKLUSIV!",
+      "price": 229.9,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40757": {
+      "name": "LEGO® Icons 40757 Kiosk an der Ecke EXKLUSIV! NEU OVP!",
+      "price": 33.25,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40825": {
+      "name": "LEGO® 40825 Halloweenkranz EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40380": {
+      "name": "BrickHeadz 40380 Osterschaf",
+      "price": 15.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40761": {
+      "name": "LEGO® Icons 40761 Herr der Ringe: Sméagol & Déagol EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21061": {
+      "name": "Architecture 21061 Notre-Dame de Paris",
+      "price": 191.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10374": {
+      "name": "Icons 10374 Rosa Rosenstrauß",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40867": {
+      "name": "LEGO® 40867 LOVE 4 Buchstaben EXKLUSIV!",
+      "price": 22.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10323": {
+      "name": "LEGO® Icons 10323 PAC-MAN Spielautomat NEU OVP EXKLUSIV!",
+      "price": 257.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40352": {
+      "name": "BrickHeadz 40352 Erntedankfest-Vogelscheuche",
+      "price": 17.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21367": {
+      "name": "LEGO® Ideas 21367 Die Mondrakete von Tim und Struppi NEU OVP",
+      "price": 131.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40588": {
+      "name": "Promotional 40588 Blumentopf",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40793": {
+      "name": "LEGO® BrickHeadz 40793 Tom & Jerry Figuren",
+      "price": 19.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43008": {
+      "name": "LEGO® 43008 Nike Dunk x LEGO Set EXKLUSIV!",
+      "price": 98.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76449": {
+      "name": "LEGO® Harry Potter 76449 Beißendes Monsterbuch der Monster",
+      "price": 48.88,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76251": {
+      "name": "LEGO® Super Heroes 76251 Star-Lords Helm NEU EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60494": {
+      "name": "LEGO® City 60494 Kipplaster und Schaufellader",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75397": {
+      "name": "LEGO® Star Wars 75397 Jabbas Segelbarke EXKLUSIV!",
+      "price": 413.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75429": {
+      "name": "LEGO® Star Wars 75429 AT-AT Pilot Helm EXKLUSIV!",
+      "price": 81.88,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10314": {
+      "name": "Icons 10314 Trockenblumengesteck",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10363": {
+      "name": "Icons 10363 Leonardo da Vincis Fluggerät",
+      "price": 55.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76919": {
+      "name": "Speed Champions 76919 McLaren Formel-1 2023",
+      "price": 26.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40926": {
+      "name": "LEGO® Gaming 40926 SEGA Mega Drive Spielkonsole EXKLUSIV!",
+      "price": 41.84,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42129": {
+      "name": "LEGO® Technic 42129 4x4 Mercedes-Benz Zetros Offroad-Truck",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21365": {
+      "name": "LEGO® Ideas 21365 Turteltauben EXKLUSIV",
+      "price": 49.5,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71434": {
+      "name": "Super Mario 71434 Limonadendschungel-Design-Set",
+      "price": 54.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11374": {
+      "name": "LEGO® Icons 11374 Flipperautomat NEU OVP EXKLUSIV!",
+      "price": 202.1,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80113": {
+      "name": "LEGO® 80113 Familientreffen NEU OVP EXKLUSIV",
+      "price": 127.4,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11389": {
+      "name": "LEGO® Icons 11389 Der Astronaut EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21366": {
+      "name": "Ideas 21366 Schwimmende Otter",
+      "price": 89.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77255": {
+      "name": "Speed Champions 77255 Lightning McQueen",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75573": {
+      "name": "LEGO® Avatar 75573 Schwebende Berge: Site 26 und RDA Samson NEU OVP!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40634": {
+      "name": "LEGO® 40634 Ikonen NEU OVP EXKLUSIV!",
+      "price": 149.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75428": {
+      "name": "LEGO® Star Wars 75428 Kampfdroide mit STAP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42136": {
+      "name": "LEGO® Technic 42136 John Deere 9620R 4WD Tractor NEU OVP",
+      "price": 42.24,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76965": {
+      "name": "LEGO® Jurassic World 76965 Dino-Missionen: Stegosaurus",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75379": {
+      "name": "Star Wars 75379 R2-D2",
+      "price": 88.88,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75417": {
+      "name": "LEGO® Star Wars 75417 AT-ST Kampfläufer NEU OVP",
+      "price": 148.8,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75192": {
+      "name": "LEGO® Star Wars 75192 Millennium Falcon UCS NEU OVP!",
+      "price": 849.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40810": {
+      "name": "LEGO® Promotional 40810 LEGOLAND Park Portal EXKLUSIV!",
+      "price": 33.24,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77253": {
+      "name": "Speed Champions 77253 Bugatti Vision GT",
+      "price": 27.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11505": {
+      "name": "LEGO® Botanicals 11505 Waldpilze NEU OVP!",
+      "price": 66.24,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43010": {
+      "name": "LEGO® 43010 Nike Slam Dunk EXKLUSIV",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31393": {
+      "name": "LEGO® Creator 31393 Waldtiere: Wolf EXKLUSIV!",
+      "price": 52.8,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42141": {
+      "name": "LEGO® Technic 42141 McLaren Formel 1 Rennwagen",
+      "price": 199.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75636": {
+      "name": "One Piece 75636 Hütte im Windmühlendorf",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75640": {
+      "name": "One Piece 75640 Baratié Schwimmendes Restaurant",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42215": {
+      "name": "Technic 42215 Volvo EC500 Hybrid Bagger",
+      "price": 319.68,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80051": {
+      "name": "Monkie Kid 80051 Mini-Mech",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75338": {
+      "name": "Star Wars 75338 Überfall auf Ferrix",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11512": {
+      "name": "LEGO® Botanicals 11512 Hängende Efeutute EXKLUSIV!",
+      "price": 56.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21369": {
+      "name": "LEGO® Ideas 21369 The X-Files EXKLUSIV!",
+      "price": 191.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75647": {
+      "name": "LEGO® One Piece 75647 Gum-Gum-Frucht NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75458": {
+      "name": "LEGO® Star Wars 75458 Helm AT-RT-Pilot des Restimperiums",
+      "price": 64.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77984": {
+      "name": "LEGO® Jurassic World 77984 Jurassic Park Jeep Wrangler",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21591": {
+      "name": "LEGO® Minecraft 21591 Duell mit dem Krummen Wärter",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75442": {
+      "name": "LEGO® Star Wars 75442 UCS The Mandalorian N-1 Starfighter",
+      "price": 224.66,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75459": {
+      "name": "LEGO® Star Wars 75459 Imperiales Shuttle der Lambda-Klasse",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10366": {
+      "name": "LEGO® Icons 10366 Tropisches Aquarium EXKLUSIV!",
+      "price": 403.88,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75461": {
+      "name": "LEGO® Star Wars 75461 Große Darth-Vader-Minifigur EXKLUSIV!",
+      "price": 87.4,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11378": {
+      "name": "LEGO® Icons 11378 Douglas DC-3 PAN AM Passagierflugzeug",
+      "price": 216.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21359": {
+      "name": "LEGO® Ideas 21359 Die Italienische Riviera",
+      "price": 253.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11513": {
+      "name": "LEGO® Botanicals 11513 Dunkles Blumengesteck EXKLUSIV!",
+      "price": 56.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43306": {
+      "name": "LEGO® Disney 43306 Lotso EXKLUSIV!",
+      "price": 41.84,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31394": {
+      "name": "LEGO® Creator 31394 Niedliche Tiere: Roter Panda EXKLUSIV!",
+      "price": 32.33,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77120": {
+      "name": "LEGO® Sonic 77120 Shadows Mech vs. G.U.N. Trooper EXKLUSIV!",
+      "price": 48.49,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77985": {
+      "name": "LEGO Jurassic World 77985 Triceratops Dinosaurier Skelett",
+      "price": 74.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71052": {
+      "name": "LEGO® Minifiguren 71052 Serie 29 - 36er Box NEU OVP!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40690": {
+      "name": "LEGO® 40690 Hommage an die Bücher von Jules Verne EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42242": {
+      "name": "LEGO® Technic 42242 Mercedes-Benz Unimog U 5023 mit Kran",
+      "price": 113.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75460": {
+      "name": "LEGO® Star Wars 75460 Neuer Republikanischer X-Wing Starfighter",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80112": {
+      "name": "LEGO® 80112 Glückverheißender Drache EXKLUSIV EOL",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40920": {
+      "name": "LEGO® 40920 Bugs Bunny EXKLUSIV!",
+      "price": 41.84,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71837": {
+      "name": "LEGO® Ninjago 71837 NINJAGO City Werkstätten EXKLUSIV!",
+      "price": 224.66,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31378": {
+      "name": "LEGO® Creator 31378 Weltraumteleskop EXKLUSIV!",
+      "price": 35.89,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10354": {
+      "name": "LEGO® Icons 10354 Herr der Ringe: Das Auenland EXKLUSIV!",
+      "price": 241.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76478": {
+      "name": "LEGO Harry Potter 76478 Bücherstütze: Dumbledores Büro",
+      "price": 112.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40595": {
+      "name": "LEGO® Ideas 40595 Hommage an Galileo Galilei EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43025": {
+      "name": "LEGO® Editions 43025 Nike Air Max 95 EXKLUSIV!",
+      "price": 96.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10357": {
+      "name": "LEGO® Icons 10357 Shelby Cobra 427 S/C NEU OVP EXKLUSIV!",
+      "price": 127.88,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42241": {
+      "name": "LEGO® Technic 42241 Grüner Bugatti Chiron Pur Sport EXKLUSIV!",
+      "price": 64.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80121": {
+      "name": "LEGO® 80121 Altes Gasthaus EXKLUSIV!",
+      "price": 108.1,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77981": {
+      "name": "LEGO Jurassic World 77981 Rettungszentrum Junge Velociraptoren",
+      "price": 43.2,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80120": {
+      "name": "LEGO® 80120 Karpfen Springt übers Drachentor EXKLUSIV!",
+      "price": 51.7,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40687": {
+      "name": "LEGO® 40687 Alien-Diner EXKLUSIV NEU OVP",
+      "price": 17.76,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43302": {
+      "name": "LEGO® Disney 43302 Main Street, U.S.A. NEU EXKLUSIV!",
+      "price": 349.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80011": {
+      "name": "LEGO 80011 Monkie Kid Red Son's Inferno Truck",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60501": {
+      "name": "LEGO® City 60501 Lava Land-Achterbahnpark EXKLUSIV!",
+      "price": 96.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40695": {
+      "name": "LEGO® Harry Potter 40695 Borgin and Burkes: Floo Network",
+      "price": 41.4,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40586": {
+      "name": "LEGO® Icons 40586 Umzugswagen EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40864": {
+      "name": "LEGO® 40864 Glücksbringer EXKLUSIV!",
+      "price": 33.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40701": {
+      "name": "LEGO® 40701 Ballerina-Szene EXKLUSIV!",
+      "price": 22.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40746": {
+      "name": "LEGO® 40746 Santa's Delivery Truck EXKLUSIV!",
+      "price": 21.12,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60508": {
+      "name": "LEGO® City 60508 Überfall auf den Polizeizug NEU OVP",
+      "price": 150.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40913": {
+      "name": "LEGO® Icons 40913 Oldtimer-Parade EXKLUSIV!",
+      "price": 23.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42674": {
+      "name": "LEGO® Friends 42674 Comic- und Spieleladen",
+      "price": 81.6,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31216": {
+      "name": "LEGO® Art 31216 Keith Haring Tanzende Figuren NEU",
+      "price": 93.06,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40673": {
+      "name": "LEGO® BrickHeadz 40673 Micky Maus im Frühlingsfestkostüm",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40688": {
+      "name": "LEGO® 40688 Siegerpokal EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11503": {
+      "name": "LEGO® Botanicals 11503 Blumen an der Wand",
+      "price": 85.36,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40671": {
+      "name": "LEGO® BrickHeadz 40671 Groot im Topf NEU OVP EXKLUSIV!",
+      "price": 16.49,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21368": {
+      "name": "LEGO® Ideas 21368 Peanuts: Snoopys Hundehütte NEU OVP",
+      "price": 69.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10356": {
+      "name": "LEGO® Icons 10356 Star Trek: U.S.S. Enterprise NCC-1701-D",
+      "price": 347.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40925": {
+      "name": "LEGO® BrickHeadz 40925 Alice im Wunderland EXKLUSIV!",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40685": {
+      "name": "LEGO® 40685 Erlebnisfreibad EXKLUSIV",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40922": {
+      "name": "LEGO® BrickHeadz 40922 Lilo & Stitch: Angel NEU OVP",
+      "price": 16.32,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40373": {
+      "name": "LEGO® 40373 Jahrmarkt-Minifiguren-Zubehörset NEU OVP!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75419": {
+      "name": "LEGO® Star Wars 75419 Todesstern EXKLUSIV!",
+      "price": 950.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60488": {
+      "name": "LEGO® City 60488 Pommes-Truck",
+      "price": 19.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40689": {
+      "name": "LEGO® 40689 Feuerwerk EXKLUSIV!",
+      "price": 15.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42196": {
+      "name": "LEGO® Technic 42196 Lamborghini Huracán Tecnica Orange",
+      "price": 49.5,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40957": {
+      "name": "LEGO® 40957 Frühlingskranz NEU OVP EXKLUSIV!",
+      "price": 43.2,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40507": {
+      "name": "LEGO® 40507 I love Billund EXKLUSIV! NEU OVP!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40680": {
+      "name": "LEGO® 40680 Blumenladen EXKLUSIV!",
+      "price": 20.24,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43020": {
+      "name": "LEGO® 43020 Offizieller Pokal FIFA Fußball-WM NEU OVP!",
+      "price": 142.5,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40802": {
+      "name": "LEGO® BrickHeadz 40802 Luna Lovegood & Thestral Figuren",
+      "price": 24.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40952": {
+      "name": "LEGO® Promotional 40952 LEGOLAND Castle EXKLUSIV!",
+      "price": 63.69,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40915": {
+      "name": "LEGO® 40915 Lion Dance EXKLUSIV!",
+      "price": 26.88,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40792": {
+      "name": "LEGO® BrickHeadz 40792 Dumbo NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60511": {
+      "name": "LEGO® City 60511 Klassischer Dampfzug NEU OVP!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40860": {
+      "name": "LEGO® BrickHeadz 40860 Toy Story EXKLUSIV",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40804": {
+      "name": "LEGO® BrickHeadz 40804 Bumblebee Mech & Fahrzeug",
+      "price": 24.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40760": {
+      "name": "LEGO® Fortnite 40760 Abenteuer-Schali und Kuschelbeauftragte",
+      "price": 28.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40646": {
+      "name": "LEGO® Icons 40646 Narzissen EOL!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40670": {
+      "name": "LEGO® BrickHeadz 40670 Iron Spider-Man NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40683": {
+      "name": "LEGO® 40683 Blumenrankgitter NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40878": {
+      "name": "LEGO® BrickHeadz 40878 Teenage Mutant Ninja Turtles Figuren",
+      "price": 44.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10466": {
+      "name": "LEGO® Duplo 10466 Zugfahrt mit Opa EXKLUSIV!",
+      "price": 43.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40521": {
+      "name": "LEGO® Promotional 40521 The Haunted Mansion Disney Parks",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60495": {
+      "name": "LEGO® City 60495 Recycling-LKW NEU OVP EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "77093": {
+      "name": "LEGO® Gaming 77093 Ocarina of Time Das Letzte Gefecht",
+      "price": 116.24,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75421": {
+      "name": "LEGO® Star Wars 75421 SMART Play: Darth Vaders TIE Fighter",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40822": {
+      "name": "LEGO® 40822 Pickup mit Halloweenkürbis EXKLUSIV!",
+      "price": 22.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76238": {
+      "name": "LEGO® Super Heroes 76238 Batman Maske TV-Klassiker NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40516": {
+      "name": "LEGO® 40516 Jeder ist besonders EXKLUSIV! EOL!",
+      "price": 41.84,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60470": {
+      "name": "LEGO® City 60470 Arktis-Polarexpress NEU OVP",
+      "price": 164.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80119": {
+      "name": "LEGO® 80119 Leinwand mit Galoppierenden Pferden EXKLUSIV!",
+      "price": 99.74,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21360": {
+      "name": "LEGO® Ideas 21360 Willy Wonka und die Schokoladenfabrik EXKLUSIV!",
+      "price": 194.37,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43279": {
+      "name": "LEGO® Disney 43279 WALL-E und EVE NEU",
+      "price": 56.05,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76458": {
+      "name": "LEGO® Harry Potter 76458 Thestralfamilie EXKLUSIV",
+      "price": 64.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11376": {
+      "name": "LEGO® Icons 11376 Ford Model T NEU OVP EXKLUSIV!",
+      "price": 109.25,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43269": {
+      "name": "LEGO® Disney 43269 Welpe aus 101 Dalmatiner NEU OVP",
+      "price": 113.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75381": {
+      "name": "LEGO® Star Wars 75381 Droideka NEU OVP",
+      "price": 55.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43305": {
+      "name": "LEGO® Disney 43305 Ferkels Geburtstagsspaß EXKLUSIV!",
+      "price": 43.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10362": {
+      "name": "LEGO® Icons 10362 Französisches Café NEU OVP!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40891": {
+      "name": "LEGO® Promotional 40891 Stranger Things: WSQK Radio Station",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75427": {
+      "name": "LEGO® Star Wars 75427 SMART Play: A-Wing und Duell im Thronsaal",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40518": {
+      "name": "LEGO® Creator 40518 Hochgeschwindigkeitszug EXKLUSIV NEU OVP",
+      "price": 32.89,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10367": {
+      "name": "LEGO® Icons 10367 Herr der Ringe: Gandalf vs. Balrog",
+      "price": 100.8,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40879": {
+      "name": "LEGO® BrickHeadz 40879 Elfi Max Demogorgon Holly Figuren",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31171": {
+      "name": "LEGO® Creator 31171 Wilde Tiere: Prächtiges Nashorn mit Vögeln",
+      "price": 64.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76321": {
+      "name": "LEGO® Super Heroes 76321 Spider-Man vs. Doc Ock: Showdown U-Bahn",
+      "price": 49.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40797": {
+      "name": "LEGO® BrickHeadz 40797 I-Aah",
+      "price": 12.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43232": {
+      "name": "LEGO® Disney 43232 Peter Pans & Wendys Flug über London NEU OVP",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40658": {
+      "name": "LEGO® Star Wars 40658 Millennium Falcon Weihnachtsdiorama",
+      "price": 33.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40861": {
+      "name": "LEGO® BrickHeadz 40861 Sulley, Mike und Boo Figuren EXKLUSIV!",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40803": {
+      "name": "LEGO® BrickHeadz 40803 Optimus Prime Mech & Fahrzeug",
+      "price": 24.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43019": {
+      "name": "LEGO® 43019 Fußball NEU OVP!",
+      "price": 99.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43307": {
+      "name": "LEGO® Disney 43307 Alien mit Pizza Planet Raketenfahrt EXKLUSIV!",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40923": {
+      "name": "BrickHeadz 40923 Shrek, Donkey und Gingy",
+      "price": 43.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76450": {
+      "name": "Harry Potter 76450 Buchstütze: Hogwarts Express",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40856": {
+      "name": "BrickHeadz 40856 The Mandalorian and Grogu",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75425": {
+      "name": "Star Wars 75425 SMART Play: Mos Eisley Cantina",
+      "price": 73.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40775": {
+      "name": "Promotional 40775 Mini-Ritterburg",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40924": {
+      "name": "BrickHeadz 40924 Megatron",
+      "price": 28.79,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40776": {
+      "name": "Promotional 40776 Weihnachtsmarktstand",
+      "price": 24.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80056": {
+      "name": "Monkie Kid 80056 Neunköpfige Bestie",
+      "price": 84.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75389": {
+      "name": "Star Wars 75389 Dunkler Millennium Falke",
+      "price": 152.64,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40677": {
+      "name": "BrickHeadz 40677 Harry Potter Gefangene von Askaban",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71866": {
+      "name": "Ninjago 71866 15-Jubiläum Ninja-Charaktere",
+      "price": 37.19,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76317": {
+      "name": "Super Heroes 76317 Peter Parkers Wohnung",
+      "price": 56.64,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40748": {
+      "name": "BrickHeadz 40748 Batman 8-in-1",
+      "price": 28.49,
+      "source": "no reference price",
+      "url": ""
+    },
+    "30434": {
+      "name": "Creator 30434 Aston Martin Valkyrie 30er BOX",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60500": {
+      "name": "City 60500 Der LEGO Lieferwagen",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21063": {
+      "name": "Architecture 21063 Schloss Neuschwanstein",
+      "price": 224.63,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75376": {
+      "name": "Star Wars 75376 Tantive IV",
+      "price": 75.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42156": {
+      "name": "Technic 42156 PEUGEOT 9X8 Le Mans Hypercar",
+      "price": 189.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75426": {
+      "name": "Star Wars 75426 SMART Play: Millennium Falke",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76330": {
+      "name": "Super Heroes 76330 Batman Logo",
+      "price": 66.74,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11372": {
+      "name": "Icons 11372 Herbstlicher Landhausgarten",
+      "price": 109.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76976": {
+      "name": "Jurassic World 76976 Spinosaurier & Quetzalcoatlus",
+      "price": 139.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10342": {
+      "name": "Icons 10342 Rosafarbener Blumenstrauß",
+      "price": 57.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21064": {
+      "name": "Architecture 21064 Paris - Stadt der Liebe",
+      "price": 69.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "30701": {
+      "name": "Icons 30701 Feldblumen 30er Box",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76973": {
+      "name": "Jurassic World 76973 Raptor & Titanosaurus",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "72037": {
+      "name": "Super Mario 72037 Mario Kart: Mario & Standard-Kart",
+      "price": 148.8,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40954": {
+      "name": "Creator 40954 Postkarte aus Deutschland",
+      "price": 24.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43033": {
+      "name": "Editions 43033 Trikot US-Fußballnationalmannschaft 2026",
+      "price": 27.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60423": {
+      "name": "City 60423 Straßenbahn mit Haltestelle",
+      "price": 75.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40765": {
+      "name": "Star Wars 40765 Ausbildungszentrum auf Kamino",
+      "price": 45.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21281": {
+      "name": "Minecraft 21281 Geburtstagsfeier des Babyschweins EOL",
+      "price": 38.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40721": {
+      "name": "40721 Halloween-Scheune",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40426": {
+      "name": "Seasonal 40426 Türkranz / Adventskranz 2in1",
+      "price": 39.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40881": {
+      "name": "BrickHeadz 40881 Vorratslama und Fischstäbchen",
+      "price": 27.59,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75444": {
+      "name": "Star Wars 75444 Angriff des AT-RT",
+      "price": 49.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40674": {
+      "name": "BrickHeadz 40674 Stitch",
+      "price": 12.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75423": {
+      "name": "Star Wars 75423 SMART Play: Lukes Rot Fünf X-Wing",
+      "price": 83.69,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10353": {
+      "name": "Icons 10353 Williams Racing FW14B Nigel Mansell",
+      "price": 79.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75382": {
+      "name": "Star Wars 75382 TIE-Abfangjäger",
+      "price": 239.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11508": {
+      "name": "Icons 11508 Gänseblümchen",
+      "price": 19.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11504": {
+      "name": "Icons 11504 Friedenslilie",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "5007905": {
+      "name": "5007905 Harry Potter Schlüsselleuchte",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21226": {
+      "name": "Art 21226 Gemeinsames Kunstprojekt",
+      "price": 109.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10280": {
+      "name": "Creator 10280 Blumenstrauß",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60469": {
+      "name": "City 60469 Hauptbahnhof",
+      "price": 75.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60466": {
+      "name": "City 60466 Gelber Bulldozer",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "30727": {
+      "name": "Star Wars 30727 TIE Advanced Mini 30er Box",
+      "price": 119.7,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80036": {
+      "name": "Monkie Kid 80036 Stadt der Laternen",
+      "price": 139.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40487": {
+      "name": "Ideas 40487 Segelboot Abenteuer",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76304": {
+      "name": "Super Heroes 76304 Batman Forever Batmobil",
+      "price": 89.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76975": {
+      "name": "Jurassic World 76975 Flucht vor dem T.Rex",
+      "price": 49.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31167": {
+      "name": "Creator 31167 Geisterhaus 3-in-1",
+      "price": 80.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80024": {
+      "name": "Monkie Kid 80024 Berg der Blumen und Früchte",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40703": {
+      "name": "Ninjago Mikromodelle 40703 40704 40705 40706",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10343": {
+      "name": "Icons 10343 Mini-Orchidee",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40814": {
+      "name": "40814 Schwebender Baby-Elefant",
+      "price": 31.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75399": {
+      "name": "Star Wars 75399 Rebel U-Wing Starfighter",
+      "price": 69.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40678": {
+      "name": "40678 Feiertagskalender",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11502": {
+      "name": "Icons 11502 Sonnenblumen",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "43277": {
+      "name": "Disney 43277 Cruella de Vils Auto",
+      "price": 49.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60503": {
+      "name": "City 60503 Hubschrauber der Küstenwache",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60487": {
+      "name": "City 60487 Gelbes Taxi",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40720": {
+      "name": "Disney 40720 Mini-Dornröschenschloss",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "30390": {
+      "name": "Jurassic World 30390 Dinosaur Market 30er BOX",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40779": {
+      "name": "Promotional 40779 Jahr des Pferdes",
+      "price": 14.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75420": {
+      "name": "Star Wars 75420 SMART Play: Lukes Landspeeder",
+      "price": 39.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42171": {
+      "name": "Technic 42171 Mercedes-AMG F1 W14 E Performance",
+      "price": 191.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76456": {
+      "name": "Harry Potter 76456 Adventskalender 2025",
+      "price": 34.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76470": {
+      "name": "Harry Potter 76470 Fliegender Ford Anglia",
+      "price": 79.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42167": {
+      "name": "Technic 42167 Mack LR Electric Müllwagen",
+      "price": 34.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75436": {
+      "name": "Star Wars 75436 Mandalorianer und Grogu Speeder Bike",
+      "price": 14.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76970": {
+      "name": "Jurassic World 76970 Babydinosaurier Dolores: Aquilops",
+      "price": 24.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60474": {
+      "name": "City 60474 F1 Startaufstellung VCARB & Sauber",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11509": {
+      "name": "Icons 11509 Blühender Kaktus",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42146": {
+      "name": "Technic 42146 Liebherr LR 13000 Raupenkran",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40669": {
+      "name": "Super Heroes 40669 Iron Man MK5",
+      "price": 14.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76433": {
+      "name": "Harry Potter 76433 Zaubertrankpflanze: Alraune",
+      "price": 64.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "5007906": {
+      "name": "5007906 Hermine Granger Schlüsselleuchte",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40763": {
+      "name": "Creator 40763 Weltkindertag-Teddy",
+      "price": 25.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42224": {
+      "name": "Technic 42224 Porsche 911 GT3 R REXY AO Racing",
+      "price": 139.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40359": {
+      "name": "40359 Bilderrahmen",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60422": {
+      "name": "City 60422 Hafen mit Frachtschiff",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40675": {
+      "name": "BrickHeadz 40675 Klon Commander Cody",
+      "price": 14.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71858": {
+      "name": "Ninjago 71858 15-Jubiläum Vier-Waffen-Schmiede",
+      "price": 99.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "11501": {
+      "name": "Botanicals 11501 Tulpenstrauß",
+      "price": 59.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40548": {
+      "name": "BrickHeadz 40548 Hommage an die Spice Girls EOL",
+      "price": 35.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60478": {
+      "name": "City 60478 Betonmischer",
+      "price": 39.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40711": {
+      "name": "40711 Igel und ihr Picknick-Date",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76969": {
+      "name": "Jurassic World 76969 Dino-Fossilien: Triceratops-Schädel",
+      "price": 44.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80103": {
+      "name": "80103 Drachenbootrennen",
+      "price": 69.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40796": {
+      "name": "BrickHeadz 40796 Helden und Bösewichte Rache der Sith",
+      "price": 55.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40885": {
+      "name": "Creator 40885 Entenfamilie",
+      "price": 39.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60367": {
+      "name": "City 60367 Passagierflugzeug",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10291": {
+      "name": "Creator Expert 10291 Queer Eye Loft der Fab 5",
+      "price": 86.39,
+      "source": "no reference price",
+      "url": ""
+    },
+    "80013": {
+      "name": "Monkie Kid 80013 Geheime Teambasis",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75440": {
+      "name": "Star Wars 75440 AT-AT",
+      "price": 64.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40798": {
+      "name": "BrickHeadz 40798 Roter Panda Mei",
+      "price": 14.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40676": {
+      "name": "BrickHeadz 40676 Die dunkle Bedrohung",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60499": {
+      "name": "City 60499 Flughafenlöschfahrzeug",
+      "price": 69.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42165": {
+      "name": "Technic 42165 Mercedes-AMG F1 W14 Pull-Back",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75443": {
+      "name": "Star Wars 75443 Grogus Zuhause",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42096": {
+      "name": "Technic 42096 Porsche 911 RSR",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42121": {
+      "name": "Technic 42121 Hydraulikbagger EOL",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40682": {
+      "name": "40682 Frühlingsgartenhaus",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75422": {
+      "name": "Star Wars 75422 SMART Play: Jedi-Training Yodas Hütte",
+      "price": 69.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40547": {
+      "name": "BrickHeadz 40547 Obi-Wan Kenobi & Darth Vader EOL",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "71847": {
+      "name": "Ninjago 71847 Der Wächterdrache",
+      "price": 149.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21279": {
+      "name": "Minecraft 21279 Der Enderman-Turm",
+      "price": 99.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "10347": {
+      "name": "Icons 10347 Kleiner Sommerstrauß",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60479": {
+      "name": "City 60479 Gefangenentransporter",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "40622": {
+      "name": "BrickHeadz 40622 100-jähriges Disney Jubiläum",
+      "price": 39.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "5007907": {
+      "name": "5007907 Ron Weasley Schlüsselleuchte",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75452": {
+      "name": "Star Wars 75452 Astromech-Droide BB-8",
+      "price": 89.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76972": {
+      "name": "Jurassic World 76972 Raptor: Verfolgungsjagd Geländewagen",
+      "price": 34.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "42602": {
+      "name": "Friends 42602 Fahrzeug zur Weltraumforschung",
+      "price": null,
+      "source": "no reference price",
+      "url": ""
+    },
+    "60505": {
+      "name": "City 60505 Flugzeug, Wartungsfahrzeug, Luftkissenboot",
+      "price": 69.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75448": {
+      "name": "Star Wars 75448 Klon-Schocktruppen Mech",
+      "price": 19.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31174": {
+      "name": "Creator 31174 Retro-Telefon",
+      "price": 29.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "30683": {
+      "name": "Speed Champions 30683 McLaren Formel-1 30er Box",
+      "price": 105.0,
+      "source": "no reference price",
+      "url": ""
+    },
+    "31168": {
+      "name": "Creator 31168 Ritterburg im Mittelalter",
+      "price": 109.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76459": {
+      "name": "Harry Potter 76459 Hagrids und Harrys Flucht Ligusterweg",
+      "price": 24.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75441": {
+      "name": "Star Wars 75441 Angriffskreuzer der Venator-Klasse",
+      "price": 79.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "76461": {
+      "name": "Harry Potter 76461 Wichtel",
+      "price": 34.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "75367": {
+      "name": "Star Wars 75367 Venator-Klasse Angriffskreuzer",
+      "price": 623.99,
+      "source": "no reference price",
+      "url": ""
+    },
+    "21273": {
+      "name": "Minecraft 21273 Angriff des Ghast-Ballons",
+      "price": 69.99,
+      "source": "no reference price",
+      "url": ""
+    }
+  },
+  "seller": "knoppers55"
+}
