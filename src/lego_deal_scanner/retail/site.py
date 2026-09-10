@@ -74,12 +74,24 @@ main{margin-top:20px;display:flex;flex-direction:column;gap:11px}
 .fig .gap small{display:block;font-size:11px;font-weight:700;color:var(--dim);
   letter-spacing:.09em;text-transform:uppercase;margin-top:2px}
 .empty{color:var(--dim);padding:60px 4px;text-align:center;font-size:16px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px}
+.tools input,.tools select{font:13.5px/1 inherit;color:var(--fg);background:var(--pill);
+  border:1px solid var(--line);border-radius:9px;padding:8px 11px;outline:none}
+.tools input:focus,.tools select:focus{border-color:var(--accent)}
+.tools input[type=search]{flex:1;min-width:150px}
+.tools input[type=number]{width:96px}
+.tools .count{margin-left:auto;font-size:13px;color:var(--dim);
+  font-variant-numeric:tabular-nums}
+.tools button{font:13.5px/1 inherit;color:var(--dim);background:var(--pill);
+  border:1px solid var(--line);border-radius:9px;padding:8px 11px;cursor:pointer}
+.tools button:hover{color:var(--fg)}
 footer{margin-top:44px;color:var(--dim);font-size:12.5px;line-height:1.7}
 @media(max-width:560px){
   h1{font-size:21px}
   .row{padding:14px;gap:13px}
   .thumb{width:58px;height:58px}
   .fig .gap{font-size:23px}
+  .tools .count{margin-left:0;width:100%}
 }
 """
 
@@ -102,7 +114,9 @@ _JS = r"""
     cur=modes[(i+1)%modes.length][0]; LS.s('lds-theme',cur); apply(cur);
   });
 
+  var board=document.getElementById('board');
   var rows=[].slice.call(document.querySelectorAll('.row'));
+
   var prev={}; try{prev=JSON.parse(LS.g('lds')||'{}')||{}}catch(e){}
   var first=!Object.keys(prev).length, n=0, cmap={};
   rows.forEach(function(r){
@@ -120,6 +134,45 @@ _JS = r"""
   function snap(){LS.s('lds',JSON.stringify(cmap));}
   setTimeout(snap,45000);
   window.addEventListener('beforeunload',snap);
+
+  /* ---- filter + sort toolbar ---- */
+  var q=document.getElementById('q'), shop=document.getElementById('shop'),
+      sort=document.getElementById('sort'), min=document.getElementById('min'),
+      count=document.getElementById('count'), copy=document.getElementById('copy');
+  function num(r,k){var v=parseFloat(r.dataset[k]);return isNaN(v)?0:v;}
+  function run(){
+    if(!board) return;
+    var s=(q&&q.value||'').trim().toLowerCase();
+    var sh=shop&&shop.value||'', mn=parseFloat(min&&min.value)||0;
+    var key=sort&&sort.value||'gap', asc=(key==='price'||key==='num');
+    rows.sort(function(a,b){return asc?num(a,key)-num(b,key):num(b,key)-num(a,key);});
+    rows.forEach(function(r){board.appendChild(r);});
+    var shown=0;
+    rows.forEach(function(r){
+      var ok=true;
+      if(s && r.dataset.q.indexOf(s)<0) ok=false;
+      if(sh && r.dataset.shop!==sh) ok=false;
+      if(mn && num(r,'gap')<mn) ok=false;
+      r.style.display=ok?'':'none'; if(ok) shown++;
+    });
+    if(count) count.textContent=shown+' of '+rows.length;
+    LS.s('lds-sort',key); LS.s('lds-shop',sh);
+  }
+  if(sort){var ss=LS.g('lds-sort'); if(ss) sort.value=ss;}
+  if(shop){var sv=LS.g('lds-shop'); if(sv) shop.value=sv;}
+  [q,shop,sort,min].forEach(function(el){ if(el) el.addEventListener('input',run); });
+  if(copy) copy.addEventListener('click',function(){
+    var t=rows.filter(function(r){return r.style.display!=='none';}).map(function(r){
+      return [r.dataset.num, r.querySelector('.name .t').textContent.trim(),
+              r.dataset.shop, '€'+r.dataset.price,
+              '€'+Math.round(num(r,'gap'))+' under'].join('\t');
+    }).join('\n');
+    navigator.clipboard.writeText(t).then(function(){
+      copy.textContent='Copied '+t.split('\n').filter(Boolean).length;
+      setTimeout(function(){copy.textContent='Copy';},1500);
+    });
+  });
+  run();
 })();
 """
 
@@ -138,15 +191,19 @@ def _row(d: dict) -> str:
 
     net = d.get("net_profit_eur")
     if net is not None:
-        fig = f'~&euro;{net:.0f}<small>profit</small>'
+        gap_val, fig = net, f'~&euro;{net:.0f}<small>profit</small>'
     else:
         g = d.get("margin_vs_ebay_eur")
+        gap_val = g or 0
         fig = (f'&euro;{g:.0f}<small>under your price</small>' if g is not None
                else f'&minus;{d["saving_pct"] * 100:.0f}%')
+    haystack = html.escape(f'{d["set_num"]} {d["name"]} {shop}'.lower(), quote=True)
 
     return (
         f'<a class="row" href="{url}" target="_blank" rel="noopener" '
-        f'data-key="{key}" data-price="{d["price_eur"]:.2f}">'
+        f'data-key="{key}" data-price="{d["price_eur"]:.2f}" '
+        f'data-gap="{gap_val:.2f}" data-shop="{html.escape(shop.lower(), quote=True)}" '
+        f'data-num="{sn}" data-q="{haystack}">'
         f'<span class="thumb"><img src="{img}" alt="" loading="lazy" '
         f'onerror="this.style.display=\'none\'"><b>{sn}</b></span>'
         f'<span class="name"><span class="t">{name}</span>'
@@ -168,6 +225,23 @@ def render_html(result: dict, cfg: dict) -> str:
     body = "\n".join(_row(d) for d in deals) or \
         '<p class="empty">Nothing cheaper than your prices right now.</p>'
 
+    shops = sorted({(d.get("shop_name") or d.get("shop") or "") for d in deals},
+                   key=str.lower)
+    shop_opts = "".join(f'<option value="{html.escape(s.lower())}">{html.escape(s)}</option>'
+                        for s in shops if s)
+    tools = f"""<div class="tools">
+    <input type="search" id="q" placeholder="Search set or name">
+    <select id="shop"><option value="">All shops</option>{shop_opts}</select>
+    <select id="sort">
+      <option value="gap">Biggest gap</option>
+      <option value="price">Cheapest first</option>
+      <option value="num">Set number</option>
+    </select>
+    <input type="number" id="min" min="0" step="10" placeholder="min &euro;">
+    <button id="copy" type="button">Copy</button>
+    <span class="count" id="count">{len(deals)}</span>
+  </div>""" if deals else ""
+
     return f"""<!doctype html>
 <html lang="de"><head>
 <meta charset="utf-8">
@@ -185,7 +259,8 @@ def render_html(result: dict, cfg: dict) -> str:
   <button id="theme" class="theme" type="button">Auto</button>
 </header>
 <div id="new" class="newbar" hidden></div>
-<main>
+{tools}
+<main id="board">
 {body}
 </main>
 <footer>Links go to the shop's page for that set &mdash; confirm the set, price
