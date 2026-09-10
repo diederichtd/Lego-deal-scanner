@@ -14,55 +14,73 @@ from datetime import datetime, timezone
 from pathlib import Path
 _CSS = """
 :root{
-  --bg:#fbfbfa; --fg:#1a1a19; --dim:#6b6b66; --line:#e6e5e1;
-  --hi:#f2f1ec; --accent:#177a3a; --new:#c8102e; --tile:#efeee9;
+  --bg:#faf9f7; --card:#fff; --fg:#1b1a18; --dim:#726c63; --line:#eceae4;
+  --accent:#0b7a3b; --new:#c8102e; --pill:#f3f1ec;
+  --sh:0 1px 2px rgba(20,18,15,.04),0 4px 14px rgba(20,18,15,.05);
+  --shh:0 2px 6px rgba(20,18,15,.07),0 12px 30px rgba(20,18,15,.10);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#141413; --fg:#eceae4; --dim:#928e85; --line:#2b2a27;
-  --hi:#1e1d1b; --accent:#57c27a; --new:#f2637a; --tile:#232220;
+  --bg:#131211; --card:#1c1b19; --fg:#efece5; --dim:#9a938a; --line:#2c2a26;
+  --accent:#54c47a; --new:#f2637a; --pill:#262420;
+  --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.35);
+  --shh:0 2px 8px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.45);
 }}
 :root[data-theme="dark"]{
-  --bg:#141413; --fg:#eceae4; --dim:#928e85; --line:#2b2a27;
-  --hi:#1e1d1b; --accent:#57c27a; --new:#f2637a; --tile:#232220;
+  --bg:#131211; --card:#1c1b19; --fg:#efece5; --dim:#9a938a; --line:#2c2a26;
+  --accent:#54c47a; --new:#f2637a; --pill:#262420;
+  --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.35);
+  --shh:0 2px 8px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.45);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--bg)}
 body{background:var(--bg);color:var(--fg);
-  font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  -webkit-font-smoothing:antialiased}
-.wrap{max-width:680px;margin:0 auto;padding:30px 20px 64px}
-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-h1{font-size:19px;font-weight:650;letter-spacing:-.01em}
-h1 span{color:var(--dim);font-weight:500}
-.sub{color:var(--dim);font-size:13px;margin-top:4px}
-.theme{flex:none;font:12px/1 inherit;color:var(--dim);background:var(--tile);
-  border:1px solid var(--line);border-radius:7px;padding:6px 9px;cursor:pointer}
+  font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:740px;margin:0 auto;padding:38px 18px 80px}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;
+  margin-bottom:4px}
+h1{font-size:25px;font-weight:750;letter-spacing:-.02em}
+h1 span{color:var(--dim);font-weight:500;font-size:18px}
+.sub{color:var(--dim);font-size:14px;margin-top:7px}
+.theme{flex:none;font:13px/1 inherit;color:var(--dim);background:var(--pill);
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;cursor:pointer}
 .theme:hover{color:var(--fg)}
-.newbar{margin:16px 0 0;font-size:13px;color:var(--accent)}
-.newbar a{color:var(--dim);text-decoration:underline;cursor:pointer;margin-left:8px}
-main{margin-top:16px;border-top:1px solid var(--line)}
-.row{display:flex;align-items:center;gap:13px;padding:12px 4px;
-  border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
-.row:hover{background:var(--hi)}
-.thumb{flex:none;width:46px;height:46px;border-radius:8px;background:var(--tile);
+.newbar{margin:18px 0 2px;font-size:14px;font-weight:600;color:var(--accent)}
+.newbar a{color:var(--dim);font-weight:400;text-decoration:underline;cursor:pointer;
+  margin-left:8px}
+main{margin-top:20px;display:flex;flex-direction:column;gap:11px}
+.row{display:flex;align-items:center;gap:16px;padding:16px 18px;background:var(--card);
+  border:1px solid var(--line);border-radius:15px;box-shadow:var(--sh);
+  color:inherit;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.row:hover{transform:translateY(-1px);box-shadow:var(--shh)}
+.thumb{flex:none;width:70px;height:70px;border-radius:11px;background:var(--pill);
   border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
-  overflow:hidden;position:relative}
+  overflow:hidden}
 .thumb img{width:100%;height:100%;object-fit:contain}
-.thumb b{font:11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
+.thumb b{font:12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
 .name{flex:1;min-width:0}
-.name .t{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-  font-weight:500}
-.name .m{color:var(--dim);font-size:12.5px;margin-top:2px}
-.row.is-new .name .t::after{content:" · new";color:var(--new);font-size:12px;
-  font-weight:600}
-.fig{flex:none;text-align:right;white-space:nowrap;line-height:1.25}
-.fig .buy{font:14px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
-.fig .gap{display:block;margin-top:3px;font-size:20px;font-weight:700;
-  color:var(--accent);letter-spacing:-.01em}
-.fig .gap small{font-size:12px;font-weight:600;color:var(--dim)}
-.empty{color:var(--dim);padding:44px 4px;text-align:center}
-footer{margin-top:34px;color:var(--dim);font-size:12px;line-height:1.6}
-@media(max-width:520px){.fig .gap{font-size:18px}.thumb{width:40px;height:40px}}
+.name .t{display:block;font-size:16.5px;font-weight:600;line-height:1.35;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.name .m{margin-top:6px;display:flex;align-items:center;gap:9px;font-size:13.5px;
+  color:var(--dim)}
+.name .m .num{font:12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--pill);border:1px solid var(--line);padding:3px 7px;border-radius:6px}
+.row.is-new .name .t::after{content:"NEW";margin-left:9px;font-size:11px;font-weight:800;
+  color:var(--new);letter-spacing:.05em;vertical-align:2px}
+.fig{flex:none;text-align:right;white-space:nowrap}
+.fig .buy{font:13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
+.fig .gap{display:block;margin-top:6px;font-size:28px;font-weight:800;
+  color:var(--accent);letter-spacing:-.02em}
+.fig .gap small{display:block;font-size:11px;font-weight:700;color:var(--dim);
+  letter-spacing:.09em;text-transform:uppercase;margin-top:2px}
+.empty{color:var(--dim);padding:60px 4px;text-align:center;font-size:16px}
+footer{margin-top:44px;color:var(--dim);font-size:12.5px;line-height:1.7}
+@media(max-width:560px){
+  h1{font-size:21px}
+  .row{padding:14px;gap:13px}
+  .thumb{width:58px;height:58px}
+  .fig .gap{font-size:23px}
+}
 """
 
 _JS = r"""
@@ -120,10 +138,10 @@ def _row(d: dict) -> str:
 
     net = d.get("net_profit_eur")
     if net is not None:
-        fig = f'~&euro;{net:.0f} <small>profit</small>'
+        fig = f'~&euro;{net:.0f}<small>profit</small>'
     else:
         g = d.get("margin_vs_ebay_eur")
-        fig = (f'&euro;{g:.0f} <small>under</small>' if g is not None
+        fig = (f'&euro;{g:.0f}<small>under your price</small>' if g is not None
                else f'&minus;{d["saving_pct"] * 100:.0f}%')
 
     return (
@@ -132,8 +150,8 @@ def _row(d: dict) -> str:
         f'<span class="thumb"><img src="{img}" alt="" loading="lazy" '
         f'onerror="this.style.display=\'none\'"><b>{sn}</b></span>'
         f'<span class="name"><span class="t">{name}</span>'
-        f'<span class="m">{sn} &middot; {shop}</span></span>'
-        f'<span class="fig"><span class="buy">&euro;{d["price_eur"]:.0f}</span>'
+        f'<span class="m"><span class="num">{sn}</span>{shop}</span></span>'
+        f'<span class="fig"><span class="buy">shop &euro;{d["price_eur"]:.0f}</span>'
         f'<span class="gap">{fig}</span></span></a>'
     )
 
