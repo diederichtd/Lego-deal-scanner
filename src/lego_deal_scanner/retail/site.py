@@ -33,30 +33,44 @@ _CSS = """
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--bg)}
-body{background:var(--bg);color:var(--fg);
+body{background:
+    radial-gradient(1100px 520px at 12% -8%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 60%),
+    var(--bg);
+  color:var(--fg);
   font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-.wrap{max-width:820px;margin:0 auto;padding:38px 18px 80px}
+.wrap{max-width:860px;margin:0 auto;padding:40px 18px 80px}
 header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;
   margin-bottom:4px}
-h1{font-size:25px;font-weight:750;letter-spacing:-.02em}
-h1 span{color:var(--dim);font-weight:500;font-size:18px}
+h1{font-size:26px;font-weight:800;letter-spacing:-.02em;
+  background:linear-gradient(100deg,var(--fg),var(--fg) 55%,var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+h1 span{color:var(--dim);font-weight:500;font-size:18px;-webkit-background-clip:initial;
+  background-clip:initial;background:none;-webkit-text-fill-color:initial}
 .sub{color:var(--dim);font-size:14px;margin-top:7px}
 .theme{flex:none;font:13px/1 inherit;color:var(--dim);background:var(--pill);
-  border:1px solid var(--line);border-radius:9px;padding:8px 12px;cursor:pointer}
-.theme:hover{color:var(--fg)}
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;cursor:pointer;
+  transition:border-color .15s,color .15s}
+.theme:hover{color:var(--fg);border-color:var(--accent)}
 .newbar{margin:18px 0 2px;font-size:14px;font-weight:600;color:var(--accent)}
 .newbar a{color:var(--dim);font-weight:400;text-decoration:underline;cursor:pointer;
   margin-left:8px}
 main{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.row{display:flex;flex-direction:column;padding:16px;background:var(--card);
+.row{position:relative;display:flex;flex-direction:column;padding:16px;background:var(--card);
   border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);
-  color:inherit;text-decoration:none;transition:transform .12s,box-shadow .12s}
-.row:hover{transform:translateY(-2px);box-shadow:var(--shh)}
+  color:inherit;text-decoration:none;overflow:hidden;
+  transition:transform .15s cubic-bezier(.2,.8,.2,1),box-shadow .15s,border-color .15s}
+.row::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--accent),transparent 75%);
+  opacity:0;transition:opacity .15s}
+.row:hover{transform:translateY(-3px);box-shadow:var(--shh);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.row:hover::before{opacity:1}
 .thumb{width:100%;aspect-ratio:1/1;border-radius:13px;background:var(--pill);
   border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
   overflow:hidden;margin-bottom:13px}
-.thumb img{width:100%;height:100%;object-fit:contain;padding:12px}
+.thumb img{width:100%;height:100%;object-fit:contain;padding:12px;
+  transition:transform .2s}
+.row:hover .thumb img{transform:scale(1.04)}
 .thumb b{font:20px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
 .name{min-width:0}
 .name .t{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
@@ -68,7 +82,14 @@ main{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .row.is-new .name .t::after{content:" NEW";font-size:11px;font-weight:800;
   color:var(--new);letter-spacing:.05em}
 .fig{margin-top:auto;padding-top:14px;text-align:left}
-.fig .buy{font:12.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
+.fig .buy{display:flex;align-items:center;gap:6px;
+  font:12.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim)}
+.fig .buy .age{font-family:inherit;opacity:.75}
+.trend{display:flex;align-items:center;gap:8px;margin-top:8px;min-height:18px}
+.trend .spark{display:block;flex:none}
+.trend .badge{font:11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;
+  color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);
+  border-radius:6px;padding:3px 6px;letter-spacing:.02em}
 .fig .gap{display:block;margin-top:6px;font-size:32px;font-weight:800;
   color:var(--accent);letter-spacing:-.02em}
 .fig .gap small{display:block;font-size:11px;font-weight:700;color:var(--dim);
@@ -185,6 +206,38 @@ def _bricklink(set_num: str) -> str:
     return f"https://img.bricklink.com/ItemImage/SN/0/{set_num}-1.png"
 
 
+def _age_label(hours) -> str:
+    if hours is None:
+        return ""
+    if hours < 1:
+        return "just now"
+    if hours < 24:
+        return f"&middot; {round(hours)}h ago"
+    return f"&middot; {int(hours // 24)}d ago"
+
+
+def _sparkline(points: list) -> str:
+    """Tiny inline trend line from recent price history - free to render, we
+    already persist every price point checked."""
+    pts = [p for p in (points or []) if p is not None]
+    if len(pts) < 2:
+        return ""
+    lo, hi = min(pts), max(pts)
+    span = (hi - lo) or 1.0
+    w, h, pad = 56, 18, 2
+    step = (w - 2 * pad) / (len(pts) - 1)
+    coords = " ".join(
+        f"{pad + i * step:.1f},{pad + (h - 2 * pad) * (1 - (p - lo) / span):.1f}"
+        for i, p in enumerate(pts)
+    )
+    color = "var(--accent)" if pts[-1] < pts[0] else (
+        "var(--new)" if pts[-1] > pts[0] else "var(--dim)")
+    return (f'<svg class="spark" viewBox="0 0 {w} {h}" width="{w}" height="{h}" '
+            f'aria-hidden="true"><polyline fill="none" stroke="{color}" '
+            f'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" '
+            f'points="{coords}"/></svg>')
+
+
 def _row(d: dict) -> str:
     name = html.escape(d["name"])
     shop = html.escape(d.get("shop_name") or d.get("shop") or "")
@@ -202,6 +255,11 @@ def _row(d: dict) -> str:
         fig = (f'&euro;{g:.0f}<small>under your price</small>' if g is not None
                else f'&minus;{d["saving_pct"] * 100:.0f}%')
     haystack = html.escape(f'{d["set_num"]} {d["name"]} {shop}'.lower(), quote=True)
+    age = _age_label(d.get("priced_age_hours"))    # own markup, no user data - not escaped
+    spark = _sparkline(d.get("price_points"))
+    days = d.get("falling_days") or 0
+    badge = f'<span class="badge">&darr;{days}d</span>' if days >= 1 else ""
+    trend = f'<span class="trend">{spark}{badge}</span>' if (spark or badge) else ""
 
     return (
         f'<a class="row" href="{url}" target="_blank" rel="noopener" '
@@ -212,7 +270,8 @@ def _row(d: dict) -> str:
         f'onerror="this.style.display=\'none\'"><b>{sn}</b></span>'
         f'<span class="name"><span class="t">{name}</span>'
         f'<span class="m"><span class="num">{sn}</span>{shop}</span></span>'
-        f'<span class="fig"><span class="buy">shop &euro;{d["price_eur"]:.0f}</span>'
+        f'<span class="fig"><span class="buy">shop &euro;{d["price_eur"]:.0f}'
+        f'<span class="age">{age}</span></span>{trend}'
         f'<span class="gap">{fig}</span></span></a>'
     )
 

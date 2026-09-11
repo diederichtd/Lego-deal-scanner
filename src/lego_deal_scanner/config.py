@@ -84,6 +84,7 @@ DEFAULTS: dict[str, Any] = {
             "max_retries": 2,
         },
         "blocked_shops": [],          # shop names to never show, e.g. ["Lucky Bricks"]
+        "max_price_age_hours": 12,    # drop a brickmerge offer once its own timestamp is older than this
         "min_flip_margin_eur": 12.0,  # the filter: show sets where your price - retail >= this
         "profit_model": False,        # True = also subtract eBay fees + postage and rank by net profit
         "min_net_profit_eur": 5.0,    # only used when profit_model is True

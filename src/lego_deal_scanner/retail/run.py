@@ -122,10 +122,12 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
     # 2.5) brickmerge aggregator: one fetch per set = all German shops -------
     bm_total = bm_ok = 0
     if brickmerge_on:
+        from .brickmerge import age_hours as bm_age_hours
         from .brickmerge import fetch as bm_fetch
 
         cap = int(bmcfg.get("max_sets", 120))
         min_score = int(bmcfg.get("min_deal_score", 0))
+        max_age = float(rcfg.get("max_price_age_hours", 12) or 0)
         blocked = {re.sub(r"\s*\(.*?\)\s*", "", s).strip().lower()
                   for s in (rcfg.get("blocked_shops") or [])}
         order = sorted(catalog, key=lambda r: -(r.sold or 0))
@@ -141,6 +143,10 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
                 continue
             if re.sub(r"\s*\(.*?\)\s*", "", bp.merchant or "").strip().lower() in blocked:
                 continue  # user asked to never see this shop again
+            age = bm_age_hours(bp.priced_at)
+            if max_age and age is not None and age > max_age:
+                # brickmerge's own timestamp says this price is too old to trust
+                continue
             ref = ((lego_prices.get(row.set_num) or {}).get("price")
                    or bp.uvp_eur or row.rrp_eur or row.ebay_price_eur or bp.best_eur)
             if not ref:
@@ -177,6 +183,7 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
                           shop_name=bp.merchant or "brickmerge", note=note)
             d["compare_url"] = bp.url        # brickmerge price list, as a backup
             d["deal_score"] = bp.deal_score
+            d["priced_age_hours"] = age
             if ep:
                 d["ebay_price_eur"] = ep
                 d["margin_vs_ebay_eur"] = round(ep - bp.best_eur, 2)
@@ -263,6 +270,8 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             d["net_profit_eur"] = None
             d["resale_eur"] = round(resale, 2)
         d["falling_days"] = store.falling_days(d["shop"], d["set_num"])
+        d["price_points"] = [p["price"] for p in store.price_history(d["set_num"], limit=20)
+                             if p["shop"] == d["shop"]]
 
     if profit_on:
         _n = lambda d: d.get("net_profit_eur")

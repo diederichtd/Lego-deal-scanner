@@ -117,6 +117,7 @@ def cfg(tmp_path):
     c["retail"]["ebay_sold"]["enabled"] = False
     c["retail"]["profit_model"] = True
     c["retail"]["verify_top_n"] = 0
+    c["retail"]["max_price_age_hours"] = 0   # fixtures use a fixed old timestamp
     c["store"]["path"] = str(tmp_path / "s.sqlite3")
     c["site"]["outdir"] = str(tmp_path / "site")
     return c
@@ -179,6 +180,17 @@ def test_resolve_and_verify_swaps_search_url_for_product_url():
     v = resolve_and_verify("https://shop.test/search?q=75394", "75394", 99.0, F())
     assert v["product_url"] == "https://shop.test/p/75394"
     assert v["ok"] is True
+
+
+def test_stale_brickmerge_price_is_dropped(cfg):
+    cfg["retail"]["max_price_age_hours"] = 12   # PAGE_75394 is timestamped 28.08.
+    fetch = FakeFetcher({
+        "https://www.brickmerge.de/75394-1_x": PAGE_75394,
+        "https://www.brickmerge.de/10255-1_x": PAGE_10255,
+    })
+    with Store(cfg["store"]["path"]) as store:
+        result = run_watch(cfg, store, fetcher=fetch)
+    assert result["deals"] == []
 
 
 def test_blocked_shop_never_shown(cfg):

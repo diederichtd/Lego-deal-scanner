@@ -15,9 +15,33 @@ from __future__ import annotations
 import logging
 import re
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Optional
 
 log = logging.getLogger(__name__)
+
+_PRICED_AT = re.compile(r"(\d{1,2})\.(\d{1,2})\.,?\s*(\d{1,2}):(\d{2})")
+
+
+def age_hours(priced_at: str, now: Optional[datetime] = None) -> Optional[float]:
+    """Hours since brickmerge's "Preisangabe vom DD.MM., HH:MM Uhr" timestamp.
+
+    The string carries no year, so we assume the current one and roll back a
+    year if that lands in the future (only matters right at New Year's).
+    """
+    m = _PRICED_AT.search(priced_at or "")
+    if not m:
+        return None
+    day, month, hour, minute = (int(x) for x in m.groups())
+    now = now or datetime.now()
+    try:
+        stamp = now.replace(month=month, day=day, hour=hour, minute=minute,
+                            second=0, microsecond=0)
+    except ValueError:
+        return None
+    if stamp > now:
+        stamp = stamp.replace(year=stamp.year - 1)
+    return round((now - stamp).total_seconds() / 3600, 1)
 
 BASE = "https://www.brickmerge.de"
 _EURO = r"(?:€|&euro;|&#8364;)"
