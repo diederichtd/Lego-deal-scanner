@@ -40,14 +40,14 @@ def test_theme_toggle_present():
 
 def test_simple_mode_says_under_not_profit():
     html = render_html({**BASE, "deals": [_deal()], "seller": "knoppers55"}, {"title": "t"})
-    assert "&euro;35<small>under your price</small>" in html
+    assert '<b class="amt">&euro;35</b><small>under your price</small>' in html
     assert "profit" not in html.lower()
 
 
 def test_profit_mode_says_profit():
     html = render_html({**BASE, "deals": [_deal(net_profit_eur=18.0)], "seller": "x"},
                        {"title": "t"})
-    assert "~&euro;18<small>profit</small>" in html
+    assert '<b class="amt">~&euro;18</b><small>profit</small>' in html
 
 
 def test_no_old_clutter():

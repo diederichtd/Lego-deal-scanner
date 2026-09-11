@@ -14,22 +14,22 @@ from datetime import datetime, timezone
 from pathlib import Path
 _CSS = """
 :root{
-  --bg:#faf9f7; --card:#fff; --fg:#1b1a18; --dim:#726c63; --line:#eceae4;
-  --accent:#0b7a3b; --new:#c8102e; --pill:#f3f1ec;
-  --sh:0 1px 2px rgba(20,18,15,.04),0 4px 14px rgba(20,18,15,.05);
-  --shh:0 2px 6px rgba(20,18,15,.07),0 12px 30px rgba(20,18,15,.10);
+  --bg:#fbf3d8; --card:#fffdf5; --fg:#18150f; --dim:#7c7358; --line:#ecdfae;
+  --accent:#f4c22d; --ink:#18150f; --new:#e0553f; --pill:#fff0ae;
+  --sh:0 1px 2px rgba(30,24,10,.05),0 6px 18px rgba(30,24,10,.06);
+  --shh:0 3px 10px rgba(30,24,10,.10),0 16px 34px rgba(30,24,10,.13);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#131211; --card:#1c1b19; --fg:#efece5; --dim:#9a938a; --line:#2c2a26;
-  --accent:#54c47a; --new:#f2637a; --pill:#262420;
-  --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.35);
-  --shh:0 2px 8px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.45);
+  --bg:#15130f; --card:#211e17; --fg:#f5efd8; --dim:#a89a72; --line:#332d20;
+  --accent:#f1c343; --ink:#15130f; --new:#ff8367; --pill:#332a13;
+  --sh:0 1px 2px rgba(0,0,0,.35),0 6px 20px rgba(0,0,0,.4);
+  --shh:0 3px 10px rgba(0,0,0,.45),0 18px 40px rgba(0,0,0,.5);
 }}
 :root[data-theme="dark"]{
-  --bg:#131211; --card:#1c1b19; --fg:#efece5; --dim:#9a938a; --line:#2c2a26;
-  --accent:#54c47a; --new:#f2637a; --pill:#262420;
-  --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.35);
-  --shh:0 2px 8px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.45);
+  --bg:#15130f; --card:#211e17; --fg:#f5efd8; --dim:#a89a72; --line:#332d20;
+  --accent:#f1c343; --ink:#15130f; --new:#ff8367; --pill:#332a13;
+  --sh:0 1px 2px rgba(0,0,0,.35),0 6px 20px rgba(0,0,0,.4);
+  --shh:0 3px 10px rgba(0,0,0,.45),0 18px 40px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--bg)}
@@ -65,6 +65,9 @@ main{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
   opacity:0;transition:opacity .15s}
 .row:hover{transform:translateY(-3px);box-shadow:var(--shh);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
 .row:hover::before{opacity:1}
+.tag{position:absolute;top:12px;right:-30px;background:var(--accent);color:var(--ink);
+  font-size:10.5px;font-weight:800;letter-spacing:.08em;padding:4px 34px;
+  transform:rotate(38deg);box-shadow:0 1px 4px rgba(0,0,0,.15)}
 .thumb{width:100%;aspect-ratio:1/1;border-radius:13px;background:var(--pill);
   border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
   overflow:hidden;margin-bottom:13px}
@@ -90,10 +93,12 @@ main{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .trend .badge{font:11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;
   color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);
   border-radius:6px;padding:3px 6px;letter-spacing:.02em}
-.fig .gap{display:block;margin-top:6px;font-size:32px;font-weight:800;
-  color:var(--accent);letter-spacing:-.02em}
+.fig .gap{display:block;margin-top:8px}
+.fig .gap .amt{display:inline-block;font-size:30px;font-weight:800;color:var(--ink);
+  letter-spacing:-.02em;line-height:1.15;padding:0 6px;border-radius:5px;
+  background:linear-gradient(180deg,transparent 56%,var(--accent) 56%,var(--accent) 92%,transparent 92%)}
 .fig .gap small{display:block;font-size:11px;font-weight:700;color:var(--dim);
-  letter-spacing:.09em;text-transform:uppercase;margin-top:3px}
+  letter-spacing:.09em;text-transform:uppercase;margin-top:5px}
 .empty{grid-column:1/-1;color:var(--dim);padding:60px 4px;text-align:center;font-size:16px}
 .tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px}
 .tools input,.tools select{font:13.5px/1 inherit;color:var(--fg);background:var(--pill);
@@ -114,8 +119,9 @@ footer{margin-top:44px;color:var(--dim);font-size:12.5px;line-height:1.7}
   .thumb{margin-bottom:10px}
   .thumb b{font-size:15px}
   .name .t{font-size:13.5px}
-  .fig .gap{font-size:22px}
+  .fig .gap .amt{font-size:21px}
   .fig .buy{font-size:11px}
+  .tag{top:9px;right:-32px;font-size:9.5px;padding:3px 32px}
   .tools .count{margin-left:0;width:100%}
 }
 """
@@ -248,12 +254,14 @@ def _row(d: dict) -> str:
 
     net = d.get("net_profit_eur")
     if net is not None:
-        gap_val, fig = net, f'~&euro;{net:.0f}<small>profit</small>'
+        gap_val = net
+        fig = f'<b class="amt">~&euro;{net:.0f}</b><small>profit</small>'
     else:
         g = d.get("margin_vs_ebay_eur")
         gap_val = g or 0
-        fig = (f'&euro;{g:.0f}<small>under your price</small>' if g is not None
-               else f'&minus;{d["saving_pct"] * 100:.0f}%')
+        fig = (f'<b class="amt">&euro;{g:.0f}</b><small>under your price</small>'
+               if g is not None else
+               f'<b class="amt">&minus;{d["saving_pct"] * 100:.0f}%</b>')
     haystack = html.escape(f'{d["set_num"]} {d["name"]} {shop}'.lower(), quote=True)
     age = _age_label(d.get("priced_age_hours"))    # own markup, no user data - not escaped
     spark = _sparkline(d.get("price_points"))
@@ -266,6 +274,7 @@ def _row(d: dict) -> str:
         f'data-key="{key}" data-price="{d["price_eur"]:.2f}" '
         f'data-gap="{gap_val:.2f}" data-shop="{html.escape(shop.lower(), quote=True)}" '
         f'data-num="{sn}" data-q="{haystack}">'
+        f'<span class="tag">DEAL</span>'
         f'<span class="thumb"><img src="{img}" alt="" loading="lazy" '
         f'onerror="this.style.display=\'none\'"><b>{sn}</b></span>'
         f'<span class="name"><span class="t">{name}</span>'
