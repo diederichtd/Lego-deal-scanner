@@ -4,6 +4,7 @@ output to the set numbers an eBay seller currently lists."""
 from __future__ import annotations
 
 import logging
+import re
 import time
 from typing import Optional
 
@@ -125,6 +126,8 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
 
         cap = int(bmcfg.get("max_sets", 120))
         min_score = int(bmcfg.get("min_deal_score", 0))
+        blocked = {re.sub(r"\s*\(.*?\)\s*", "", s).strip().lower()
+                  for s in (rcfg.get("blocked_shops") or [])}
         order = sorted(catalog, key=lambda r: -(r.sold or 0))
         for row in order[:cap]:
             bp = bm_fetch(row.set_num, fetcher)
@@ -136,6 +139,8 @@ def run_watch(cfg: dict, store: Store, fetcher: Optional[Fetcher] = None) -> dic
             if bp.marketplace or bp.coupon_only:
                 # not a plain buy-from-a-shop price (eBay listing / coupon-only) - skip
                 continue
+            if re.sub(r"\s*\(.*?\)\s*", "", bp.merchant or "").strip().lower() in blocked:
+                continue  # user asked to never see this shop again
             ref = ((lego_prices.get(row.set_num) or {}).get("price")
                    or bp.uvp_eur or row.rrp_eur or row.ebay_price_eur or bp.best_eur)
             if not ref:

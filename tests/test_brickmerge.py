@@ -179,3 +179,19 @@ def test_resolve_and_verify_swaps_search_url_for_product_url():
     v = resolve_and_verify("https://shop.test/search?q=75394", "75394", 99.0, F())
     assert v["product_url"] == "https://shop.test/p/75394"
     assert v["ok"] is True
+
+
+def test_blocked_shop_never_shown(cfg):
+    cfg["retail"]["blocked_shops"] = ["Lucky Bricks"]
+    blocked_page = _page(
+        "LEGO 75394 Preisvergleich ab 90,00 &euro;",
+        '75394 kostet aktuell ab 90,00 &euro; statt UVP 169,99 &euro;. akt. UVP: 169,99 &euro;. '
+        '<p>Top-Angebot:</p><div class="topprice"><a href="/go2/?m=1&i=75394-1" '
+        'title="Link zu Lucky Bricks - 79,99 &euro; (47%) gespart - Preisangabe vom 28.08., '
+        '12:00 Uhr: 90,00 &euro;*"><img alt="Lucky Bricks"></a></div>',
+    )
+    fetch = FakeFetcher({"https://www.brickmerge.de/75394-1_x": blocked_page,
+                        "https://www.brickmerge.de/10255-1_x": PAGE_10255})
+    with Store(cfg["store"]["path"]) as store:
+        result = run_watch(cfg, store, fetcher=fetch)
+    assert result["deals"] == [] and (result.get("thin") or []) == []

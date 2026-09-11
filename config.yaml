@@ -15,6 +15,7 @@ retail:
   seller_label: "knoppers55"                  # shown on the deals page header
   min_discount_pct: 0.12
   min_price_eur: 25.0
+  blocked_shops: ["Lucky Bricks"]  # never show deals from these shops
   min_flip_margin_eur: 12.0     # show sets a shop has >= this much cheaper than your eBay price
   profit_model: false           # simple gap view - no fee/postage math
   verify_top_n: 200            # try to resolve the real product link for every deal
